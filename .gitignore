@@ -19,6 +19,7 @@
 .config/ranger/rifle.conf
 .config/ranger/tagged
 .config/ranger/*.sh
+.config/ranger/rc.conf
 .config/geany/
 .config/gtk-2.0/
 .config/gtk-3.0/
@@ -35,7 +36,6 @@
 .config/viewnior
 .dbus/
 .dia/
-.dosbox/
 .elinks/bookmarks
 .elinks/cookies
 .elinks/*hist*
@@ -66,10 +66,7 @@
 .snes9x/
 .subversion
 .task/
-<<<<<<< HEAD
 .texlive/
-=======
->>>>>>> c857ac20227d082b3671756c045a72832022a666
 .themes/
 .thumbnails/
 .thunderbird/
@@ -78,15 +75,11 @@
 .vim/plugin/
 .vim/spell/
 .xmame/
-<<<<<<< HEAD
 .urxvt/
-=======
->>>>>>> c857ac20227d082b3671756c045a72832022a666
+.w3m/
 .zsnes/
 Anime/
 backups/
-bin/weather_*
-bin/.*
 Desktop/
 Download/
 Games/
