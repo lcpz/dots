@@ -1,0 +1,39 @@
+Xcursor.theme: Vanilla-DMZ-AA
+
+#include "/home/luke/.colors/lukes"
+
+*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
+
+!*.font: -xos4-Terminus-Medium-R-Normal--12-120-72-72-C-60-ISO10646-1
+!*.boldFont: -xos4-Terminus-Medium-R-Normal--12-120-72-72-C-60-ISO10646-1
+!*.italicFont: -xos4-Terminus-Medium-R-Normal--12-120-72-72-C-60-ISO10646-1
+!*.boldItalicFont: -xos4-Terminus-Medium-R-Normal--12-120-72-72-C-60-ISO10646-1
+
+*.font: -*-tamsyn-medium-*-*-*-14-*-*-*-*-*-*-*
+*.boldFont: -*-tamsyn-medium-*-*-*-14-*-*-*-*-*-*-* 
+*.italicFont: -*-tamsyn-medium-*-*-*-14-*-*-*-*-*-*-*
+*.boldItalicFont: -*-tamsyn-medium-*-*-*-14-*-*-*-*-*-*-*
+
+*saveLines: 8192
+*scrollBar: false
+*dynamicColors: true
+*scrollTtyKeypress: true
+*scrollTtyOutput: false
+*loginShell: true
+*jumpScroll: true
+*multiScroll: true
+*scrollKey: true
+*metaSendsEscape: true
+*highlightSelection: true
+*boldMode: false
+*eightBitInput: true
+
+URxvt.depth: 32
+URxvt.background: [95]#000000
+URxvt.perl-ext-common:  default,matcher
+URxvt.url-launcher:     /usr/bin/dwb
+URxvt.matcher.button:   1
+URxvt.perl-ext:      default,url-select
+URxvt.keysym.M-u:    perl:url-select:select_next
+URxvt.url-select.launcher:   /usr/bin/dwb
+URxvt.url-select.underline: true

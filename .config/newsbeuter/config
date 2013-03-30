@@ -1,0 +1,10 @@
+browser   "dwb %u"
+
+datetime-format "%d %b"
+notify-beep yes
+notify-xterm  yes
+auto-reload yes
+
+color      listnormal    default     default
+color      listfocus     yellow      default
+color      info          color8       default

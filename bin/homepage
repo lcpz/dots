@@ -1,0 +1,137 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+########## begin config ##########
+
+output = 'homepage.html'      # output file
+title = 'Speed Dial'          # page title
+<<<<<<< HEAD
+font = ('Terminus', '12pt')   # font
+=======
+font = ('Terminus', '10px')   # font
+>>>>>>> c857ac20227d082b3671756c045a72832022a666
+separator = '>'               # separator between group title and links
+colors = (
+    '#020202',  # background
+    '#999999',  # links
+<<<<<<< HEAD
+    '#b3b3b3',  # group title
+=======
+    '#B3B3B3',  # group title
+>>>>>>> c857ac20227d082b3671756c045a72832022a666
+    '#4C4C4C',  # separator
+)
+
+# add your links here
+links = {
+    #['', ''],
+    'serious': [
+        ['dotshare', 'http://dotshare.it'],
+        ['arch blogs', 'http://archlinux.me'],
+        ['github', 'https://github.com'],
+    ],
+    'fancy': [
+        ['a journey round my skull', 'http://ajourneyroundmyskull.blogspot.it'],
+        ['kick to kill', 'http://kicktokill.blogspot.it'],
+        ['public domain images', 'http://imagespublicdomain.wordpress.com/'],
+        ['garote\'s page', 'http://garote.bdmonkeys.net/index.html'],
+        ['cyberpunkreview', 'http://cyberpunkreview.com'],
+        ['scaruffi\'s musical page', 'http://www.ksl.stanford.edu/people/scaruffi/music.html'],
+        ['newgrounds', 'http://newgrounds.com'],
+        ['wallbase', 'http://wallbase.cc/home'],
+        ['the cyberpunk project', 'http://project.cyberpunk.ru'],
+        ['thought experiments lain', 'http://www.cjas.org/~leng/lain.htm'],
+        ['unixporn', 'http://www.reddit.com/r/unixporn/'],
+        ['kriegs', 'www.kriegs.net'],
+        ['mechafetus', 'http://visublog.mechafetus.com/'],
+        ['kotaku', 'http://kotaku.com'],
+        ['bagni proeliator', 'http://bagniproeliator.blogspot.it/'],
+        ['prigionieri dello schermo', 'http://iprigionieridelloschermo.wordpress.com/'],
+<<<<<<< HEAD
+        ['one thing well', 'http://onethingwell.org']
+=======
+>>>>>>> c857ac20227d082b3671756c045a72832022a666
+    ],
+    'music': [
+       ['yestedays and todays', 'http://pinktrad.blogspot.it'],
+       ['earls psychedelic garden', 'http://earlspsychedelicgarden.blogspot.it'],
+       ['madrotter-treasure-hunt' , 'http://madrotter-treasure-hunt.blogspot.it'],
+       ['college of musical knowledge',  'http://collegeofmusicalknowledge.blogspot.it'],
+       ['venus in leathers',  'http://drownedvalley.blogspot.it'],
+       ['a softly sleeping rose', 'http://asoftlysleepingrose.blogspot.it'],
+       ['mutant sounds', 'http://mutant-sounds.blogspot.it'],
+       ['habit of sex', 'http://habitofsex.blogspot.it'],
+       ['stalking duppi', 'http://stalkingduppi.blogspot.it'],
+       ['soundhead',  'http://the-soundhead.blogspot.it'],
+       ['no longer forgotten music', 'http://433rpm.blogspot.it'],
+       ['nostalgie de la boue', 'http://nostalgie-de-la-boue.blogspot.it'],
+       ['7\'\' from the underground', 'http://bluetvset.blogspot.it'],
+       ['jazz-privado', 'http://jazz-privado.blogspot.it'],
+       ['rockalterno70', 'http://rockalterno70.wordpress.com/'],
+       ['the changing same', 'http://thechanging-same.blogspot.it/']
+    ]
+}
+
+########## end config ##########
+
+import os
+
+css = '''body {
+  background-color: %s;
+  font-family: "%s";
+  font-size: %s;
+  font-weight: normal;
+  margin-left: 7%%;
+}
+a:link,a:visited,a:active {
+  text-decoration: none;
+  color: %s;
+<<<<<<< HEAD
+  fo:nt-weight: normal;
+=======
+  font-weight: normal;
+>>>>>>> c857ac20227d082b3671756c045a72832022a666
+}
+a:hover {
+  text-decoration: underline;
+  color: %s;
+  font-weight: normal;
+}
+table {
+  border-spacing: 8px;
+}
+td:first-child {
+  font-weight: bold;
+  color: %s
+}
+td:nth-child(2) {
+  font-weight: normal;
+  color: %s;
+}''' % (colors[0], font[0], font[1], colors[1], colors[1], colors[2], colors[3])
+
+links_html = ''
+for group in sorted(links):
+    links_html += '<tr><td align="right">%s</td><td>%s</td><td>' % (group, separator)
+    for site in sorted(links[group]):
+        links_html += '<a href="%s">%s</a> ' % (site[1], site[0])
+    links_html += '</td></tr>'
+
+html = '''<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>%s</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <table valign="middle" border="0" width="100%%" height="100%%"><tr><td><table>
+    %s
+  </table></td></tr></table>
+</body>
+</html>''' % (title, links_html)
+
+with open(output, 'w') as file:
+    file.write(html)
+with open('style.css', 'w') as file:
+    file.write(css)
+
+os.system('tidy -f /dev/null -utf8 -i -m -q -asxhtml %s' % output)

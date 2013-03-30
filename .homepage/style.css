@@ -1,0 +1,40 @@
+body {
+  background-color: #020202;
+  font-family: "Terminus";
+<<<<<<< HEAD
+  font-size: 12pt;
+=======
+  font-size: 10px;
+>>>>>>> c857ac20227d082b3671756c045a72832022a666
+  font-weight: normal;
+  margin-left: 7%;
+}
+a:link,a:visited,a:active {
+  text-decoration: none;
+  color: #999999;
+<<<<<<< HEAD
+  fo:nt-weight: normal;
+=======
+  font-weight: normal;
+>>>>>>> c857ac20227d082b3671756c045a72832022a666
+}
+a:hover {
+  text-decoration: underline;
+  color: #999999;
+  font-weight: normal;
+}
+table {
+  border-spacing: 8px;
+}
+td:first-child {
+  font-weight: bold;
+<<<<<<< HEAD
+  color: #b3b3b3
+=======
+  color: #B3B3B3
+>>>>>>> c857ac20227d082b3671756c045a72832022a666
+}
+td:nth-child(2) {
+  font-weight: normal;
+  color: #4C4C4C;
+}

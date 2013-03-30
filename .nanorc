@@ -1,0 +1,52 @@
+set brackets ""')>]}"
+set matchbrackets "(]}"
+set backup
+set backupdir "/home/luke/backups"
+#set mouse
+set multibuffer
+set quotestr "> "
+#set rebinddelete
+set rebindkeypad
+set regexp
+set smarthome
+set smooth
+set tabsize 4
+#set tabstospaces
+
+include "/usr/share/nano/c-file.nanorc"
+include "/usr/share/nano/config2.nanorc"
+include "/usr/share/nano/config3.nanorc"
+include "/usr/share/nano/default.nanorc"
+include "/usr/share/nano/etc-stuff.nanorc"
+include "/usr/share/nano/shlike.nanorc"
+include "/usr/share/nano/rcfiles.nanorc"
+include "/usr/share/nano/rcfiles-new.nanorc"
+include "/usr/share/nano/sources_list.nanorc"
+include "/usr/share/nano/urls.nanorc"
+include "/usr/share/nano/xdefaults.nanorc"
+include "/usr/share/nano/xorg.nanorc"
+include "/usr/share/nano/c.nanorc"
+include "/usr/share/nano/conf.nanorc"
+include "/usr/share/nano/html.nanorc"
+include "/usr/share/nano/java.nanorc"
+include "/usr/share/nano/man.nanorc"
+include "/usr/share/nano/mutt.nanorc"
+include "/usr/share/nano/nanorc.nanorc"
+include "/usr/share/nano/patch.nanorc"
+include "/usr/share/nano/perl.nanorc"
+include "/usr/share/nano/php.nanorc"
+include "/usr/share/nano/python.nanorc"
+include "/usr/share/nano/sh.nanorc"
+include "/usr/share/nano/tex.nanorc"
+
+## Lua
+syntax "Lua" "\.lua$"
+color brightmagenta "\<(and|break|do|else|elseif|end|for|function|if|in|local|not|or|repeat|return|then|until|while)\>"
+color green "\<(setmetatable|getmetatable|type|print|pcall|pairs|ipairs|assert|loadstring|next|select|xpcall|rawget|rawset|tostring|tonumber)\>"
+color red "\<(false|nil|true)\>"
+color yellow "[0-9]"
+color brightyellow "\"(\\.|[^\"])*\""
+color brightyellow start="\[\=*?\[" end="\]\=*?\]"
+color green "\#(\\.|[^'])*[[:space:]]"
+color brightblue "--.*"
+color brightblue start="--\[\[" end="\]\]"

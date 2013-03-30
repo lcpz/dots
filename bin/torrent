@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ $(pidof rtorrent) ]; then
+    tmux attach -t Torrent
+else
+    tmux new -s Torrent rtorrent
+fi

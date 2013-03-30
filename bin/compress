@@ -1,0 +1,3 @@
+#! /bin/bash
+
+tar -cjf $1_$(date +"%Y%m%d").tar.bz2 $2
