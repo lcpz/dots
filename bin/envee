@@ -125,6 +125,22 @@ setart() {
            art[13]='     |  _ \ | || | |  _| |   \))       '
            art[14]='     |_.__/  \_,_| |_|   |_||_|        '
            ;;
+      blackburn)
+           art[1]='   __ )    |                  |       '
+           art[2]='   __ \    |    _` |    __|   |  /    '
+           art[3]='   |   |   |   (   |   (        <     '
+           art[4]='  ____/   _|  \__,_|  \___|  _|\_\    ' 
+           art[5]='                                      '
+           art[6]='       __ )                           ' 
+           art[7]='       __ \    |   |    __|   __ \    ' 
+           art[8]='       |   |   |   |   |      |   |   '
+           art[9]='      ____/   \__,_|  _|     _|  _|   '
+           art[10]='                                      '
+           art[11]='                                      '
+           art[12]='                                      '
+           art[13]='                                      '
+           art[14]='                                      '
+          ;;
         isometric)
             art[1]='     ___           ___         '
             art[2]='    /\  \         /\  \        '
@@ -273,14 +289,14 @@ art_list=(steamburn isometric classic graffiti poison bulbhead avatar)
 varname
 vardata
 # Set the default art to be displayed (from the sourced ~/envee/envee_art_defs).
-setart steamburn
+setart blackburn
 
 # Default value for art (blue).
 art_color=''
 msg_art_col=1
 # Default value for labels (yellow).
 label_color=''
-msg_label_col=3
+msg_label_col=8
 # Default value for data (white).
 data_color=''
 msg_data_col=7
