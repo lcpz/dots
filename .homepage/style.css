@@ -1,11 +1,7 @@
 body {
   background-color: #020202;
   font-family: "Terminus";
-<<<<<<< HEAD
   font-size: 12pt;
-=======
-  font-size: 10px;
->>>>>>> c857ac20227d082b3671756c045a72832022a666
   font-weight: normal;
   margin-left: 7%;
 }
@@ -28,11 +24,7 @@ table {
 }
 td:first-child {
   font-weight: bold;
-<<<<<<< HEAD
   color: #b3b3b3
-=======
-  color: #B3B3B3
->>>>>>> c857ac20227d082b3671756c045a72832022a666
 }
 td:nth-child(2) {
   font-weight: normal;

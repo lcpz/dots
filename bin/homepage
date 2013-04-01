@@ -5,20 +5,12 @@
 
 output = 'homepage.html'      # output file
 title = 'Speed Dial'          # page title
-<<<<<<< HEAD
 font = ('Terminus', '12pt')   # font
-=======
-font = ('Terminus', '10px')   # font
->>>>>>> c857ac20227d082b3671756c045a72832022a666
 separator = '>'               # separator between group title and links
 colors = (
     '#020202',  # background
     '#999999',  # links
-<<<<<<< HEAD
     '#b3b3b3',  # group title
-=======
-    '#B3B3B3',  # group title
->>>>>>> c857ac20227d082b3671756c045a72832022a666
     '#4C4C4C',  # separator
 )
 
@@ -47,10 +39,7 @@ links = {
         ['kotaku', 'http://kotaku.com'],
         ['bagni proeliator', 'http://bagniproeliator.blogspot.it/'],
         ['prigionieri dello schermo', 'http://iprigionieridelloschermo.wordpress.com/'],
-<<<<<<< HEAD
         ['one thing well', 'http://onethingwell.org']
-=======
->>>>>>> c857ac20227d082b3671756c045a72832022a666
     ],
     'music': [
        ['yestedays and todays', 'http://pinktrad.blogspot.it'],
