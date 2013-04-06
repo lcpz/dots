@@ -1,63 +1,116 @@
-#
-# ncmpcpp config
-#
-
+##### connection settings #####
+mpd_host = "127.0.0.1"
+mpd_port = "6600"
 mpd_music_dir = "/home/luke/Musica"
-mpd_crossfade_time = "5"
+mpd_connection_timeout = "5"
+mpd_crossfade_time = "1"
+mpd_communication_mode = "notifications" (polling/notifications)
 
-# Visualizer
-visualizer_fifo_path = "/tmp/mpd.fifo"
-visualizer_output_name = "fifo"
-visualizer_type = "wave" (spectrum/wave)
-
-# Playlist
-song_columns_list_format = "(3f)[black]{n} (40)[default]{t|f} (25)[red]{a} (30)[blue]{b} (4f)[black]{l}"
-#"$L(9)[black]{l} (20)[red]{a} (30)[blue]{b} $L(20)[default]{t}"
+##### song format #####
+song_list_format = "{$5 %a$9 $1│$9 $8%t$9 }|{ $8%f$9}$R{$5%b $7}"
+song_status_format = "{{{$3%a$9}} $8-$9 {$8%t$9}|{$8%f$9}{ $8-$9 $6%b$9{ $8-$9 $7%y$9}}}"
+song_library_format = "{%n $8-$9 }{%t}|{%f}"
+tag_editor_album_format = "{%y $8-$9 }{%b}"
+alternative_header_first_line_format = "$1$aqqu$/a$9 {$8%t$9}|{$8%f$9} $1$atqq$/a$9"
+alternative_header_second_line_format = "{{$6%a$9}{ $8-$9 $4%b$9 $8-$9 $7%y$9}}|{%D}"
 now_playing_prefix = "$b"
 now_playing_suffix = "$/b"
+browser_playlist_prefix = "playlist"
+selected_item_prefix = "$5"
+selected_item_suffix = "$9"
+song_window_title_format = "{%t}|{%f} - {%a}"
+
+##### columns settings #####
+song_columns_list_format = "(40)[red]{t|f} (25)[yellow]{a} (25)[green]{b} (25)[white]{l}"
+song_list_format = "{$5 %a$9 $1│$9 $8%t$9 }|{ $8%f$9}$R{$5%b $7}"
+song_status_format = "{{{$3%a$9}} $8-$9 {$8%t$9}|{$8%f$9}{ $8-$9 $6%b$9{ $8-$9 $7%y$9}}}"
+song_library_format = "{%n $8-$9 }{%t}|{%f}"
+tag_editor_album_format = "{%y $8-$9 }{%b}"
+alternative_header_first_line_format = "$1$aqqu$/a$9 {$8%t$9}|{$8%f$9} $1$atqq$/a$9"
+alternative_header_second_line_format = "{{$6%a$9}{ $8-$9 $4%b$9 $8-$9 $7%y$9}}|{%D}"
+now_playing_prefix = "$b"
+now_playing_suffix = "$/b"
+browser_playlist_prefix = "playlist"
+selected_item_prefix = "$5"
+selected_item_suffix = "$9"
+song_window_title_format = "{%t}|{%f} - {%a}"
+
+##### various settings #####
+execute_on_song_change = ""
+playlist_show_remaining_time = "no"
+playlist_shorten_total_times = "yes"
+playlist_separate_albums = "no"
 playlist_display_mode = "columns" (classic/columns)
-autocenter_mode = "no"
-centered_cursor = "no"
-cyclic_scrolling = "no"
-mouse_list_scroll_whole_page = "no"
-#song_list_format = "{$8$9}{[%l] >> }{%t }$R{%a - %b}"
-song_list_format = "$1$9%l$1$9 $1¦$9 $2%a$9 $1¦$9 $5%b$9 $R$1$9%t$1$9 $1¦$9 $1%n$9"
-# $0$8$8%l$0$8 $1¦$7 $7%a$7 $1¦$7 $6%t$1 $R $1%b$1"
-song_library_format = "{%n > }{%t}|{%f}"
-
-# Bars
-song_status_format = "{%a - }{%t - }{%b}"
-#"$8%t $1• $2%a $1•{ $5%b $1• }$7%y$1"
-#progressbar_look = "||]"
-progressbar_look = "-? "
-#"-??"
-titles_visibility = "no"
-header_visibility = "no"
-statusbar_visibility = "no"
-#now_playing_prefix = "?"
-
-# Browser
-browser_playlist_prefix = "$2plist »$9 "
 browser_display_mode = "columns" (classic/columns)
-
-# Colors
-discard_colors_if_item_is_selected = "yes"
-header_window_color = "black"
-volume_color = "cyan"
-state_line_color = "black"
-state_flags_color = "green"
-main_window_color = "default"
-color1 = "default"
-color2 = "green"
-main_window_highlight_color = "red"
-progressbar_color = "yellow"
-statusbar_color = "black"
-active_column_color = "red"
-visualizer_color = "cyan"
-
-# Others
-song_window_title_format = "MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"
 search_engine_display_mode = "columns" (classic/columns)
+discard_colors_if_item_is_selected = "no"
+incremental_seeking = "yes"
+seek_time = "1"
+autocenter_mode = "yes"
+centered_cursor = "yes"
+progressbar_look = "::"
+default_place_to_search_in = "database" (database/playlist)
+user_interface = "classic" (classic/alternative)
+media_library_left_column = "a" (possible values: a,y,g,c,p, legend above)
+default_find_mode = "wrapped" (wrapped/normal)
+default_space_mode = "add" (add/select)
+default_tag_editor_left_col = "dirs" (albums/dirs)
+default_tag_editor_pattern = "%n - %t"
+#header_visibility = "no"
+#statusbar_visibility = "no"
+titles_visibility = "yes"
+header_text_scrolling = "yes"
+fancy_scrolling = "yes"
+cyclic_scrolling = "no"
+lines_scrolled = "2"
 follow_now_playing_lyrics = "yes"
+ncmpc_like_songs_adding = "yes" (enabled - add/remove, disabled - always add)
+show_hidden_files_in_local_browser = "no"
 display_screens_numbers_on_start = "no"
-# vim: set ts=2 sw=2 tw=0 :
+startup_screen = "2"
+jump_to_now_playing_song_at_start = "yes"
+ask_before_clearing_main_playlist = "no"
+clock_display_seconds = "no"
+display_volume_level = "yes"
+display_bitrate = "yes"
+display_remaining_time = "no"
+regular_expressions = "extended" (basic/extended)
+ignore_leading_the = "no"
+block_search_constraints_change_if_items_found = "yes"
+mouse_support = "yes"
+mouse_list_scroll_whole_page = "yes"
+
+##### visualizer settings #####
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+visualizer_sync_interval = "1"
+#visualizer_type = "wave" (spectrum/wave)
+visualizer_type = "spectrum" (spectrum/wave)
+
+##### lyrics support #####
+##
+## supported lyrics databases:
+##
+## - 1 - lyricsplugin.com
+##
+lyrics_database = "1"
+external_editor = "vim"
+use_console_editor = "yes" (set to yes, if your editor is console app)
+discard_colors_if_item_is_selected = "yes"
+colors_enabled = "yes"
+empty_tag_color = "white"
+header_window_color = "black"
+volume_color = "yellow"
+state_line_color = "black"
+state_flags_color = "black"
+main_window_color = "white"
+color1 = "default"
+color2 = "blue"
+main_window_highlight_color = "blue"
+progressbar_color = "black"
+statusbar_color = "blue"
+alternative_ui_separator_color = "black"
+active_column_color = "blue"
+window_border_color = "blue"
+active_window_border = "blue"
+visualizer_color = "blue"
