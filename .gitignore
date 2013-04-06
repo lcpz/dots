@@ -10,7 +10,6 @@
 .config/dwb/mimetypes
 .config/dwb/*.*
 .config/dconf/
-.config/midori
 .config/ranger/colorschemes/__*
 .config/ranger/__pycache__
 .config/ranger/bookmarks
@@ -69,7 +68,6 @@
 .texlive/
 .themes/
 .thumbnails/
-.thunderbird/
 .torrent-search/
 .vim/bundle/
 .vim/plugin/

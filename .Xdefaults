@@ -1,6 +1,14 @@
 Xcursor.theme: Vanilla-DMZ-AA
 
-#include "/home/luke/.colors/lukes"
+#include "/home/luke/.colors/blackburn"
+
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.dpi: 96
+Xft.rgba: rgb
 
 *charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
 
@@ -17,23 +25,13 @@ Xcursor.theme: Vanilla-DMZ-AA
 *saveLines: 8192
 *scrollBar: false
 *dynamicColors: true
-*scrollTtyKeypress: true
-*scrollTtyOutput: false
 *loginShell: true
-*jumpScroll: true
 *multiScroll: true
-*scrollKey: true
-*metaSendsEscape: true
-*highlightSelection: true
-*boldMode: false
-*eightBitInput: true
 
 URxvt.depth: 32
-URxvt.background: [95]#000000
-URxvt.perl-ext-common:  default,matcher
+URxvt.termName: rxvt-256color
+URxvt.imLocale: it_IT.UTF-8
+URxvt.perl-ext-common:  default,matcher,url-select
+URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 URxvt.url-launcher:     /usr/bin/dwb
 URxvt.matcher.button:   1
-URxvt.perl-ext:      default,url-select
-URxvt.keysym.M-u:    perl:url-select:select_next
-URxvt.url-select.launcher:   /usr/bin/dwb
-URxvt.url-select.underline: true
