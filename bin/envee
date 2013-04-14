@@ -36,7 +36,7 @@ vardata() {
     dat[9]="$TERM"
     dat[10]="$(awesome -v | head -1)"
     dat[11]="github.com/copycat-killer/awesome-copycats"
-    dat[12]="$(more ~/.gtkrc-2.0 | grep gtk-theme-name | cut -d"=" -f2 | cut -d'"' -f2)"
+    dat[12]="$(more ~/.config/gtk-3.0/settings.ini | grep gtk-theme-name | cut -d"=" -f2 | cut -d'"' -f2)"
     dat[13]="$(more ~/.gtkrc-2.0 | grep gtk-icon-theme | cut -d"=" -f2 | cut -d'"' -f2)"
     dat[14]="Vanilla-DMZ-AA"
 }

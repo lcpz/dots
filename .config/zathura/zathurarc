@@ -1,45 +1,21 @@
-<<<<<<< HEAD
 set default-bg "#101010"
 set default-fg "#d4d4d4"
-set font "Terminus normal 9"
 set inputbar-bg "#101010"
 set inputbar-fg "#d4d4d4"
 set statusbar-bg "#101010"
 set statusbar-fg "#d4d4d4"
 set recolor-lightcolor "#101010"
 set recolor-darkcolor "#d4d4d4"
-
 set first-page-column 2
-set font "tamsynu medium 9"
+set font "Tamsynu 10"
 set adjust-open width
 set advance-pages-per-row true
 set page-padding 5
-=======
-set first-page-column 2
-set font "tamsynu medium 9"
 set completion-bg "#242323"
-set completion-fg "#94928F"
-set completion-highlight-bg "#94928F"
-set completion-highlight-fg "#140C0B"
-set default-bg "#140C0B"
-set default-fg "#877A70"
-set inputbar-bg "#140C0B"
-set inputbar-fg "#877A70"
-set statusbar-bg "#140c0b"
-set statusbar-fg "#877a70"
-set notification-error-bg "#140C0B"
-set notification-error-fg "#C78186"
-set notification-warning-bg "#140C0B"
-set notification-warning-fg "#8CA8A2"
-
 set adjust-open width
 set advance-pages-per-row true
 set highlight-color "#FFFF00"
 set page-padding 5
-set recolor-darkcolor "#140C0B"
-set recolor-lightcolor "#877A70"
->>>>>>> c857ac20227d082b3671756c045a72832022a666
-set zoom-step 5
 
 map <F1> set "pages-per-row 1"
 map <F2> set "pages-per-row 2"

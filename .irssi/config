@@ -264,7 +264,11 @@ statusbar = {
   };
 };
 settings = {
-  core = { real_name = "luke"; user_name = "luke"; nick = "starshine"; };
+  core = {
+    real_name = "luke";
+    user_name = "luke";
+    nick = "copycat-killer";
+  };
   "fe-text" = { actlist_sort = "refnum"; };
   "perl/core/scripts" = { awl_block = "-14"; };
   "irc/dcc" = {

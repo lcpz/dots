@@ -86,6 +86,7 @@ if has('gui_running')
   set guioptions-=r               " remove right scrollbar
   set guioptions-=b               " remove bottom scrollbar
   set guioptions-=L               " remove left scrollbar
+  set guifont=Tamsyn
   set guicursor+=a:block-blinkon0 " always use block cursor, no cursor blinking
   " Paste from PRIMARY and CLIPBOARD
   inoremap <silent> <M-v> <Esc>"+p`]a
@@ -159,6 +160,8 @@ let g:ctrlp_custom_ignore = {
       \ 'file': '\.pyc$\|\.so$\|\.swp$',
       \ }
 
+"let g:Powerline_symbols='fancy'
+
 set fillchars+=stl:\ ,stlnc:\
 let g:syntastic_mode_map = { 'mode': 'passive' }
 let g:syntastic_python_checker_args='--ignore=E501'
@@ -208,13 +211,5 @@ let g:tagbar_width = 30
 let g:tagbar_compact = 1
 let g:tagbar_iconchars = ['→', '▼']
 let g:tagbar_autoshowtag = 0
-
-function! ToggleColours()
-if g:colors_name == 'hybrid'
-  colorscheme hybrid-light
-else
-  colorscheme hybrid
-endif
-endfunction
 
 "}}}

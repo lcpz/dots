@@ -1,9 +1,3 @@
-URxvt.depth: 32
-URxvt.background: #181818
-URxvt.scrollBar: false
-URxvt.font: xft:consolas:pixelsize=10
-URxvt*termName: rxvt-256color
-
 *background: #181818
 *foreground: #c0c0c0
 *cursorColor: #93a1a1

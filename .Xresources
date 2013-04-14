@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #define t_background #101010
 #define t_current_line #282a2e
 #define t_selection #373b41
