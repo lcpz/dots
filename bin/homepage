@@ -8,7 +8,7 @@ title = 'Speed Dial'          # page title
 font = ('Terminus', '12pt')   # font
 separator = '>'               # separator between group title and links
 colors = (
-    '#020202',  # background
+    '#050505',  # background
     '#999999',  # links
     '#b3b3b3',  # group title
     '#4C4C4C',  # separator
