@@ -24,13 +24,8 @@ Xft.rgba: rgb
 *multiScroll: true
 
 URxvt.depth: 32
-URxvt.termName: rxvt-unicode-256color
-URxvt.imLocale: it_IT.UTF-8
-URxvt.perl-ext-common:  default,matcher,url-select
-URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+URxvt.background: [95]#020202
+
+URxvt.perl-ext-common:  default,matcher
 URxvt.url-launcher:     /usr/bin/dwb
 URxvt.matcher.button:   1
-
-UXTerm*faceName: Source Code Pro for Powerline
-UXTerm*faceSize: 12
-UXterm*foreground: color1

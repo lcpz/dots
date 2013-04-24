@@ -1,8 +1,6 @@
 *background: #020202
-
-URxvt*background: [95]#020202
-URxvt*.foreground: #F2F1F0
-URxvt*.cursorColor: #F67730
+*.foreground: #F2F1F0
+*.cursorColor: #F67730
 
 !black
 *color0: #222222
