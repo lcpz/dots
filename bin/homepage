@@ -23,6 +23,9 @@ links = {
         ['github', 'https://github.com'],
     ],
     'fancy': [
+        ['runyourjewels', 'http://runyourjewels.com/round/2/'],
+        ['simpledesktops', 'http://simpledesktops.com'],
+        ['4walled', 'http://4walled.cc'],
         ['a journey round my skull', 'http://ajourneyroundmyskull.blogspot.it'],
         ['kick to kill', 'http://kicktokill.blogspot.it'],
         ['public domain images', 'http://imagespublicdomain.wordpress.com/'],
@@ -42,7 +45,6 @@ links = {
         ['one thing well', 'http://onethingwell.org']
     ],
     'music': [
-       ['yestedays and todays', 'http://pinktrad.blogspot.it'],
        ['earls psychedelic garden', 'http://earlspsychedelicgarden.blogspot.it'],
        ['madrotter-treasure-hunt' , 'http://madrotter-treasure-hunt.blogspot.it'],
        ['college of musical knowledge',  'http://collegeofmusicalknowledge.blogspot.it'],

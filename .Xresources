@@ -29,7 +29,7 @@ Xcursor.theme: Vanilla-DMZ-AA
 *multiScroll: true
 
 URxvt.depth: 32
-URxvt.background: [95]#020202
+URxvt.background: [100]#101010
 
 URxvt.perl-ext-common:  default,matcher
 URxvt.url-launcher:     /usr/bin/dwb

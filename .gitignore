@@ -19,8 +19,6 @@
 .config/ranger/tagged
 .config/ranger/*.sh
 .config/ranger/rc.conf
-.config/gtk-2.0/
-.config/gtk-3.0/
 .config/htop/
 .config/libreoffice
 .config/newsbeuter/urls
@@ -77,7 +75,6 @@ Video/
 .bash_profile
 .esd_auth
 .gitconfig
-.gtkrc-2.0
 .lesshst
 .netrc
 .pulse-cookie

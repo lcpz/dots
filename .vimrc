@@ -77,7 +77,7 @@ set smartcase                    " override ignorecase if upper case typed
 " Colours
 set t_Co=256
 let g:hybrid_use_Xresources = 1
-colorscheme hybrid
+colorscheme hybrid 
 
 " gVim
 if has('gui_running')
