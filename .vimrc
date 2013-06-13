@@ -14,7 +14,6 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'godlygeek/tabular'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'

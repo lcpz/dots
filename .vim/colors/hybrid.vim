@@ -266,7 +266,7 @@ exe "hi! SpellBad"      .s:fg_red         .s:bg_none        .s:fmt_undr
 exe "hi! SpellCap"      .s:fg_blue        .s:bg_none        .s:fmt_undr
 exe "hi! SpellLocal"    .s:fg_aqua        .s:bg_none        .s:fmt_undr
 exe "hi! SpellRare"     .s:fg_purple      .s:bg_none        .s:fmt_undr
-exe "hi! StatusLine"    .s:fg_comment     .s:bg_background  .s:fmt_revr
+exe "hi! StatusLine"    .s:fg_background  .s:bg_foreground  .s:fmt_revr
 exe "hi! StatusLineNC"  .s:fg_window      .s:bg_comment     .s:fmt_revr
 exe "hi! TabLine"       .s:fg_foreground  .s:bg_darkcolumn  .s:fmt_revr
 "		TabLineFill"
