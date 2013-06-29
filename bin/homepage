@@ -21,6 +21,7 @@ links = {
         ['dotshare', 'http://dotshare.it'],
         ['arch blogs', 'http://archlinux.me'],
         ['github', 'https://github.com'],
+        ['instant server', 'http://instantserver.io'],
     ],
     'fancy': [
         ['runyourjewels', 'http://runyourjewels.com/round/2/'],

@@ -57,6 +57,7 @@ alias clearcache='echo "sync; echo 3 > /proc/sys/vm/drop_caches"'
 alias homepage='cd $HOME/.homepage; rm *; homepage; cd'
 alias wifi='sudo wifi-menu'
 alias weechat='weechat-curses'
+alias eneassh='ssh -X antonio@192.168.14.140'
 alias commands='more $HOME/.bashrc | grep alias* | cut -d" " -f2- -s'
 
 export EDITOR="vim"
