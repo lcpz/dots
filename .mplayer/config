@@ -1,0 +1,6 @@
+vo="x11"  #video out
+zoom="1" #Allow sofware scaling if I use x11 for vo
+double="yes"
+monitoraspect="16:9"
+autoq=100
+vf=pp=de,hqdn3d
