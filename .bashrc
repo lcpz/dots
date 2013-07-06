@@ -30,7 +30,7 @@ alias upmirrors='sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backu
 alias win='sudo ntfs-3g /dev/sda2 /media/win; cd /media/win/Users/luke/Desktop'
 alias upterm='xrdb $HOME/.Xresources'
 alias awrc='$EDITOR $HOME/.config/awesome/rc.lua'
-alias awtheme='$EDITOR $HOME/.config/awesome/themes/blackburn/theme.lua'
+alias awtheme='$EDITOR $HOME/.config/awesome/themes/dremora/theme.lua'
 alias awdir='cd $HOME/.config/awesome'
 alias tmux='tmux -2uv'
 alias links='links -anonymous'
@@ -58,6 +58,7 @@ alias homepage='cd $HOME/.homepage; rm *; homepage; cd'
 alias wifi='sudo wifi-menu'
 alias weechat='weechat-curses'
 alias eneassh='ssh -X antonio@192.168.14.140'
+alias screenlock='xscreensaver-command --lock'
 alias commands='more $HOME/.bashrc | grep alias* | cut -d" " -f2- -s'
 
 export EDITOR="vim"

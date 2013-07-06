@@ -141,6 +141,22 @@ setart() {
            art[13]='                                      '
            art[14]='                                      '
           ;;
+      dremora)
+          art[1]='______   ______ _______ _______  _____   ______ _______   '
+          art[2]='|     \ |_____/ |______ |  |  | |     | |_____/ |_____|   '
+          art[3]='|_____/ |    \_ |______ |  |  | |_____| |    \_ |     |   '
+          art[4]='                                                          '
+          art[5]='                                                          '
+          art[6]='                                                          '
+          art[7]='                                                          '
+          art[8]='                                                          '
+          art[9]='                                                          '
+          art[10]='                                                          '
+          art[11]='                                                          '
+          art[12]='                                                          '
+          art[13]='                                                          '
+          art[14]='                                                          '
+          ;;
         isometric)
             art[1]='     ___           ___         '
             art[2]='    /\  \         /\  \        '
@@ -289,7 +305,7 @@ art_list=(steamburn isometric classic graffiti poison bulbhead avatar)
 varname
 vardata
 # Set the default art to be displayed (from the sourced ~/envee/envee_art_defs).
-setart blackburn
+setart dremora
 
 # Default value for art (blue).
 art_color=''

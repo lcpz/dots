@@ -6,8 +6,8 @@ URxvt*background: [95]#020202
 *color0:     #101010
 *color8:     #404040
 !red
-*color1:     #E84F4F
-*color9:     #D23D3D
+*color1:     #FFA7DA
+*color9:     #D370A3
 !green
 *color2:     #B8D68C
 *color10:    #A0CF5D
