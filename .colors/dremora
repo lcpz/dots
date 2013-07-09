@@ -1,0 +1,37 @@
+! Dremora
+
+*background: #111111
+*.foreground: #F2F1F0
+*.cursorColor: #E15441
+
+!black
+*color0: #222222
+*color8: #666666
+
+!red
+*color1: #D23D3D
+*color9: #E84F4F
+
+!green
+*color2: #B7CE42
+*color10: #BDE077
+
+!yellow
+*color3: #E36E5E
+*color11: #E36352
+
+!blue
+*color4: #7DC1CF
+*color12: #5fB4C6
+
+!magenta
+*color5: #B54670
+*color13: #E17689
+
+!cyan
+*color6: #6D878D
+*color14: #42717B
+
+!white
+*color7: #F2F1F0
+*color15: #F2F1F0
