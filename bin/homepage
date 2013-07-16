@@ -24,6 +24,7 @@ links = {
         ['instant server', 'http://instantserver.io'],
     ],
     'fancy': [
+        ['freebokspot', 'http://www.freebookspot.es'],
         ['runyourjewels', 'http://runyourjewels.com/round/2/'],
         ['simpledesktops', 'http://simpledesktops.com'],
         ['4walled', 'http://4walled.cc'],
@@ -46,6 +47,13 @@ links = {
         ['one thing well', 'http://onethingwell.org']
     ],
     'music': [
+       ['blue calx music', 'http://bluecalx.wordpress.com/'],
+       ['perfect sound forever', 'http://www.furious.com/perfect/staff2.html'],
+       ['monobrow73', 'http://monobrow73.blogspot.it/'],
+       ['all tomorrow parties festival lineups', 'http://en.wikipedia.org/wiki/All_Tomorrow%27s_Parties_Festival_lineups'], 
+       ['no wtf', 'http://nowtf.com'],
+       ['the white noise revisited', 'http://thewhitenoiserevisited.blogspot.it/'],
+       ['warp records', 'http://warp.net/'],
        ['earls psychedelic garden', 'http://earlspsychedelicgarden.blogspot.it'],
        ['madrotter-treasure-hunt' , 'http://madrotter-treasure-hunt.blogspot.it'],
        ['college of musical knowledge',  'http://collegeofmusicalknowledge.blogspot.it'],
