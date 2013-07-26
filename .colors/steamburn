@@ -3,7 +3,6 @@
 
 ! black
 *.color0:             #403f3e
-<<<<<<< HEAD
 *.color8:             #666564
 
 ! red
@@ -63,7 +62,5 @@
 ! white
 *.color7:             #94928f
 *.color15:            #dcdccc
->>>>>>> c857ac20227d082b3671756c045a72832022a666
 
 *cursorColor:         darkorange2
-

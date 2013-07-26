@@ -8,8 +8,8 @@ title = 'Speed Dial'          # page title
 font = ('Terminus', '12pt')   # font
 separator = '>'               # separator between group title and links
 colors = (
-    '#121212',  # background
-    '#d7d7d7',  # links
+    '#242424',  # background
+    '#dddcff',  # links
     '#9e9e9e',  # group title
     '#4C4C4C',  # separator
 )
@@ -47,6 +47,7 @@ links = {
         ['one thing well', 'http://onethingwell.org']
     ],
     'music': [
+       ['love in spurts', 'http://loveinspurts.blogspot.it'],
        ['blue calx music', 'http://bluecalx.wordpress.com/'],
        ['perfect sound forever', 'http://www.furious.com/perfect/staff2.html'],
        ['monobrow73', 'http://monobrow73.blogspot.it/'],

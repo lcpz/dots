@@ -1,5 +1,5 @@
 body {
-  background-color: #121212;
+  background-color: #242424;
   font-family: "Terminus";
   font-size: 12pt;
   font-weight: normal;
@@ -7,7 +7,7 @@ body {
 }
 a:link,a:visited,a:active {
   text-decoration: none;
-  color: #d7d7d7;
+  color: #dddcff;
 <<<<<<< HEAD
   fo:nt-weight: normal;
 =======
@@ -16,7 +16,7 @@ a:link,a:visited,a:active {
 }
 a:hover {
   text-decoration: underline;
-  color: #d7d7d7;
+  color: #dddcff;
   font-weight: normal;
 }
 table {

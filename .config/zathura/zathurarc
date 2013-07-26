@@ -1,11 +1,9 @@
-set default-bg "#101010"
-set default-fg "#d4d4d4"
-set inputbar-bg "#101010"
-set inputbar-fg "#d4d4d4"
-set statusbar-bg "#101010"
-set statusbar-fg "#d4d4d4"
-set recolor-lightcolor "#101010"
-set recolor-darkcolor "#d4d4d4"
+set default-bg "#242424"
+set default-fg "#ebebff"
+set inputbar-bg "#333333"
+set inputbar-fg "#ebebff"
+set statusbar-bg "#333333"
+set statusbar-fg "#ebebff"
 set first-page-column 2
 set font "Tamsyn 10"
 set adjust-open width

@@ -10,7 +10,7 @@
 _PROMPT() {
   _EXIT_STATUS=$?
   [ $_EXIT_STATUS != 0 ] && _EXIT_STATUS_STR="\[\033[1;30m\][\[\033[1;31m\]$_EXIT_STATUS\[\033[1;30m\]] "
-  PS1="\033[1;30m\]» \[\e[1;33m\]\u\033[1;30m\] $_EXIT_STATUS_STR\[\033[1;30m\][\[\033[0m\]\W\[\033[1;30m\]]\[\033[1;30m\]:\[\033[0m\] "
+  PS1="\033[1;30m\]» \[\e[0;0m\]\u\033[1;30m\] $_EXIT_STATUS_STR\[\033[1;30m\][\[\033[0m\]\W\[\033[1;30m\]]\[\033[1;30m\]:\[\033[0m\] "
   unset _EXIT_STATUS_STR
 }
                 
@@ -30,7 +30,7 @@ alias upmirrors='sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backu
 alias win='sudo ntfs-3g /dev/sda2 /media/win; cd /media/win/Users/luke/Desktop'
 alias upterm='xrdb $HOME/.Xresources'
 alias awrc='$EDITOR $HOME/.config/awesome/rc.lua'
-alias awtheme='$EDITOR $HOME/.config/awesome/themes/starless/theme.lua'
+alias awtheme='$EDITOR $HOME/.config/awesome/themes/rainbow/theme.lua'
 alias awdir='cd $HOME/.config/awesome'
 alias tmux='tmux -2uv'
 alias links='links -anonymous'

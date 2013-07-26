@@ -1,0 +1,36 @@
+! Rainbow colorscheme
+
+*background: #242424
+*foreground: #ebebff
+
+! black
+*color0: #333333 
+*color8: #777777
+
+! red
+*color1: #bf4849
+*color9: #d97777
+
+! green
+*color2: #90a959
+*color10: #b5bd68
+
+! yellow
+*color3: #e6c45c
+*color11: #d9d982 
+
+! blue
+*color4: #6a9fb5
+*color12: #99bdcc
+
+! magenta
+*color5: #b57da9
+*color13: #cca5c4
+
+! cyan
+*color6: #80bab0
+*color14: #add9d1
+
+! white
+*color7: #cccbca
+*color15: #f1f2f0

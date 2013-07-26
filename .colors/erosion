@@ -1,36 +1,38 @@
-*background: #181512
-*foreground: #bea492
-*cursorColor: #93a1a1
+! NOT erosion by crshd
+! but based on
+
+*background: #242424
+*foreground: #c4ad9c
+
+*cursorColor: #c4ad9c
 
 !! black dark/light
-*color0: #332d29
-*color8: #817267
+*color0: #4d4742
+*color8: #9a8e85
 
 !! red dark/light
 *color1: #8c644c
-*color9: #9f7155
+*color9: #a87f66
 
 !! green dark/light
-*color2: #c4be90
-*color10: #bec17e
+*color2: #abad71
+*color10: #c4bf97
 
 !! yellow dark/light
-*color3: #bfba92
-*color11: #fafac0
+*color3: #c3c395
+*color11: #d6d6a4
 
 !! blue dark/light
-! *color4: #293033
-! *color12: #303b40
-*color4: #646a6d
-*color12: #626e74
+*color4: #5a6e78
+*color12: #8b99a0
 
 !! magenta dark/light
-*color5: #6d6871
-*color13: #756f7b
+*color5: #665871
+*color13: #84798d
 
 !! cyan dark/light
-*color6: #3b484a
-*color14: #444d4e
+*color6: #3c5e63
+*color14: #768e91
 
 !! white dark/light
 *color7: #504339
