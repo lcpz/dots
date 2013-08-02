@@ -1,0 +1,36 @@
+! Holo colorscheme
+
+*background: #242424
+*foreground: #CCCCCC
+
+! black
+*color0: #444444 
+*color8: #888888
+
+! red
+*color1: #BF3E3E
+*color9: #FF5353
+
+! green
+*color2: #98AB60
+*color10: #CBE580
+
+! yellow
+*color3: #AB7260
+*color11: #E59980 
+
+! blue
+*color4: #6099AC
+*color12: #80CCE6
+
+! magenta
+*color5: #AB6099
+*color13: #E580CC
+
+! cyan
+*color6: #80bab0
+*color14: #add9d1
+
+! white
+*color7: #F1F2F0
+*color15: #FFFFFF
