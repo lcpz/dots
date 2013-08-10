@@ -92,11 +92,8 @@ else
   let s:changefg   = "189"
   if g:hybrid_use_Xresources == 1
     let s:foreground = "15"   " White
-<<<<<<< HEAD
-    let s:selection  = "9"   " LightGrey
-=======
+    let s:selection  = "9"    " LightGrey
     let s:selection  = "10"   " LightGrey
->>>>>>> c857ac20227d082b3671756c045a72832022a666
     let s:line       = "0"    " Black
     let s:comment    = "7"    " LightGrey
     let s:red        = "9"    " LightRed
@@ -329,7 +326,7 @@ exe "hi! Underlined"      .s:fg_blue        .s:bg_none        .s:fmt_none
 
 exe "hi! Ignore"          .s:fg_none        .s:bg_none        .s:fmt_none
 
-exe "hi! Error"           .s:fg_red         .s:bg_none        .s:fmt_undr
+exe "hi! Error"           .s:fg_red         .s:bg_purple        .s:fmt_undr
 
 exe "hi! Todo"            .s:fg_addfg       .s:bg_none        .s:fmt_none
 

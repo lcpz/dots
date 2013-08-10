@@ -58,6 +58,7 @@
 .vim/bundle/
 .vim/plugin/
 .vim/spell/
+.vim/syntax/
 .urxvt/
 Anime/
 backups/

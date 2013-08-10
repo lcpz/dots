@@ -16,13 +16,10 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'godlygeek/tabular'
 Bundle 'kien/ctrlp.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'w0ng/vim-hybrid'
 Bundle 'scrooloose/nerdtree'
-Bundle 'adinapoli/vim-markmultiple'
+Bundle 'spolu/dwm.vim'
 
 "}}}
 " Settings {{{
@@ -33,10 +30,10 @@ filetype plugin indent on
 syntax on
 
 " General
-set directory^=$HOME/backups//   " put all swap files together in one place
+set directory^=$HOME/backups/    " put all swap files together in one place
 set backspace=2                  " enable <BS> for everything
 set completeopt-=preview         " dont show preview window
-set fcs=vert:│,fold:-            " solid instead of broken line for vert splits
+set fillchars+=vert:\            " empty space instead of broken line for vsplits 
 set hidden                       " hide when switching buffers, don't unload
 set cursorline                   " highlight cursor line
 set laststatus=2                 " always show status line
@@ -47,7 +44,6 @@ set linebreak                    " attempt to wrap lines cleanly
 set number                       " show line numbers
 set showcmd                      " show command on last line of screen
 set showmatch                    " show bracket matches
-set spelllang=it                 " spell check with Italian
 set textwidth=0                  " don't break lines after some maximum width
 set title                        " use filename in window title
 set wildmenu                     " enhanced cmd line completion
@@ -85,8 +81,9 @@ if has('gui_running')
   set guioptions-=r               " remove right scrollbar
   set guioptions-=b               " remove bottom scrollbar
   set guioptions-=L               " remove left scrollbar
-  set guifont=Tamsyn
+  set guifont=Tamsyn              " setting gui font
   set guicursor+=a:block-blinkon0 " always use block cursor, no cursor blinking
+  colorscheme jellybeans
   " Paste from PRIMARY and CLIPBOARD
   inoremap <silent> <M-v> <Esc>"+p`]a
   inoremap <silent> <S-Insert> <Esc>"*p`]a
@@ -123,9 +120,6 @@ map <CR> o<Esc>
 " Search for trailing whitespace
 nnoremap <leader>w /\s\+$<CR>
 
-" Toggle last active buffer
-nnoremap <leader><Tab> :b#<CR>
-
 " Toggle method used for folding
 nnoremap <leader>m :call ToggleFoldMethod()<CR>
 
@@ -146,11 +140,6 @@ nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>f :CtrlP<CR>
 nnoremap <leader>r :CtrlPMRUFiles<CR>
 
-" Check file for errors
-nnoremap <leader>c :SyntasticCheck<CR>
-" Show Quickfix window for Syntastic errors
-nnoremap <leader>e :Errors<CR>
-
 "}}}
 " Plugin Settings {{{
 " -----------------------------------------------------------------------------
@@ -162,8 +151,8 @@ let g:ctrlp_custom_ignore = {
 "let g:Powerline_symbols='fancy'
 
 set fillchars+=stl:\ ,stlnc:\
-let g:syntastic_mode_map = { 'mode': 'passive' }
-let g:syntastic_python_checker_args='--ignore=E501'
+
+let g:dwm_master_pane_width=96
 
 "}}}
 " Autocommands {{{
