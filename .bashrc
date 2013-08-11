@@ -70,4 +70,5 @@ export R600_ENABLE_S3TC=1
 export GREP_COLOR="1;31"
 export LESS="-R"
 export LANG=it_IT.utf8
+export _JAVA_AWT_WM_NONREPARENTING=1
 eval $(dircolors -b $HOME/.config/dir_colours)
