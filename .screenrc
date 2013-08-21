@@ -1,8 +1,10 @@
-caption always "%{= kw}%?%-Lw%?%{Kw}%n*%f %t%?(%u)%?%{kw}%?%+Lw%? %=%{= dw} %H "
+#caption always "%{= kw}%?%-Lw%?%{Kw}%n*%f %t%?(%u)%?%{kw}%?%+Lw%? %=%{= dw} %H "
+caption splitonly 
 defbce "on"
 startup_message off
 hardstatus alwayslastline
-hardstatus string "%{= b}>> ${USER}%{c}@%{b}%H: %L>%1`%? %?%{b}%u%? %-18=%?%{c} %{c}%-=%{c}%-w%{b}%n %t%{c}%+w %{b}${TIME}"
+#hardstatus string "%{= b}>> ${USER}%{c}@%{b}%H: %L>%1`%? %?%{b}%u%? %-18=%?%{c} %{c}%-=%{c}%-w%{b}%n %t%{c}%+w %{b}${TIME}"
+hardstatus string "%{= kw}%?%-Lw%?%{Kw}%n*%f %t%?(%u)%?%{kw}%?%+Lw%? %=%{= dw}"
 term screen-256color  
 autodetach on
 defscrollback 5000

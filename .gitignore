@@ -46,9 +46,7 @@
 .mutt/
 .ncmpcpp/error.log
 .newsbeuter/
-.pki/
 .pulse/
-.purple/
 .rtorrent.rc
 .rtorrent/session
 .task/
@@ -66,6 +64,7 @@ Desktop/
 Download/
 Games/
 Immagini/
+Mail/
 Musica/
 screenshots/
 Uni*/
@@ -77,6 +76,7 @@ Video/
 .gitconfig
 .lesshst
 .netrc
+.offlineimaprc
 .pulse-cookie
 .p7zip
 .recently-used

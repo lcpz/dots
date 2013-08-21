@@ -4,18 +4,16 @@ set inputbar-bg "#333333"
 set inputbar-fg "#ebebff"
 set statusbar-bg "#333333"
 set statusbar-fg "#ebebff"
-set first-page-column 2
-set font "Tamsyn 10"
-set adjust-open width
-set advance-pages-per-row true
-set page-padding 5
-set completion-bg "#242323"
-set adjust-open width
-set advance-pages-per-row true
 set highlight-color "#FFFF00"
+set completion-bg "#242323"
+set font "Tamsyn 10"
+set first-page-column 2
+set adjust-open width
+set advance-pages-per-row true
 set page-padding 5
 
 map <F1> set "pages-per-row 1"
 map <F2> set "pages-per-row 2"
 map b toggle_statusbar
-
+map i toggle_index
+map / search forward

@@ -24,8 +24,8 @@ links = {
         ['instant server', 'http://instantserver.io'],
     ],
     'fancy': [
-        ['freebokspot', 'http://www.freebookspot.es'],
-        ['runyourjewels', 'http://runyourjewels.com/round/2/'],
+        ['lazyboxx', 'https://sites.google.com/site/lazyboxx/desktops'],
+        ['freebookspot', 'http://www.freebookspot.es'],
         ['simpledesktops', 'http://simpledesktops.com'],
         ['4walled', 'http://4walled.cc'],
         ['a journey round my skull', 'http://ajourneyroundmyskull.blogspot.it'],
@@ -33,7 +33,6 @@ links = {
         ['public domain images', 'http://imagespublicdomain.wordpress.com/'],
         ['garote\'s page', 'http://garote.bdmonkeys.net/index.html'],
         ['cyberpunkreview', 'http://cyberpunkreview.com'],
-        ['scaruffi\'s musical page', 'http://www.ksl.stanford.edu/people/scaruffi/music.html'],
         ['newgrounds', 'http://newgrounds.com'],
         ['wallbase', 'http://wallbase.cc/home'],
         ['the cyberpunk project', 'http://project.cyberpunk.ru'],
@@ -43,7 +42,7 @@ links = {
         ['mechafetus', 'http://visublog.mechafetus.com/'],
         ['kotaku', 'http://kotaku.com'],
         ['bagni proeliator', 'http://bagniproeliator.blogspot.it/'],
-        ['prigionieri dello schermo', 'http://iprigionieridelloschermo.wordpress.com/'],
+        ['prigionieri dello schermo', 'http://iprigionieridelloschermo.tumblr.com/'],
         ['one thing well', 'http://onethingwell.org']
     ],
     'music': [
@@ -51,7 +50,6 @@ links = {
        ['blue calx music', 'http://bluecalx.wordpress.com/'],
        ['perfect sound forever', 'http://www.furious.com/perfect/staff2.html'],
        ['monobrow73', 'http://monobrow73.blogspot.it/'],
-       ['all tomorrow parties festival lineups', 'http://en.wikipedia.org/wiki/All_Tomorrow%27s_Parties_Festival_lineups'], 
        ['no wtf', 'http://nowtf.com'],
        ['the white noise revisited', 'http://thewhitenoiserevisited.blogspot.it/'],
        ['warp records', 'http://warp.net/'],
