@@ -1,0 +1,22 @@
+#! /bin/bash
+
+pattern='██'
+
+cprint() {
+    printf '  \033[%sm%s\033[0m' "$1" "$2"
+}
+
+printf '\n'
+
+for attr in 0 1 ; do
+    for fgi in $(seq 1 6) ; do
+        cprint "${attr};3${fgi}" "$pattern"
+    done
+    printf '\n\n'
+done
+
+for co in '1;30' '0;37' '1;37' '1;30' '0;37' '1;37' ; do
+    cprint "$co" "$pattern"
+done
+
+printf '\n\n'

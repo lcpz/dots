@@ -1,0 +1,35 @@
+#!/bin/sh
+
+echo
+
+for i in {0..7}
+do
+	tput setaf $i
+	echo -en "  \u2584\u2584\u2584\u2584 "
+	tput setaf sgr0
+done
+
+echo
+
+for i in {8..15}
+do
+	tput setaf $((i-8))
+	echo -en "  \u2588"
+	tput setaf $i
+	echo -en "\u2588\u2588"
+	tput setaf $((i-8))
+	echo -en "\u2588 "
+	tput setaf sgr0
+done
+
+echo
+
+for i in {0..7}
+do
+	tput setaf $i
+	echo -en "  \u2580\u2580\u2580\u2580 "
+	tput setaf sgr0
+done
+
+echo
+

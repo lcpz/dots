@@ -7,7 +7,7 @@ then
 	sudo reflector -l 5 --sort rate --save /etc/pacman.d/mirrorlist
 fi
 
-yaourt -Syu --devel --aur
+pacman -Syu
 
 dip=$(pacman -Qdtq)
 if [ -z $dip ]
