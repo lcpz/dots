@@ -86,6 +86,7 @@ Uni*/
 Video/
 .bash_history
 .gitconfig
+.git-*
 .lesshst
 .offlineimaprc
 .pulse-cookie

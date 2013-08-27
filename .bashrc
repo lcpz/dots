@@ -33,8 +33,10 @@ alias pacman='sudo pacman --color always'
 alias pac='pacman --color always'
 alias pacs='sudo pacman -S'
 alias pacss='pacman -Ss'
+alias pacsi='pacman -Si'
 alias pacssi='pacman -Ssi'
 alias pacqs='pacman -Qs'
+alias pacqi='pacman -Qi'
 alias pacqsi='pacman -Qsi'
 alias pacr='sudo pacman -Rscudn'
 alias upmirrors='sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup; sudo reflector -l 5 --sort rate --save /etc/pacman.d/mirrorlist'
@@ -71,7 +73,6 @@ alias chat='weechat-curses'
 alias eneassh='ssh -X antonio@192.168.14.140'
 alias so="scrot ~/screenshots/tmp.png && imgurbash ~/screenshots/tmp.png; rm ~/screenshots/tmp.png"
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
-alias gkeyring='gnome-keyring-query'
 alias commands='more $HOME/.bashrc | grep alias* | cut -d" " -f2- -s'
 
 complete -cf sudo
