@@ -148,8 +148,6 @@ let g:ctrlp_custom_ignore = {
       \ 'file': '\.pyc$\|\.so$\|\.swp$',
       \ }
 
-"let g:Powerline_symbols='fancy'
-
 set fillchars+=stl:\ ,stlnc:\
 
 let g:dwm_master_pane_width=96
