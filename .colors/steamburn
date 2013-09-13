@@ -1,3 +1,5 @@
+! Steamburn
+
 *.background:         #130c0b
 *.foreground:         #877a70
 
@@ -32,35 +34,3 @@
 ! white
 *.color7:             #dcdccc
 *.color15:            #dddfff
-=======
-*.color8:             #666362
-
-! red
-*.color1:             #91444d
-*.color9:             #c78186
-
-! green
-*.color2:             #5a7722
-*.color10:            #96a474
-
-! yellow
-*.color3:             #916949
-*.color11:            #edd8aa
-
-! blue
-*.color4:             #557282
-*.color12:            #8eafff
-
-! magenta
-*.color5:             #78516d
-*.color13:            #a8879f
-
-! cyan
-*.color6:             #58756c
-*.color14:            #8ca8a2
-
-! white
-*.color7:             #94928f
-*.color15:            #dcdccc
-
-*cursorColor:         darkorange2

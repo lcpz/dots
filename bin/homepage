@@ -20,6 +20,7 @@ links = {
     'serious': [
         ['dotshare', 'http://dotshare.it'],
         ['arch blogs', 'http://archlinux.me'],
+        ['techperiences', 'http://blog.techperiences.com/'],
         ['github', 'https://github.com'],
         ['instant server', 'http://instantserver.io'],
     ],

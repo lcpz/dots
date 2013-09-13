@@ -1,0 +1,38 @@
+! Multicolor
+
+!black
+*color0:  #171717
+*color8:  #737373
+
+!red
+*color1:  #FF5E5E
+*color9:  #FF7878
+
+!green
+*color2:  #9CE82B
+*color10: #9ACD32
+
+!yellow
+*color3:  #F0E68C
+*color11: #EEE8AA
+
+!blue
+*color4:  #008AFF
+*color12: #4F98FF
+
+!magenta
+*color5:  #E88CFF
+*color13: #EDA6FF
+
+!cyan
+*color6:  #87CEFA
+*color14: #B0E2FF
+
+!white
+*color7:  #DCDCCC
+*color15: #FFFFFF
+
+*background: #101010
+*foreground: #d4d4d4
+
+*cursorColor: darkorange2

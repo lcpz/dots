@@ -1,4 +1,6 @@
-*background: #020202
+! Blackburn
+
+*.background: #020202
 *.foreground: #F2F1F0
 *.cursorColor: #F67730
 

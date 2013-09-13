@@ -19,6 +19,7 @@ _PROMPT() {
 PROMPT_COMMAND=_PROMPT
 
 alias cower='cower -v'
+alias rm='rm -iv'
 alias ls='ls -h --color=auto'
 alias ll='ls++'
 alias lano='nano -AiWDucd'
@@ -48,8 +49,10 @@ alias awdir='cd $HOME/.config/awesome'
 alias tmux='tmux -2uv'
 alias elinks='elinks -anonymous'
 alias copysel='xsel -p -o | xsel -i -b'
-alias usb='sudo mount -t vfat /dev/sdb1 /mnt/usb; cd /mnt/usb'
-alias usb2='sudo mount -t vfat /dev/sdb /mnt/usb; cd /mnt/usb'
+alias usb='sudo mount -t vfat /dev/sdb /mnt/usb; cd /mnt/usb'
+alias usb1='sudo mount -t vfat /dev/sdb1 /mnt/usb; cd /mnt/usb'
+alias sudousb='sudo mount -o umask=0,uid=nobody,gid=nobody -t vfat /dev/sdb/ /mnt/usb; cd /mnt/usb'
+alias sudousb1='sudo mount -o umask=0,uid=nobody,gid=nobody -t vfat /dev/sdb1/ /mnt/usb; cd /mnt/usb'
 alias usbumount='sudo umount /mnt/usb'
 alias cdrom='sudo mount -t iso9660 -o ro /dev/cdrom /mnt/cdrom; cd /mnt/cdrom'
 alias storage='sudo ntfs-3g /dev/sda3 /mnt/storage; cd /mnt/storage'
@@ -80,6 +83,7 @@ complete -cf man
 complete -cf gv # gvim
 
 set -o posix
+set -o ignoreeof
 
 export EDITOR="vim"
 export GREP_COLOR="1;31"

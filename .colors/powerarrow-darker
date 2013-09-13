@@ -1,0 +1,36 @@
+! Powerarrow Darker
+
+*.background: #1A1A1A
+*.foreground: #DDDDFF
+
+!black
+*color0: #1A1A1A
+*color8: #6E6E6E
+
+!red
+*color1: #AF5360
+*color9: #EA6F81
+
+!green
+*color2: 447019
+*color10: #7BAB4E
+
+!yellow
+*color3: #D8D782
+*color11: #CFCD63
+
+!blue
+*color12: #92ADCB
+*color4: #648BB5
+
+!magenta
+*color5: #E5C8D6
+*color13: #CB92AD
+
+!cyan
+*color6: #406E6F
+*color14: #81DCDE
+
+!white
+*color7: #C6C6E5
+*color15: #DDDDFF

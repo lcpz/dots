@@ -2,19 +2,19 @@
 
 if [ -n "$1" ]
 then
-	printf ":: Aggiornamento mirrors in corso...\n"
+	printf ":: Updating mirrors...\n"
 	sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
 	sudo reflector -l 5 --sort rate --save /etc/pacman.d/mirrorlist
 fi
 
-pacman -Syu
+sudo pacman -Syu
 
 dip=$(pacman -Qdtq)
 if [ -z $dip ]
 then
-	printf "\n:: Nessuna dipendenza non necessaria trovata\n\n"
+	printf "\n:: No unecessary dependencies found\n\n"
 else
-	printf "\n:: Rimozione dipendenze non necessarie"
+	printf "\n:: Removing unecessary dependencies\n\n"
 	sudo pacman -Rs $dip
 fi
 

@@ -1,6 +1,6 @@
 ! Dremora
 
-*background: #111111
+*.background: #111111
 *.foreground: #F2F1F0
 *.cursorColor: #E15441
 
