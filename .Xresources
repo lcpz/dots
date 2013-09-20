@@ -1,5 +1,4 @@
-#include "/home/luke/.colors/rainbow"
-#include "/home/luke/.colors/urxvt_fix"
+#include "/home/luke/.colors/copland"
 
 Xcursor.theme         : Vanilla-DMZ-AA
 

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+[[ -z $1 ]] && exit 1
+
+ffmpeg -f x11grab -r 25 -s 1366x768 -i :0.0 -preset fast $1.avi
+#convert -quiet -delay 1 $1.avi $1.gif
+#convert $1.gif -layers OptimizeTransparency +map $1_opt.gif

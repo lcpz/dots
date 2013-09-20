@@ -1,0 +1,36 @@
+! Copland
+
+*background: #181818
+*foreground: #eeeeec
+
+! black
+*color0: #333333 
+*color8: #777777
+
+! red
+*color1: #ff78a3
+*color9: #ffa0be
+
+! green
+*color2: #b6ff93
+*color10: #bdff9d
+
+! yellow
+*color3: #ffd378
+*color11: #ffe0a0
+
+! blue
+*color4: #78a4ff
+*color12: #93b6ff
+
+! magenta
+*color5: #8f78ff
+*color13: #b0a0ff
+
+! cyan
+*color6: #78e7ff
+*color14: #a0eeff
+
+! white
+*color7: #cccbca
+*color15: #fcfcfc
