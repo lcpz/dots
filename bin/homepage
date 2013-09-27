@@ -5,7 +5,7 @@
 
 output = 'homepage.html'      # output file
 title = 'Speed Dial'          # page title
-font = ('Terminus', '12pt')   # font
+font = ('Tamsyn', '11pt')     # font
 separator = '>'               # separator between group title and links
 colors = (
     '#242424',  # background
@@ -20,7 +20,7 @@ links = {
     'serious': [
         ['dotshare', 'http://dotshare.it'],
         ['arch blogs', 'http://archlinux.me'],
-        ['techperiences', 'http://blog.techperiences.com/'],
+        ['notfoss', 'http://blog.notfoss.com/'],
         ['github', 'https://github.com'],
         ['instant server', 'http://instantserver.io'],
     ],
@@ -28,21 +28,17 @@ links = {
         ['behance', 'http://www.behance.net/'],
         ['subtle patterns', 'http://subtlepatterns.com/'],
         ['la pelle muta', 'http://lapellemuta.blogspot.it'],
-        ['lazyboxx', 'https://sites.google.com/site/lazyboxx/desktops'],
-        ['freebookspot', 'http://www.freebookspot.es'],
         ['simpledesktops', 'http://simpledesktops.com'],
         ['4walled', 'http://4walled.cc'],
         ['a journey round my skull', 'http://ajourneyroundmyskull.blogspot.it'],
         ['kick to kill', 'http://kicktokill.blogspot.it'],
         ['public domain images', 'http://imagespublicdomain.wordpress.com/'],
-        ['garote\'s page', 'http://garote.bdmonkeys.net/index.html'],
+        ['garote\'s', 'http://garote.bdmonkeys.net/index.html'],
         ['cyberpunkreview', 'http://cyberpunkreview.com'],
-        ['newgrounds', 'http://newgrounds.com'],
         ['wallbase', 'http://wallbase.cc/home'],
         ['the cyberpunk project', 'http://project.cyberpunk.ru'],
         ['thought experiments lain', 'http://www.cjas.org/~leng/lain.htm'],
-        ['unixporn', 'http://www.reddit.com/r/unixporn/'],
-        ['kriegs', 'www.kriegs.net'],
+        ['kriegs', 'http://www.kriegs.net'],
         ['mechafetus', 'http://visublog.mechafetus.com/'],
         ['kotaku', 'http://kotaku.com'],
         ['bagni proeliator', 'http://bagniproeliator.blogspot.it/'],
@@ -54,7 +50,6 @@ links = {
        ['love in spurts', 'http://loveinspurts.blogspot.it'],
        ['blue calx music', 'http://bluecalx.wordpress.com/'],
        ['perfect sound forever', 'http://www.furious.com/perfect/staff2.html'],
-       ['monobrow73', 'http://monobrow73.blogspot.it/'],
        ['no wtf', 'http://nowtf.com'],
        ['the white noise revisited', 'http://thewhitenoiserevisited.blogspot.it/'],
        ['warp records', 'http://warp.net/'],
@@ -71,7 +66,6 @@ links = {
        ['nostalgie de la boue', 'http://nostalgie-de-la-boue.blogspot.it'],
        ['7\'\' from the underground', 'http://bluetvset.blogspot.it'],
        ['jazz-privado', 'http://jazz-privado.blogspot.it'],
-       ['rockalterno70', 'http://rockalterno70.wordpress.com/'],
        ['the changing same', 'http://thechanging-same.blogspot.it/']
     ]
 }
