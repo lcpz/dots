@@ -25,6 +25,8 @@ links = {
         ['instant server', 'http://instantserver.io'],
     ],
     'fancy': [
+        ['behance', 'http://www.behance.net/'],
+        ['subtle patterns', 'http://subtlepatterns.com/'],
         ['la pelle muta', 'http://lapellemuta.blogspot.it'],
         ['lazyboxx', 'https://sites.google.com/site/lazyboxx/desktops'],
         ['freebookspot', 'http://www.freebookspot.es'],
@@ -48,6 +50,7 @@ links = {
         ['one thing well', 'http://onethingwell.org']
     ],
     'music': [
+       ['la destileria sonora', 'http://ledestileriasonora.blogspot.it/'],
        ['love in spurts', 'http://loveinspurts.blogspot.it'],
        ['blue calx music', 'http://bluecalx.wordpress.com/'],
        ['perfect sound forever', 'http://www.furious.com/perfect/staff2.html'],

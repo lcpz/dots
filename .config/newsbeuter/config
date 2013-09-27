@@ -1,10 +1,10 @@
-browser   "dwb %u"
+browser "dwb %u"
 
 datetime-format "%d %b"
-notify-beep yes
-notify-xterm  yes
 auto-reload yes
 
-color      listnormal    default     default
-color      listfocus     yellow      default
-color      info          color8       default
+color  listnormal          color8    default
+color  listnormal_unread   color15   default
+color  listfocus           blue      default
+color  listfocus_unread    white     black
+color  info                blue      default

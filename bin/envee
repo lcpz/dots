@@ -15,7 +15,7 @@ varname() {
     env[8]="Packages (foreign): "
     env[9]="Terminal: "
     env[10]="WM: "
-    env[11]="WM theme: "
+    env[11]="T: "
     env[12]="GTK: "
     env[13]="Icons: "
     env[14]="Cursor: "
@@ -36,7 +36,7 @@ vardata() {
     dat[9]="$TERM"
     dat[10]="$(awesome -v | head -1)"
     dat[11]="github.com/copycat-killer/awesome-copycats"
-    dat[12]="$(more ~/.config/gtk-3.0/settings.ini | grep gtk-theme-name | cut -d"=" -f2 | cut -d'"' -f2)"
+    dat[12]="$(more ~/.gtkrc-2.0 | grep gtk-theme-name | cut -d'"' -f2)"
     dat[13]="$(more ~/.gtkrc-2.0 | grep gtk-icon-theme | cut -d"=" -f2 | cut -d'"' -f2)"
     dat[14]="Vanilla-DMZ-AA"
 }
@@ -156,6 +156,22 @@ setart() {
           art[12]='                                                          '
           art[13]='                                                          '
           art[14]='                                                          '
+          ;;
+      copland)
+          art[1]='                      8                   8    '
+          art[2]='                      8                   8    '
+          art[3]=' .oPYo. .oPYo. .oPYo. 8 .oPYo. odYo. .oPYo8    '
+          art[4]='8       8    8 8    8 8 .oooo8 8   8 8    8    '
+          art[5]='8     . 8    8 8    8 8 8    8 8   8 8    8    '
+          art[6]=' `YooP  `YooP  8YooP  8 `YooP8 8   8 `YooP     '
+          art[7]=' :.....::.....:8 ....:..:.....:..::..:.....:   '
+          art[8]=' ::::::::::::::8 :::::::::::::::::::::::::::   '
+          art[9]=' ::::::::::::::..:::::::::::::::::::::::::::   '
+          art[10]='                                               '
+          art[11]='                                               '
+          art[12]='                                               '
+          art[13]='                                               '
+          art[14]='                                               '
           ;;
         isometric)
             art[1]='     ___           ___         '
@@ -305,14 +321,14 @@ art_list=(steamburn isometric classic graffiti poison bulbhead avatar)
 varname
 vardata
 # Set the default art to be displayed (from the sourced ~/envee/envee_art_defs).
-setart dremora
+setart copland
 
 # Default value for art (blue).
 art_color=''
-msg_art_col=1
+msg_art_col=4
 # Default value for labels (yellow).
 label_color=''
-msg_label_col=8
+msg_label_col=4
 # Default value for data (white).
 data_color=''
 msg_data_col=7

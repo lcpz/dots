@@ -42,8 +42,8 @@ display=( host distro kernel uptime pkgs shell res de wm wmtheme gtk cpu mem )
 display_type="ASCII"
 
 # Colors to use for the information found. These are set below according to distribution. If you would like to set your OWN color scheme for these, uncomment the lines below and edit them to your heart's content.
-textcolor="\e[1;31m"
-labelcolor="\e[1;31m"
+textcolor="\e[1;45m"
+labelcolor="\e[1;46m"
 
 # WM & DE process names
 # Removed WM's: compiz
@@ -1429,7 +1429,7 @@ asciiText () {
 		;;
 
 		"Arch Linux")
-			c1="\e[1;36m" # Light
+			c1="\e[0;36m" # Light
 			c2="\e[0;36m" # Dark
 			if [ -n "${my_lcolor}" ]; then c1="${my_lcolor}"; c2="${my_lcolor}"; fi
 			startline="1"

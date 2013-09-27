@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# A reminder
+
+mkdir fakeroot
+mount /dev/sda7 fakeroot         # my /
+mount /dev/sda5 fakeroot/boot    # my /boot
+mount -o bind /dev fakeroot/dev
+mount -o bind /sys fakeroot/sys
+mount -t proc none fakeroot/proc
+ls -s fakeroot/lib /lib
+ls -s fakeroot/lib64 /lib64
+chroot fakeroot bash
