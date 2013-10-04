@@ -12,9 +12,9 @@ sudo pacman -Syu
 dip=$(pacman -Qdtq)
 if [ -z $dip ]
 then
-	printf "\n:: No unecessary dependencies found\n\n"
+	printf "\n:: No unnecessary dependencies found\n\n"
 else
-	printf "\n:: Removing unecessary dependencies\n\n"
+	printf "\n:: Removing unnecessary dependencies\n\n"
 	sudo pacman -Rs $dip
 fi
 

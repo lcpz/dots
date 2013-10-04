@@ -81,7 +81,7 @@ if has('gui_running')
   set guioptions-=r               " remove right scrollbar
   set guioptions-=b               " remove bottom scrollbar
   set guioptions-=L               " remove left scrollbar
-  set guifont=Tamsyn              " setting gui font
+  set guifont=Tamsyn\ 10.5        " setting gui font
   set guicursor+=a:block-blinkon0 " always use block cursor, no cursor blinking
   colorscheme jellybeans
   " Paste from PRIMARY and CLIPBOARD

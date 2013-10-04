@@ -18,15 +18,12 @@ colors = (
 links = {
     #['', ''],
     'serious': [
-        ['dotshare', 'http://dotshare.it'],
+        ['runnable', 'http://www.runnable.com/'],
         ['arch blogs', 'http://archlinux.me'],
         ['notfoss', 'http://blog.notfoss.com/'],
-        ['github', 'https://github.com'],
         ['instant server', 'http://instantserver.io'],
     ],
     'fancy': [
-        ['behance', 'http://www.behance.net/'],
-        ['subtle patterns', 'http://subtlepatterns.com/'],
         ['la pelle muta', 'http://lapellemuta.blogspot.it'],
         ['simpledesktops', 'http://simpledesktops.com'],
         ['4walled', 'http://4walled.cc'],
@@ -41,7 +38,7 @@ links = {
         ['kriegs', 'http://www.kriegs.net'],
         ['mechafetus', 'http://visublog.mechafetus.com/'],
         ['kotaku', 'http://kotaku.com'],
-        ['bagni proeliator', 'http://bagniproeliator.blogspot.it/'],
+        ['bagni proeliator', 'http://www.bagniproeliator.it/'],
         ['prigionieri dello schermo', 'http://iprigionieridelloschermo.tumblr.com/'],
         ['one thing well', 'http://onethingwell.org']
     ],

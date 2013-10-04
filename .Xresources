@@ -12,10 +12,10 @@ URxvt*.boldItalicFont : xft:Tamsyn:pixelsize=14
 XTerm*.faceName       : Tamsyn
 XTerm*.faceSize       : 10
 
-*saveLines            : 4096
-*scrollBar            : false
-*dynamicColors        : true
-*multiScroll          : true
+*.saveLines           : 4096
+*.scrollBar           : false
+*.dynamicColors       : true
+*.multiScroll         : true
 
 URxvt.perl-ext-common : default,matcher
 URxvt.url-launcher    : /usr/bin/dwb
