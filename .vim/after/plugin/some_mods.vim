@@ -2,7 +2,7 @@
 
 hi StatusLine     ctermfg=Black  ctermbg=White
 hi StatusLineNC   ctermfg=Black  ctermbg=8
-hi Comment        ctermbg=Black  ctermfg=Gray
+hi Comment        ctermbg=Black  ctermfg=7
 hi Search         ctermfg=Black  ctermbg=White  cterm=underline
 hi MatchParen     ctermfg=Black  ctermbg=White 
 hi ErrorMsg       ctermfg=Red    ctermfg=Black
