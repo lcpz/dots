@@ -12,7 +12,7 @@ URxvt*.boldItalicFont : xft:Tamsyn:pixelsize=14
 XTerm*.faceName       : Tamsyn
 XTerm*.faceSize       : 10
 
-*.saveLines           : 4096
+*.saveLines           : 8192
 *.scrollBar           : false
 *.dynamicColors       : true
 *.multiScroll         : true

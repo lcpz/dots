@@ -3,7 +3,6 @@
 .cache
 .config/autostart/
 .config/awesome/
-.config/bleachbit/
 .config/dwb/default
 .config/dwb/userscripts
 .config/dwb/keys*
@@ -23,19 +22,11 @@
 .config/ranger/*.sh
 .config/ranger/rc.conf
 .config/sxiv/
-.config/htop/
-.config/libreoffice
 .config/newsbeuter/urls
-.config/pavucontrol*
 .config/pulse/
-.config/transmission/
 .dbus/
-.elinks/bookmarks
-.elinks/cookies
-.elinks/*hist*
 .fonts/fonts.dir
 .fonts/fonts.scale
-.fonts/*.bak
 .pki/
 .thumbnails/
 .w3m/
@@ -93,6 +84,4 @@ Video/
 .p7zip
 .recently-used
 .taskrc
-.viminfo
-.Xauthority
-.*.log
+.viminfo.*

@@ -24,6 +24,7 @@ links = {
         ['instant server', 'http://instantserver.io'],
     ],
     'fancy': [
+        ['deux visions', 'http://deux-visions.com/'],
         ['la pelle muta', 'http://lapellemuta.blogspot.it'],
         ['simpledesktops', 'http://simpledesktops.com'],
         ['4walled', 'http://4walled.cc'],

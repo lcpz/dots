@@ -1,7 +1,3 @@
-#
-# ~/.bashrc
-#
-
 [[ $- != *i* ]] && return
 [[ -d $HOME/bin ]] && export PATH=$PATH:$HOME/bin
 [[ -d /usr/bin/vendor_perl ]] && export PATH=$PATH:/usr/bin/vendor_perl
@@ -22,8 +18,6 @@ alias cower='cower -v'
 alias rm='rm -iv'
 alias ls='ls -h --color=auto'
 alias ll='ls++'
-alias lano='nano -AiWDucd'
-alias slano='sudo nano -AiWDucd'
 alias v='vim'
 alias sv='sudo vim'
 alias gv='gvim'
@@ -48,7 +42,6 @@ alias awrc='$EDITOR $HOME/.config/awesome/rc.lua'
 alias awtheme='$EDITOR $HOME/.config/awesome/themes/copland/theme.lua'
 alias awdir='cd $HOME/.config/awesome'
 alias tmux='tmux -2uv'
-alias elinks='elinks -anonymous'
 alias copysel='xsel -p -o | xsel -i -b'
 alias usb='sudo mount -t vfat /dev/sdb /mnt/usb; cd /mnt/usb'
 alias usb1='sudo mount -t vfat /dev/sdb1 /mnt/usb; cd /mnt/usb'
@@ -74,7 +67,6 @@ alias clearcache='echo "sync; echo 3 > /proc/sys/vm/drop_caches"'
 alias homepage='cd $HOME/.homepage; rm *; homepage; cd'
 alias wifi='sudo wifi-menu'
 alias chat='weechat-curses'
-alias eneassh='ssh -X antonio@192.168.14.140'
 alias so="scrot ~/screenshots/tmp.png && imgurbash ~/screenshots/tmp.png; rm ~/screenshots/tmp.png"
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 alias commands='more $HOME/.bashrc | grep alias* | cut -d" " -f2- -s'
@@ -89,9 +81,7 @@ set -o ignoreeof
 export EDITOR="vim"
 export GREP_COLOR="1;31"
 export LESS="-R"
-export MOZ_DISABLE_PANGO=1
 export NOCOLOR_PIPE=1
-export _JAVA_AWT_WM_NONREPARENTING=1
 export LANG=it_IT.utf8
 
 eval $(dircolors -b $HOME/.config/dir_colours)

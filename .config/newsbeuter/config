@@ -6,5 +6,5 @@ auto-reload yes
 color  listnormal          color8    default
 color  listnormal_unread   color15   default
 color  listfocus           blue      default
-color  listfocus_unread    white     black
+color  listfocus_unread    blue      color0
 color  info                blue      default
