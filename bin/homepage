@@ -19,8 +19,6 @@ links = {
     #['', ''],
     'serious': [
         ['runnable', 'http://www.runnable.com/'],
-        ['arch blogs', 'http://archlinux.me'],
-        ['notfoss', 'http://blog.notfoss.com/'],
         ['instant server', 'http://instantserver.io'],
     ],
     'fancy': [
@@ -44,14 +42,11 @@ links = {
         ['one thing well', 'http://onethingwell.org']
     ],
     'music': [
-       ['la destileria sonora', 'http://ledestileriasonora.blogspot.it/'],
-       ['love in spurts', 'http://loveinspurts.blogspot.it'],
-       ['blue calx music', 'http://bluecalx.wordpress.com/'],
+       ['lanquidity', 'http://lanquidity.blogspot.co.uk/'],
+       ['khinsider', 'http://downloads.khinsider.com/'],
+       ['eva00rei', 'http://eva00rei.blogspot.it/'],
        ['perfect sound forever', 'http://www.furious.com/perfect/staff2.html'],
-       ['no wtf', 'http://nowtf.com'],
-       ['the white noise revisited', 'http://thewhitenoiserevisited.blogspot.it/'],
        ['warp records', 'http://warp.net/'],
-       ['earls psychedelic garden', 'http://earlspsychedelicgarden.blogspot.it'],
        ['madrotter-treasure-hunt' , 'http://madrotter-treasure-hunt.blogspot.it'],
        ['college of musical knowledge',  'http://collegeofmusicalknowledge.blogspot.it'],
        ['venus in leathers',  'http://drownedvalley.blogspot.it'],
@@ -62,8 +57,6 @@ links = {
        ['soundhead',  'http://the-soundhead.blogspot.it'],
        ['no longer forgotten music', 'http://433rpm.blogspot.it'],
        ['nostalgie de la boue', 'http://nostalgie-de-la-boue.blogspot.it'],
-       ['7\'\' from the underground', 'http://bluetvset.blogspot.it'],
-       ['jazz-privado', 'http://jazz-privado.blogspot.it'],
        ['the changing same', 'http://thechanging-same.blogspot.it/']
     ]
 }

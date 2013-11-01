@@ -4,15 +4,15 @@ Xcursor.theme         : Vanilla-DMZ-AA
 
 *.charClass           : 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
 
-URxvt*.font           : xft:Tamsyn:pixelsize=14
-URxvt*.boldFont       : xft:Tamsyn:pixelsize=14
-URxvt*.italicFont     : xft:Tamsyn:pixelsize=14
-URxvt*.boldItalicFont : xft:Tamsyn:pixelsize=14
+URxvt.font            : xft:Tamsyn:pixelsize=14
+URxvt.boldFont        : xft:Tamsyn:pixelsize=14
+URxvt.italicFont      : xft:Tamsyn:pixelsize=14
+URxvt.boldItalicFont  : xft:Tamsyn:pixelsize=14
 
-XTerm*.faceName       : Tamsyn
-XTerm*.faceSize       : 10
+XTerm.faceName        : Tamsyn
+XTerm.faceSize        : 10
 
-*.saveLines           : 8192
+*.saveLines           : 4096
 *.scrollBar           : false
 *.dynamicColors       : true
 *.multiScroll         : true
@@ -20,6 +20,3 @@ XTerm*.faceSize       : 10
 URxvt.perl-ext-common : default,matcher
 URxvt.url-launcher    : /usr/bin/dwb
 URxvt.matcher.button  : 1
-
-Xft.antialias         : 1
-Xft.rgba              : rgb

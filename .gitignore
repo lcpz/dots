@@ -7,7 +7,6 @@
 .config/dwb/userscripts
 .config/dwb/keys*
 .config/dwb/mimetypes
-.config/dwb/*.*
 .config/dconf/
 .config/gtk-*
 .config/lyvi/lyvy.py
@@ -17,7 +16,6 @@
 .config/ranger/bookmarks
 .config/ranger/*.py
 .config/ranger/history
-.config/ranger/rifle.conf
 .config/ranger/tagged
 .config/ranger/*.sh
 .config/ranger/rc.conf

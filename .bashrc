@@ -69,6 +69,8 @@ alias wifi='sudo wifi-menu'
 alias chat='weechat-curses'
 alias so="scrot ~/screenshots/tmp.png && imgurbash ~/screenshots/tmp.png; rm ~/screenshots/tmp.png"
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
+alias mpvw="mpv --aspect=16:9"
+alias wifi-menu="sudo wifi-menu"
 alias commands='more $HOME/.bashrc | grep alias* | cut -d" " -f2- -s'
 
 complete -cf sudo
