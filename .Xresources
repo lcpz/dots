@@ -1,22 +1,33 @@
-#include "/home/luke/.colors/copland"
+#include ".colors/copland"
 
-Xcursor.theme         : Vanilla-DMZ-AA
+Xft.autohint                 : 0
+Xft.lcdfilter                : lcddefault
+Xft.hintstyle                : hintsfull
+Xft.hinting                  : 1
+Xft.antialias                : 1
+Xft.rgba                     : rgb
 
-*.charClass           : 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
+Xcursor.theme                : Vanilla-DMZ-AA
 
-URxvt.font            : xft:Tamsyn:pixelsize=14
-URxvt.boldFont        : xft:Tamsyn:pixelsize=14
-URxvt.italicFont      : xft:Tamsyn:pixelsize=14
-URxvt.boldItalicFont  : xft:Tamsyn:pixelsize=14
+*.charClass                  : 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
+*.saveLines                  : 4096
+*.scrollBar                  : false
 
-XTerm.faceName        : Tamsyn
-XTerm.faceSize        : 10
+XTerm.faceName               : Tamsyn
+XTerm.faceSize               : 11
 
-*.saveLines           : 4096
-*.scrollBar           : false
-*.dynamicColors       : true
-*.multiScroll         : true
+URxvt.font                   : xft:Tamsyn:pixelsize=14
+URxvt.boldFont               : xft:Tamsyn:pixelsize=14
+URxvt.italicFont             : xft:Tamsyn:pixelsize=14
+URxvt.boldItalicFont         : xft:Tamsyn:pixelsize=14
 
-URxvt.perl-ext-common : default,matcher
-URxvt.url-launcher    : /usr/bin/dwb
-URxvt.matcher.button  : 1
+URxvt*loginShell             : true
+URxvt*scrollWithBuffer       : true
+URxvt*scrollTtyKeypress      : true
+
+URxvt*perl-ext-common        : default,matcher,vtwheel,clipboard
+URxvt*keysym.Shift-Control-C : perl:clipboard:copy
+URxvt*keysym.Shift-Control-V : perl:clipboard:paste
+URxvt.url-launcher           : /usr/bin/dwb
+URxvt.matcher.button         : 1
+
