@@ -18,7 +18,6 @@ colors = (
 links = {
     #['', ''],
     'serious': [
-        ['runnable', 'http://www.runnable.com/'],
         ['rosettacode', 'http://rosettacode.org'],
         ['instant server', 'http://instantserver.io'],
     ],

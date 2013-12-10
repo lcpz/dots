@@ -21,13 +21,13 @@ URxvt.boldFont               : xft:Tamsyn:pixelsize=14
 URxvt.italicFont             : xft:Tamsyn:pixelsize=14
 URxvt.boldItalicFont         : xft:Tamsyn:pixelsize=14
 
-URxvt*loginShell             : true
-URxvt*scrollWithBuffer       : true
-URxvt*scrollTtyKeypress      : true
+URxvt.loginShell             : true
+URxvt.scrollWithBuffer       : true
+URxvt.scrollTtyKeypress      : true
 
-URxvt*perl-ext-common        : default,matcher,vtwheel,clipboard
-URxvt*keysym.Shift-Control-C : perl:clipboard:copy
-URxvt*keysym.Shift-Control-V : perl:clipboard:paste
+URxvt.perl-ext-common        : default,matcher,vtwheel,clipboard
+URxvt.keysym.Shift-Control-C : perl:clipboard:copy
+URxvt.keysym.Shift-Control-V : perl:clipboard:paste
 URxvt.url-launcher           : /usr/bin/dwb
 URxvt.matcher.button         : 1
 

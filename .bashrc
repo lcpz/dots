@@ -75,7 +75,7 @@ alias commands='more $HOME/.bashrc | grep alias* | cut -d" " -f2- -s'
 
 complete -cf sudo
 complete -cf man
-complete -cf gv # gvim
+complete -cf gv
 
 set -o posix
 set -o ignoreeof
