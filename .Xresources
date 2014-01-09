@@ -1,4 +1,4 @@
-#include ".colors/copland"
+#include ".colors/steamburn"
 
 Xft.autohint                 : 0
 Xft.lcdfilter                : lcddefault

@@ -1,36 +1,36 @@
-! Steamburn
+! Steamburn 3.0
 
-*.background:         #130c0b
-*.foreground:         #877a70
+*background: #302627
+*foreground: #e2ccb0
 
 ! black
-*.color0:             #403f3e
-*.color8:             #666564
+*color0: #302627
+*color8: #6e6767
 
 ! red
-*.color1:             #a63138
-*.color9:             #e28b90
+*color1: #8b7a70
+*color9: #a2948c
 
 ! green
-*.color2:             #958f2c
-*.color10:            #d9d264
+*color2: #8f837b
+*color10: #aba29c
 
 ! yellow
-*.color3:             #d07f3f
-*.color11:            #eccbb2
+*color3: #b7a188
+*color11: #c5b39f
 
 ! blue
-*.color4:             #3780bb
-*.color12:            #8bbbe2
+*color4: #70808b
+*color12: #8c99a2
 
 ! magenta
-*.color5:             #952c66
-*.color13:            #de77b0
+*color5: #8b7073
+*color13: #a28c8f
 
 ! cyan
-*.color6:             #427c6a 
-*.color14:            #8dc6b4
+*color6: #7a708b
+*color14: #948ca2
 
 ! white
-*.color7:             #dcdccc
-*.color15:            #dddfff
+*color7: #e2ccb0
+*color15: #e7d6bf
