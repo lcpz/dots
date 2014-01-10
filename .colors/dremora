@@ -2,15 +2,15 @@
 
 *.background: #111111
 *.foreground: #F2F1F0
-*.cursorColor: #E15441
+!*.cursorColor: #E15441
 
 !black
 *color0: #222222
 *color8: #666666
 
 !red
-*color1: #D23D3D
-*color9: #E84F4F
+*color1: #d65050
+*color9: #ea6060
 
 !green
 *color2: #B7CE42

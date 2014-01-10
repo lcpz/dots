@@ -1,4 +1,4 @@
-#include ".colors/steamburn"
+#include ".colors/dremora"
 
 Xft.autohint                 : 0
 Xft.lcdfilter                : lcddefault
