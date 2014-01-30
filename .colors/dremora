@@ -1,4 +1,4 @@
-! Dremora
+! Dremora 2.0
 
 *.background: #111111
 *.foreground: #F2F1F0
@@ -21,16 +21,16 @@
 *color11: #E36352
 
 !blue
-*color4: #7DC1CF
-*color12: #5fB4C6
+*color4: #A4D3DD
+*color12: #8FCAD7
 
 !magenta
-*color5: #B54670
+*color5: #C36A8C
 *color13: #E17689
 
 !cyan
-*color6: #6D878D
-*color14: #42717B
+*color6: #98abaf
+*color14: #7a92a2
 
 !white
 *color7: #F2F1F0
