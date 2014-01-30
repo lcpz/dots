@@ -89,10 +89,11 @@ Video/
 .pulse-cookie
 .p7zip
 .recently-used
-.taskrc
 .viminfo.*
+.viminfz.*
 .xsel.log*
 .Xauthority
 *.tmp
 .wpa_cli_history*
+.ssh/
 .vifm/
