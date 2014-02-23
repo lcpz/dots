@@ -22,6 +22,7 @@ links = {
         ['instant server', 'http://instantserver.io'],
     ],
     'fancy': [
+        ['lulubox', 'http://lulubox.tumblr.com/'],
         ['la pelle muta', 'http://lapellemuta.blogspot.it'],
         ['simpledesktops', 'http://simpledesktops.com'],
         ['4walled', 'http://4walled.cc'],
@@ -41,6 +42,8 @@ links = {
         ['one thing well', 'http://onethingwell.org']
     ],
     'music': [
+       ['thiseternalrotation', 'http://thiseternalrotation.blogspot.it/'],
+       ['brainwashed', 'http://brainwashed.com/'],
        ['lanquidity', 'http://lanquidity.blogspot.co.uk/'],
        ['khinsider', 'http://downloads.khinsider.com/'],
        ['eva00rei', 'http://eva00rei.blogspot.it/'],

@@ -1,12 +1,12 @@
 #include ".colors/dremora"
 
-Xft.autohint                 : 0
-Xft.lcdfilter                : lcddefault
-Xft.hintstyle                : hintslight
-Xft.hinting                  : 1
+!Xft.lcdfilter                : lcddefault
+!Xft.hintstyle                : hintslight
+!Xft.hinting                  : 1
+!Xft.autohint                 : 1
 Xft.antialias                : 1
 Xft.dpi                      : 96
-Xft.rgba                     : rgb
+!Xft.rgba                     : rgb
 
 Xcursor.theme                : Vanilla-DMZ-AA
 
@@ -18,9 +18,8 @@ URxvt.font                   : xft:Tamsyn:pixelsize=14
 URxvt.boldFont               : xft:Tamsyn:pixelsize=14
 
 URxvt.buffered               : true
-URxvt.perl-ext-common        : default,matcher,vtwheel,clipboard
+URxvt.perl-ext-common        : default,matcher
 URxvt.keysym.Shift-Control-C : perl:clipboard:copy
 URxvt.keysym.Shift-Control-V : perl:clipboard:paste
 URxvt.url-launcher           : /usr/bin/dwb
 URxvt.matcher.button         : 1
-
