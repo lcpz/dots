@@ -1,20 +1,20 @@
 " -- Compability -- "
 
-set nocompatible    " use vim defaults instead of vi
 set encoding=utf-8  " always encode in utf
+set nocompatible    " use vim defaults instead of vi
 
 " -- Plugins -- "
 
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'godlygeek/tabular'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'w0ng/vim-hybrid'
-Bundle 'scrooloose/nerdtree'
-Bundle 'spolu/dwm.vim'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/vundle'
+Plugin 'godlygeek/tabular'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'w0ng/vim-hybrid'
+Plugin 'scrooloose/nerdtree'
+Plugin 'spolu/dwm.vim'
 
 " -- Settings -- "
 
@@ -23,6 +23,7 @@ filetype plugin indent on
 syntax on
 
 " General
+set background=dark            " dark background
 set directory^=$HOME/backups/  " put all swap files together in one place
 set backspace=2                " enable <BS> for everything
 set completeopt-=preview       " dont show preview window

@@ -7,6 +7,8 @@ hi Search         ctermfg=Black  ctermbg=White  cterm=underline
 hi MatchParen     ctermfg=Black  ctermbg=White 
 hi ErrorMsg       ctermfg=Red    ctermfg=Black
 hi CursorLineNr   ctermfg=White  ctermbg=Black 
+hi LineNr         ctermfg=DarkGrey
+hi Visual         ctermfg=Black  ctermbg=White
 
 " Gvim - jellybeans
 
