@@ -1,25 +1,38 @@
 #include ".colors/copland"
 
-Xft.lcdfilter                : lcddefault
-Xft.hintstyle                : hintslight
-Xft.hinting                  : 1
-Xft.autohint                 : 1
-Xft.antialias                : 1
-Xft.dpi                      : 96
-Xft.rgba                     : rgb
+Xft.lcdfilter                :  lcddefault
+Xft.hintstyle                :  hintslight
+Xft.hinting                  :  1
+Xft.autohint                 :  1
+Xft.antialias                :  1
+Xft.dpi                      :  96
+Xft.rgba                     :  rgb
 
-Xcursor.theme                : Vanilla-DMZ-AA
+Xcursor.theme                :  Vanilla-DMZ-AA
 
-*.charClass                  : 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
-*.saveLines                  : 2048
-*.scrollBar                  : false
+*.charClass                  :  33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
+*.scrollBar                  :  false
 
-URxvt.font                   : xft:Tamsyn:pixelsize=14
-URxvt.boldFont               : xft:Tamsyn:pixelsize=14
+URxvt*loginShell             :  true
 
-URxvt.buffered               : false
-URxvt.perl-ext-common        : default,matcher
-URxvt.keysym.Shift-Control-C : perl:clipboard:copy
-URxvt.keysym.Shift-Control-V : perl:clipboard:paste
-URxvt.url-launcher           : /home/luke/iron
-URxvt.matcher.button         : 1
+URxvt.font                   :  xft:Tamsyn:pixelsize=14:autohint=true
+URxvt.boldFont               :  xft:Tamsyn:pixelsize=14:autohint=true
+
+URxvt*buffered               :  true
+URxvt*scrollWithBuffer       :  false
+URxvt*jumpScroll             :  false
+URxvt*skipScroll             :  true
+
+URxvt.perl-ext-common        :  default,tabbedex
+URxvt.tabbed.tabbar-fg       :  8
+URxvt.tabbed.tabbar-bg       :  0
+URxvt.tabbed.tab-fg          :  15
+URxvt.tabbed.tab-bg          :  0
+URxvt.tabbed.autohide        :  true
+URXvt.tabbed.reopen-on-close :  yes
+
+URxvt.perl-ext               :  default,url-select
+URxvt.keysym.C-i             :  perl:url-select:select_next
+URxvt.url-select.launcher    :  /home/luke/bin/iron
+URxvt.url-select.underline   :  true
+URxvt.colorUL                :  #78A4FF

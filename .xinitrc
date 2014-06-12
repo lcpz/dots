@@ -1,3 +1,6 @@
+# Italian keyboard layout
+setxkbmap -layout it -model logiex110
+
 # X settings
 xrdb -merge .Xresources && 
 
@@ -5,4 +8,4 @@ xrdb -merge .Xresources &&
 wmname LG3D &&
 
 # Start WM 
-exec awesome >> ~/.cache/awesome/stdout 2 >> ~/.cache/awesome/stderr
+exec awesome 

@@ -4,4 +4,3 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-sudo loadkeys it
