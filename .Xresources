@@ -10,19 +10,11 @@ Xft.rgba                     :  rgb
 
 Xcursor.theme                :  Vanilla-DMZ-AA
 
-*.charClass                  :  33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
-*.scrollBar                  :  false
-
-URxvt*loginShell             :  true
-
 URxvt.font                   :  xft:Tamsyn:pixelsize=14:autohint=true
 URxvt.boldFont               :  xft:Tamsyn:pixelsize=14:autohint=true
 
-URxvt*buffered               :  true
-URxvt*scrollWithBuffer       :  false
-URxvt*jumpScroll             :  false
-URxvt*skipScroll             :  true
-
+URxvt.scrollBar              :  false
+URxvt.buffered               :  true
 URxvt.perl-ext-common        :  default,tabbedex
 URxvt.tabbed.tabbar-fg       :  8
 URxvt.tabbed.tabbar-bg       :  0

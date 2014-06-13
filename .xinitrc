@@ -1,6 +1,3 @@
-# Italian keyboard layout
-setxkbmap -layout it -model logiex110
-
 # X settings
 xrdb -merge .Xresources && 
 

@@ -48,7 +48,7 @@ alias sudousb1='sudo mount -o umask=0,uid=nobody,gid=nobody -t vfat /dev/sdb1/ /
 alias cdrom='sudo mount -t iso9660 -o ro /dev/cdrom /mnt/cdrom; cd /mnt/cdrom'
 alias storage='sudo ntfs-3g /dev/sda4 /mnt/storage; cd /mnt/storage'
 alias win='sudo ntfs-3g /dev/sda2 /mnt/win; cd /mnt/win/Users/luke/Desktop'
-alias clean='find $HOME -name "\!*~*" -exec trash {} +; find $HOME -name "*.log" -exec trash {} +; find $HOME -name "*.class" -exec trash {} +; find $HOME -name ".*.swp" -exec trash {} +'
+alias clean='sudo find $HOME -name "\!*~*" -exec trash {} +; sudo find $HOME -name "*.log" -exec trash {} +; sudo find $HOME -name "*.class" -exec trash {} +; sudo find $HOME -name ".*.swp" -exec trash {} +'
 alias showtrash='cd ~/.local/share/Trash; ranger'
 alias emptytrash='sudo rm -r ~/.local/share/Trash; mkdir ~/.local/share/Trash'
 alias ve='vim -u ~/.vimencrypt -x'
