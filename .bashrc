@@ -47,7 +47,7 @@ alias sudousb='sudo mount -o umask=0,uid=nobody,gid=nobody -t vfat /dev/sdc/ /mn
 alias sudousb1='sudo mount -o umask=0,uid=nobody,gid=nobody -t vfat /dev/sdb1/ /mnt/usb; cd /mnt/usb'
 alias cdrom='sudo mount -t iso9660 -o ro /dev/cdrom /mnt/cdrom; cd /mnt/cdrom'
 alias storage='sudo ntfs-3g /dev/sda4 /mnt/storage; cd /mnt/storage'
-alias win='sudo ntfs-3g /dev/sda2 /mnt/win; cd /mnt/win/Users/luke/Desktop'
+alias win='sudo ntfs-3g /dev/sda2 /mnt/win; cd /mnt/win/Users/Luke/Desktop'
 alias clean='sudo find $HOME -name "\!*~*" -exec trash {} +; sudo find $HOME -name "*.log" -exec trash {} +; sudo find $HOME -name "*.class" -exec trash {} +; sudo find $HOME -name ".*.swp" -exec trash {} +'
 alias showtrash='cd ~/.local/share/Trash; ranger'
 alias emptytrash='sudo rm -r ~/.local/share/Trash; mkdir ~/.local/share/Trash'
@@ -60,6 +60,7 @@ alias clearcache='echo "sync; echo 3 > /proc/sys/vm/drop_caches"'
 alias homepage='cd $HOME/.homepage; rm *; homepage; cd'
 alias so="scrot ~/screenshots/tmp.png && imgurbash ~/screenshots/tmp.png; rm ~/screenshots/tmp.png"
 alias mpvw="mpv --aspect=16:9"
+alias pipupdate="pip-review --auto"
 alias commands='more $HOME/.bashrc | grep alias* | cut -d" " -f2- -s'
 
 complete -cf sudo
