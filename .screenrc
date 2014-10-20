@@ -1,0 +1,23 @@
+#caption always "%{= kw}%?%-Lw%?%{Kw}%n*%f %t%?(%u)%?%{kw}%?%+Lw%? %=%{= dw} %H "
+caption splitonly 
+defbce "on"
+startup_message off
+hardstatus alwayslastline
+#hardstatus string "%{= b}>> ${USER}%{c}@%{b}%H: %L>%1`%? %?%{b}%u%? %-18=%?%{c} %{c}%-=%{c}%-w%{b}%n %t%{c}%+w %{b}${TIME}"
+hardstatus string "%{= kw}%?%-Lw%?%{Kw}%n*%f %t%?(%u)%?%{kw}%?%+Lw%? %=%{= dw}"
+term screen-256color  
+autodetach on
+defscrollback 5000
+defnonblock on
+attrcolor b ".I"
+activity "%c activity -> %n%f %t"
+bell "%c bell -> %n%f %t^G"
+vbell_msg " *beep* "
+altscreen on  
+bindkey "^[[5;2~" eval "copy" "stuff ^u"
+bindkey -m "^[[5;2~" stuff ^u
+bindkey -m "^[[6;2~" stuff ^d
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10
+screen 1

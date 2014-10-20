@@ -20,7 +20,9 @@
 .config/ranger/*.sh
 .config/ranger/rc.conf
 .config/sxiv/
-.config/newsbeuter/urls
+.newsbeuter/urls
+.newsbeuter/cache*
+.newsbeuter/history*
 .config/pulse/
 .config/cower/
 .config/fontconfig/
@@ -57,7 +59,6 @@ aur/
 .mutt/
 .ncmpcpp/error.log
 .ncmpcpp/artists/
-.newsbeuter/
 .pulse/
 .rtorrent.rc
 .rtorrent/session

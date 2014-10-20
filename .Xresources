@@ -25,6 +25,6 @@ URXvt.tabbed.reopen-on-close :  yes
 
 URxvt.perl-ext               :  default,url-select
 URxvt.keysym.C-i             :  perl:url-select:select_next
-URxvt.url-select.launcher    :  /home/luke/bin/iron
+URxvt.url-select.launcher    :  /usr/bin/firefox
 URxvt.url-select.underline   :  true
 URxvt.colorUL                :  #78A4FF

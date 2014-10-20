@@ -52,13 +52,12 @@ alias clean='sudo find $HOME -name "\!*~*" -exec trash {} +; sudo find $HOME -na
 alias showtrash='cd ~/.local/share/Trash; ranger'
 alias emptytrash='sudo rm -r ~/.local/share/Trash; mkdir ~/.local/share/Trash'
 alias ve='vim -u ~/.vimencrypt -x'
-alias starthome='sudo netctl start wlp0s20u1-home'
-alias rehome='sudo netctl stop-all; sleep 2; sudo netctl start wlp0s20u9-home'
+alias starthome='sudo netctl start wifi-home'
+alias rehome='sudo netctl stop-all; sleep 2; sudo netctl start wifi-home'
 alias reboot='sudo reboot'
 alias findname='sudo find / -name'
 alias clearcache='echo "sync; echo 3 > /proc/sys/vm/drop_caches"'
 alias homepage='cd $HOME/.homepage; rm *; homepage; cd'
-alias so="scrot ~/screenshots/tmp.png && imgurbash ~/screenshots/tmp.png; rm ~/screenshots/tmp.png"
 alias mpvw="mpv --aspect=16:9"
 alias pipupdate="pip-review --auto"
 alias commands='more $HOME/.bashrc | grep alias* | cut -d" " -f2- -s'
