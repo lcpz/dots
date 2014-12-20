@@ -1,8 +1,7 @@
 # X settings
 xrdb -merge .Xresources && 
 
-# Set X keyboard IT layout
-setxkbmap -layout it &&
+setxkbmap it &&
 
 # Java fix
 wmname LG3D &&

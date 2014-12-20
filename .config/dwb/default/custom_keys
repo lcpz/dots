@@ -1,8 +1,0 @@
-q         : quit
-Control j : back
-Control k : forward
-J         : focus_prev
-K         : focus_next
-b         : hints_background
-x         : close_tab
-X         : undo

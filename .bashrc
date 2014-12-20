@@ -13,7 +13,6 @@ _PROMPT() {
                 
 PROMPT_COMMAND=_PROMPT
 
-alias cower='cower -v --color=always -t /home/luke/aur'
 alias rm='rm -iv'
 alias l='ls -l | coloredls'
 alias ls='ls -h --color=auto'
@@ -34,21 +33,20 @@ alias pacqi='pacman -Qi'
 alias pacqsi='pacman -Qsi'
 alias pacqssi='pacman -Qssi'
 alias pacr='sudo pacman -Rscudn'
+alias cower='cower -c --target=/home/luke/aur'
 alias upmirrors='sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup; sudo reflector -l 5 --sort rate --save /etc/pacman.d/mirrorlist'
 alias upterm='xrdb $HOME/.Xresources'
 alias awrc='$EDITOR $HOME/.config/awesome/rc.lua'
 alias awtheme='$EDITOR $HOME/.config/awesome/themes/copland/theme.lua'
 alias awdir='cd $HOME/.config/awesome'
 alias tmux='tmux -2uv'
-alias usb='sudo mount -t vfat /dev/sdc /mnt/usb; cd /mnt/usb'
-alias usb1='sudo mount -t vfat /dev/sdb /mnt/usb; cd /mnt/usb'
-alias usb2='sudo mount -t vfat /dev/sdb1 /mnt/usb; cd /mnt/usb'
+alias usb='sudo mount -t vfat /dev/sdb /mnt/usb; cd /mnt/usb'
+alias usb1='sudo mount -t vfat /dev/sdb1 /mnt/usb; cd /mnt/usb'
 alias sudousb='sudo mount -o umask=0,uid=nobody,gid=nobody -t vfat /dev/sdc/ /mnt/usb; cd /mnt/usb'
 alias sudousb1='sudo mount -o umask=0,uid=nobody,gid=nobody -t vfat /dev/sdb1/ /mnt/usb; cd /mnt/usb'
 alias cdrom='sudo mount -t iso9660 -o ro /dev/cdrom /mnt/cdrom; cd /mnt/cdrom'
 alias storage='sudo ntfs-3g /dev/sda4 /mnt/storage; cd /mnt/storage'
 alias win='sudo ntfs-3g /dev/sda2 /mnt/win; cd /mnt/win/Users/Luke/Desktop'
-alias clean='sudo find $HOME -name "\!*~*" -exec trash {} +; sudo find $HOME -name "*.log" -exec trash {} +; sudo find $HOME -name "*.class" -exec trash {} +; sudo find $HOME -name ".*.swp" -exec trash {} +'
 alias showtrash='cd ~/.local/share/Trash; ranger'
 alias emptytrash='sudo rm -r ~/.local/share/Trash; mkdir ~/.local/share/Trash'
 alias ve='vim -u ~/.vimencrypt -x'
@@ -68,9 +66,7 @@ complete -cf man
 set -o posix
 
 export EDITOR="vim"
-export LANG=it_IT.UTF-8
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
-export _JAVA_OPTIONS='-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel' 
-export JAVA_FONTS=/usr/share/fonts/TTF
+export LANG="it_IT.UTF-8"
+export LC_CTYPE="it_IT.UTF-8"
 
 eval $(dircolors -b $HOME/.config/dir_colours)
