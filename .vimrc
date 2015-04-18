@@ -15,6 +15,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'scrooloose/nerdtree'
 Plugin 'spolu/dwm.vim'
+Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 
 " -- Settings -- "

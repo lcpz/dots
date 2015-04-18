@@ -1,14 +1,26 @@
 [[ -d $HOME/bin ]] && export PATH=$PATH:$HOME/bin
 [ -z "$PS1" ] && return
 
-_PROMPT() {
-  _EXIT_STATUS=$?
-  [ $_EXIT_STATUS != 0 ] && _EXIT_STATUS_STR="\[\033[1;30m\][\[\033[1;31m\]$_EXIT_STATUS\[\033[1;30m\]] "
-  PS1="\033[1;30m\]» \[\e[0;0m\]\u\033[1;30m\] $_EXIT_STATUS_STR\[\033[1;30m\][\[\033[0m\]\W\[\033[1;30m\]]\[\033[1;30m\]:\[\033[0m\] "
-  unset _EXIT_STATUS_STR
+function __prompt_command() {
+    local EXIT="$?"
+    PS1=""
+
+    local RCol='\[\e[0m\]'
+
+    local Red='\[\e[0;31m\]'
+    local Gre='\[\e[0;32m\]'
+    local BYel='\[\e[1;33m\]'
+    local BBlu='\[\e[1;34m\]'
+    local Pur='\[\e[0;35m\]'
+
+    if [ $EXIT != 0 ]; then
+        PS1+=" ${Red}$EXIT " # Add red if exit code non 0
+    fi
+
+    PS1+=" ${BBlu}\u${RCol}  \W  "
 }
-                
-PROMPT_COMMAND=_PROMPT
+
+export PROMPT_COMMAND=__prompt_command
 
 alias rm='rm -iv'
 alias l='ls -l | coloredls'
@@ -42,19 +54,20 @@ alias usb1='sudo mount -t vfat /dev/sdb1 /mnt/usb; cd /mnt/usb'
 alias sudousb='sudo mount -o umask=0,uid=nobody,gid=nobody -t vfat /dev/sdc/ /mnt/usb; cd /mnt/usb'
 alias sudousb1='sudo mount -o umask=0,uid=nobody,gid=nobody -t vfat /dev/sdb1/ /mnt/usb; cd /mnt/usb'
 alias cdrom='sudo mount -t iso9660 -o ro /dev/cdrom /mnt/cdrom; cd /mnt/cdrom'
-alias storage='sudo ntfs-3g /dev/sda4 /mnt/storage; cd /mnt/storage'
+alias storage='sudo ntfs-3g /dev/sda3 /mnt/storage; cd /mnt/storage'
 alias win='sudo ntfs-3g /dev/sda2 /mnt/win; cd /mnt/win/Users/Luke/Desktop'
 alias showtrash='cd ~/.local/share/Trash; ranger'
 alias emptytrash='sudo rm -r ~/.local/share/Trash; mkdir ~/.local/share/Trash'
 alias ve='vim -u ~/.vimencrypt -x'
 alias starthome='sudo netctl start wifi-home'
-alias rehome='sudo netctl stop-all; sleep 2; sudo netctl start wifi-home'
+alias startunina='sudo netctl start wifi-unina'
 alias reboot='sudo reboot'
 alias findname='sudo find / -name'
 alias clearcache='echo "sync; echo 3 > /proc/sys/vm/drop_caches"'
 alias homepage='cd $HOME/.homepage; rm *; homepage; cd'
 alias mpvw="mpv --aspect=16:9"
 alias pipupdate="pip-review --auto"
+alias synctime="sudo ntpd -s"
 alias commands='more $HOME/.bashrc | grep alias* | cut -d" " -f2- -s'
 
 complete -cf sudo
@@ -65,5 +78,8 @@ set -o posix
 export EDITOR="vim"
 export LANG="it_IT.UTF-8"
 export LC_CTYPE="it_IT.UTF-8"
+
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+export PATH=$PATH:$JAVA_HOME/bin
 
 eval $(dircolors -b $HOME/.config/dir_colours)
