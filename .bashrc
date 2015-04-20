@@ -14,7 +14,7 @@ function __prompt_command() {
     local Pur='\[\e[0;35m\]'
 
     if [ $EXIT != 0 ]; then
-        PS1+=" ${Red}$EXIT " # Add red if exit code non 0
+        PS1+=" ${Red}$EXIT "
     fi
 
     PS1+=" ${BBlu}\u${RCol}  \W  "
@@ -23,7 +23,7 @@ function __prompt_command() {
 export PROMPT_COMMAND=__prompt_command
 
 alias rm='rm -iv'
-alias l='ls -l | coloredls'
+alias l='ls -lh --color=always --group-directories-first --sort=size | coloredls'
 alias ls='ls -h --color=auto'
 alias v='vim'
 alias sv='sudo vim'
