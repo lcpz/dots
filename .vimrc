@@ -64,6 +64,8 @@ set showmatch                  " show bracket matches
 set textwidth=0                " don't break lines after some maximum width
 set wildmenu                   " enhanced cmd line completion
 set ruler                      " shows ruler
+set clipboard+=unnamed         " use the clipboards of vim and win
+set go+=a                      " Visual selection automatically copied to the clipboard
 
 " Colours
 set t_Co=256
