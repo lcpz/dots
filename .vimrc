@@ -144,6 +144,7 @@ let g:ctrlp_custom_ignore = {
       \ }
 
 let g:dwm_master_pane_width=96
+let g:gitgutter_max_signs = 10000
 
 " -- Functions -- "
 

@@ -1,0 +1,4 @@
+#! /bin/sh
+
+tabbed -c -t "#363636" -T "#93b6ff" zathura -e
+
