@@ -21,9 +21,9 @@ f1=$'\e[1;37m'
 f2=$'\e[0;37m'
 
 kernel=$(uname -rmo)
-#cpuspe=$(grep 'model name' /proc/cpuinfo| sed 1q|sed 's/^.*:\ *//')
-cpuspe=$(sed -n '/model\ name/s/^.*:\ //p' /proc/cpuinfo | uniq)
-memspe=$(free -m | grep Mem: | cut -d' ' -f11)
+cpuspe=$(grep 'model name' /proc/cpuinfo| sed 1q|sed 's/^.*:\ *//')
+#cpuspe=$(sed -n '/model\ name/s/^.*:\ //p' /proc/cpuinfo | uniq)
+memspe=$(free -m | grep Mem: | cut -d' ' -f12)
 
 #system=$(lsb_release -d | sed 's/^.*:\s*//')
 system=$(cat /etc/issue|cut -d\\ -f1)
@@ -46,7 +46,7 @@ myblog=blog.z3bra.org
 cat << EOF
 ${c00}▉▉  | ${f1}OS ${f0}........... $f2$system
 ${c08}  ▉▉| ${f1}name ${f0}......... $f2$HOSTNAME
-${c01}▉▉  | ${f1}birth day${f0}..... $f2$birthd
+${c01}▉▉  | ${f1}birth day ${f0}.... $f2$birthd
 ${c09}  ▉▉| ${f1}packages ${f0}..... $f2$pkgnum
 ${c02}▉▉  | 
 ${c10}  ▉▉| ${f1}wm ${f0}........... $f2$wmname
@@ -56,7 +56,7 @@ ${c04}▉▉  | ${f1}font ${f0}......... $f2$termfn
 ${c05}  ▉▉| 
 ${c13}▉▉  | ${f1}kernel ${f0}....... $f2$kernel
 ${c06}  ▉▉| ${f1}processor ${f0}.... $f2$cpuspe
-${c14}▉▉  | ${f1}memory (MB)${f0}... $f2$memspe 
+${c14}▉▉  | ${f1}memory (MB) ${f0}.. $f2$memspe 
 ${c07}  ▉▉|
 ${c15}▉▉  | ${f1}git repos ${f0}.... $f2$gitdir
 EOF

@@ -1,10 +1,12 @@
 # X settings
-xrdb -merge .Xresources && 
+xrdb -merge .Xresources &&
 
+# IT layout
 setxkbmap it &&
 
-# Java fix
-wmname LG3D &&
+# gnome-keyring daemon
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh) &&
+export SSH_AUTH_SOCK &&
 
-# Start WM 
-exec awesome 
+# Start WM
+exec awesome

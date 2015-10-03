@@ -68,7 +68,6 @@ aur/
 .torrent-search/
 .vim/bundle/
 .vim/plugin/
-.vim/spell/
 .vim/syntax/
 .urxvt/
 Anime/
@@ -98,3 +97,4 @@ Video/
 .wpa_cli_history*
 .ssh/
 .vifm/
+/NetBeansProjects/Test/nbproject/private/

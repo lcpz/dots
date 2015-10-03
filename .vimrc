@@ -15,6 +15,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'scrooloose/nerdtree'
 Plugin 'spolu/dwm.vim'
+Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 
 " -- Settings -- "
@@ -39,6 +40,7 @@ set number                     " show line numbers
 set cursorline                 " highlight cursor line
 set title                      " use filename in window title
 set ttyfast                    " you've got a fast terminal
+set spelllang=it
 
 " Folding
 set foldignore=                " don't ignore anything when folding
@@ -63,6 +65,8 @@ set showmatch                  " show bracket matches
 set textwidth=0                " don't break lines after some maximum width
 set wildmenu                   " enhanced cmd line completion
 set ruler                      " shows ruler
+set clipboard+=unnamed         " use the clipboards of vim and win
+set go+=a                      " Visual selection automatically copied to the clipboard
 
 " Colours
 set t_Co=256
@@ -104,6 +108,7 @@ nnoremap <space> za
 nnoremap <leader>s :set spell!<CR>
 
 " Toggle hlsearch for current results
+"
 nnoremap <leader><leader> :nohlsearch<CR>
 
 " Insert newline in normal mode
@@ -112,6 +117,7 @@ map <CR> o<Esc>
 
 " Search for trailing whitespace
 nnoremap <leader>w /\s\+$<CR>
+nnoremap <leader>q :%s/\s\+$//<CR>
 
 " Toggle method used for folding
 nnoremap <leader>m :call ToggleFoldMethod()<CR>

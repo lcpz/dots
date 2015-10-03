@@ -1,23 +1,36 @@
 [[ -d $HOME/bin ]] && export PATH=$PATH:$HOME/bin
 [ -z "$PS1" ] && return
 
-_PROMPT() {
-  _EXIT_STATUS=$?
-  [ $_EXIT_STATUS != 0 ] && _EXIT_STATUS_STR="\[\033[1;30m\][\[\033[1;31m\]$_EXIT_STATUS\[\033[1;30m\]] "
-  PS1=" \[\e[1;34m\]\u\033[1;30m\] $_EXIT_STATUS_STR\[\033[1;30m\] \[\033[0m\]\W\[\033[1;30m\] \[\033[0m\] "
-  unset _EXIT_STATUS_STR
+function __prompt_command() {
+    local EXIT="$?"
+    PS1=""
+
+    local RCol='\[\e[0m\]'
+
+    local Red='\[\e[0;31m\]'
+    local Gre='\[\e[0;32m\]'
+    local BYel='\[\e[1;33m\]'
+    local BBlu='\[\e[1;34m\]'
+    local Pur='\[\e[0;35m\]'
+
+    if [ $EXIT != 0 ]; then
+        PS1+=" ${Red}$EXIT "
+    fi
+
+    PS1+=" ${BBlu}\u${RCol}  \W  "
 }
 
-PROMPT_COMMAND=_PROMPT
+export PROMPT_COMMAND=__prompt_command
 
 alias rm='rm -iv'
-alias l='ls -l | coloredls'
+alias l='ls -lh --color=always --group-directories-first --sort=size | coloredls'
 alias ls='ls -h --color=auto'
 alias v='vim'
 alias sv='sudo vim'
 alias gv='gvim'
 alias sgv='sudo gvim'
 alias m='mutt'
+alias r='ranger'
 alias z='zathura'
 alias pacman='sudo pacman --color always'
 alias pac='pacman --color always'
