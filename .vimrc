@@ -29,7 +29,7 @@ set background=dark            " dark background
 set directory^=$HOME/backups/  " put all swap files together in one place
 set backspace=2                " enable <BS> for everything
 set completeopt-=preview       " dont show preview window
-set fillchars+=vert:\          " empty space instead of broken line for vsplits 
+set fillchars+=vert:\          " empty space instead of broken line for vsplits
 set hidden                     " hide when switching buffers, don't unload
 set laststatus=2               " always show status line
 set lazyredraw                 " don't update screen when executing macros
@@ -71,7 +71,7 @@ set go+=a                      " Visual selection automatically copied to the cl
 " Colours
 set t_Co=256
 let g:hybrid_use_Xresources = 1
-colorscheme hybrid 
+colorscheme hybrid
 
 " gVim
 if has('gui_running')
@@ -115,8 +115,10 @@ nnoremap <leader><leader> :nohlsearch<CR>
 map <S-Enter> O<Esc>
 map <CR> o<Esc>
 
-" Search for trailing whitespace
+" Search for trailing whitespaces
 nnoremap <leader>w /\s\+$<CR>
+
+" Remove trailing whitespaces
 nnoremap <leader>q :%s/\s\+$//<CR>
 
 " Toggle method used for folding
