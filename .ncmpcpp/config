@@ -10,7 +10,6 @@ song_columns_list_format = "(40)[red]{t|f} (25)[yellow]{a} (25)[green]{b} (25)[w
 song_list_format = "{$5 %a$9 $1│$9 $8%t$9 }|{ $8%f$9}$R{$5%b $7}"
 song_status_format = "{{{$3%a$9}} $8-$9 {$8%t$9}|{$8%f$9}{ $8-$9 $6%b$9{ $8-$9 $7%y$9}}}"
 song_library_format = "{%n $8-$9 }{%t}|{%f}"
-tag_editor_album_format = "{%y $8-$9 }{%b}"
 alternative_header_first_line_format = "$1$aqqu$/a$9 {$8%t$9}|{$8%f$9} $1$atqq$/a$9"
 alternative_header_second_line_format = "{{$6%a$9}{ $8-$9 $4%b$9 $8-$9 $7%y$9}}|{%D}"
 now_playing_prefix = "$b"
@@ -38,8 +37,6 @@ centered_cursor = "yes"
 default_place_to_search_in = "database" (database/playlist)
 user_interface = "classic" (classic/alternative)
 default_find_mode = "wrapped" (wrapped/normal)
-default_space_mode = "add" (add/select)
-default_tag_editor_pattern = "%n - %t"
 #header_visibility = "no"
 #statusbar_visibility = "no"
 titles_visibility = "yes"
@@ -62,7 +59,6 @@ mouse_list_scroll_whole_page = "yes"
 ### visualizer settings
 visualizer_fifo_path = "/tmp/mpd.fifo"
 visualizer_output_name = "my_fifo"
-visualizer_sync_interval = "1"
 #visualizer_type = "wave" (spectrum/wave)
 visualizer_type = "spectrum" (spectrum/wave)
 
