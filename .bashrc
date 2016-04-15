@@ -22,7 +22,7 @@ function __prompt_command() {
 
 export PROMPT_COMMAND=__prompt_command
 
-alias rm='rm -iv'
+alias rm='rm -i'
 alias l='ls -lh --color=always --group-directories-first --sort=size | coloredls'
 alias ls='ls -h --color=auto'
 alias v='vim'
@@ -56,6 +56,8 @@ alias reboot='sudo reboot'
 alias findname='sudo find / -name'
 alias clearcache='echo "sync; echo 3 > /proc/sys/vm/drop_caches"'
 alias mpvw="mpv --aspect=16:9"
+alias xc='xsel -p -o | xsel -i -b'
+alias pp='pdflatex doc.tex; cpdf doc.pdf documento.pdf'
 alias commands='more $HOME/.bashrc | grep alias* | cut -d" " -f2- -s'
 
 complete -cf sudo
