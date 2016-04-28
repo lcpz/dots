@@ -11,10 +11,8 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 Plugin 'godlygeek/tabular'
 Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-surround'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'scrooloose/nerdtree'
-Plugin 'spolu/dwm.vim'
 Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 
@@ -147,8 +145,6 @@ let g:ctrlp_custom_ignore = {
       \ 'dir':  '\.git$\|\.hg$\|\.svn$\|__pycache__$',
       \ 'file': '\.pyc$\|\.so$\|\.swp$',
       \ }
-
-let g:dwm_master_pane_width=96
 
 " -- Functions -- "
 
