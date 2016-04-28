@@ -1,0 +1,10 @@
+#! /bin/bash
+
+# compress PDF/A generated with pdflatex
+
+#gs -dPDFA -dBATCH -dNOPAUSE -dQUIET -sProcessColorModel=DeviceCMYK -sDEVICE=pdfwrite -sPDFACompatibilityPolicy=1 -sOutputFile=$2 $1
+#gs -sDEVICE=pdfwrite -dPDFA -dPDFSETTINGS=/default -dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages -dCompressFonts=true -r150 -sProcessColorModel=DeviceCMYK -sOutputFile=$2.pdf $1
+#gs -sDEVICE=pdfwrite -dPDFA -dPDFSETTINGS=/default -dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages -r150 -sProcessColorModel=DeviceCMYK -sOutputFile=$2 $1
+gs -sDEVICE=pdfwrite -dPDFA -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages -r150 -sProcessColorModel=DeviceCMYK -sOutputFile=$2 $1
+qpdf --linearize $2 $2.optimized
+mv $2.optimized $2
