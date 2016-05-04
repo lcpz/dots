@@ -1,0 +1,8 @@
+#! /bin/bash
+
+for file in $1/*.pdf; do
+      pdf2ps ${file##/} output.ps
+      ps2pdf output.ps ${file%.*}.pdf
+done
+
+rm output.ps

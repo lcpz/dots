@@ -15,7 +15,6 @@ Plugin 'w0ng/vim-hybrid'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 
@@ -150,6 +149,10 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+nnoremap <silent> <F6> <C-w><
+nnoremap <silent> <F7> <C-w>>
+nnoremap <silent> <F8> <C-w>-
+nnoremap <silent> <F9> <C-w>+
 
 " Swap top/bottom or left/right split                           : Ctrl+W R
 " Break out current window into a new tabview                   : Ctrl+W T
@@ -166,14 +169,14 @@ let g:ctrlp_custom_ignore = {
       \ 'file': '\.pyc$\|\.so$\|\.swp$',
       \ }
 
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeDirArrowExpandable = '|'
+let g:NERDTreeDirArrowCollapsible = '>'
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
+    \ "Modified"  : "~",
+    \ "Staged"    : "+",
+    \ "Untracked" : "*",
+    \ "Renamed"   : ">",
+    \ "Unmerged"  : "=",
     \ "Deleted"   : "✖",
     \ "Dirty"     : "✗",
     \ "Clean"     : "✔︎",
