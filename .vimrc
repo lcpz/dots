@@ -8,11 +8,14 @@ set nocompatible    " use vim defaults instead of vi
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'kien/ctrlp.vim'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 
@@ -52,6 +55,10 @@ set shiftwidth=4               " spaces for autoindenting
 set smarttab                   " <BS> removes shiftwidth worth of spaces
 set softtabstop=2              " spaces for editing, e.g. <Tab> or <BS>
 set tabstop=2                  " spaces for <Tab>
+
+" Panes
+set splitbelow
+set splitright
 
 " Searches
 set hlsearch                   " highlight search results
@@ -106,7 +113,6 @@ nnoremap <space> za
 nnoremap <leader>s :set spell!<CR>
 
 " Toggle hlsearch for current results
-"
 nnoremap <leader><leader> :nohlsearch<CR>
 
 " Insert newline in normal mode
@@ -117,7 +123,7 @@ map <CR> o<Esc>
 nnoremap <leader>w /\s\+$<CR>
 
 " Remove trailing whitespaces
-nnoremap <leader>q :%s/\s\+$//<CR>
+nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 " Toggle method used for folding
 nnoremap <leader>m :call ToggleFoldMethod()<CR>
@@ -127,8 +133,7 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 
 " Insert current date and time
-nnoremap <leader>d "=strftime("%d %b, %Y %X")<CR>p
-nnoremap <leader>D "=strftime("%d %b, %Y %X")<CR>P
+nnoremap <leader>d "=strftime("%d %B %Y @ %X")<CR>p
 
 " Shortcut for Tabularize
 nnoremap <leader>t :Tabularize /
@@ -139,12 +144,41 @@ nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>f :CtrlP<CR>
 nnoremap <leader>r :CtrlPMRUFiles<CR>
 
+" NERDTree & panes
+nnoremap <C-N> :NERDTreeToggle<CR>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Swap top/bottom or left/right split                           : Ctrl+W R
+" Break out current window into a new tabview                   : Ctrl+W T
+" Close every window in the current tabview but the current one : Ctrl+W o
+
+" Max out the height of the current split                       : Ctrl+W _
+" Max out the width of the current split                        : Ctrl+W |
+" Normalize all split sizes                                     : Ctrl+W =
+
 " -- Plugin Settings -- "
 
 let g:ctrlp_custom_ignore = {
       \ 'dir':  '\.git$\|\.hg$\|\.svn$\|__pycache__$',
       \ 'file': '\.pyc$\|\.so$\|\.swp$',
       \ }
+
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
 
 " -- Functions -- "
 
@@ -157,3 +191,7 @@ else
   echo "foldmethod=indent"
 endif
 endfunction
+
+" -- Auto commands --"
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
