@@ -122,6 +122,11 @@ vnoremap <Leader>p "*p
 nnoremap <Leader><S-P> "*P
 vnoremap <Leader><S-P> "*P
 
+" Explore
+nnoremap <C-N> :Sexplore!<CR>
+nnoremap <C-M> :Hexplore<CR>
+nnoremap <leader>l :Lexplore<CR>
+
 " Shortcut for Tabularize
 nnoremap <leader>t :Tabularize /
 vnoremap <leader>t :Tabularize /
