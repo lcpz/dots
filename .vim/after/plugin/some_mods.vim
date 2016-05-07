@@ -12,6 +12,7 @@ hi Visual         ctermfg=Black    ctermbg=White
 hi TabLine        ctermfg=Black    ctermbg=DarkGray
 hi TabLineSel     ctermfg=White    ctermbg=Black
 hi TabLineFill    ctermfg=Black    ctermbg=Blue
+hi Folded                          ctermbg=Black
 
 " Gvim - jellybeans
 

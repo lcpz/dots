@@ -10,12 +10,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'godlygeek/tabular'
-Plugin 'kien/ctrlp.vim'
 Plugin 'w0ng/vim-hybrid'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 
 " -- Settings -- "
@@ -32,7 +27,6 @@ set completeopt-=preview       " dont show preview window
 set fillchars+=vert:\          " empty space instead of broken line for vsplits
 set hidden                     " hide when switching buffers, don't unload
 set laststatus=2               " always show status line
-set lazyredraw                 " don't update screen when executing macros
 set mouse=a                    " enable mouse in all modes
 set wrap                       " word wrap
 set linebreak                  " attempt to wrap lines cleanly
@@ -77,26 +71,6 @@ set t_Co=256
 let g:hybrid_use_Xresources = 1
 colorscheme hybrid
 
-" gVim
-if has('gui_running')
-  set guioptions-=m                " remove menu
-  set guioptions-=T                " remove toolbar
-  set guioptions-=r                " remove right scrollbar
-  set guioptions-=b                " remove bottom scrollbar
-  set guioptions-=L                " remove left scrollbar
-  set guifont=Tamsyn\ 10.5         " setting gui font
-  set guicursor+=a:block-blinkon0  " always use block cursor, no cursor blinking
-  colorscheme jellybeans
-  " Paste from PRIMARY and CLIPBOARD
-  inoremap <silent> <M-v> <Esc>"+p`]a
-  inoremap <silent> <S-Insert> <Esc>"*p`]a
-endif
-
-" vimdiff
-if &diff
-  set diffopt=filler,foldcolumn:0
-endif
-
 " -- Mappings -- "
 
 " Map leader
@@ -134,17 +108,25 @@ set pastetoggle=<F2>
 " Insert current date and time
 nnoremap <leader>d "=strftime("%d %B %Y @ %X")<CR>p
 
+" Delete (cut) to clipboard
+vnoremap <Leader>x "*x
+nnoremap <Leader>x "*x
+
+" Yank (copy) to clipboard
+vnoremap <Leader>y "*y
+nnoremap <Leader>y "*y
+
+" Put (paste) from clipboard
+nnoremap <Leader>p "*p
+vnoremap <Leader>p "*p
+nnoremap <Leader><S-P> "*P
+vnoremap <Leader><S-P> "*P
+
 " Shortcut for Tabularize
 nnoremap <leader>t :Tabularize /
 vnoremap <leader>t :Tabularize /
 
-" Search and open buffer, files, recent
-nnoremap <leader>b :CtrlPBuffer<CR>
-nnoremap <leader>f :CtrlP<CR>
-nnoremap <leader>r :CtrlPMRUFiles<CR>
-
-" NERDTree & panes
-nnoremap <C-N> :NERDTreeToggle<CR>
+" Panes
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -162,26 +144,9 @@ nnoremap <silent> <F9> <C-w>+
 " Max out the width of the current split                        : Ctrl+W |
 " Normalize all split sizes                                     : Ctrl+W =
 
-" -- Plugin Settings -- "
+" -- Other Settings -- "
 
-let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\.git$\|\.hg$\|\.svn$\|__pycache__$',
-      \ 'file': '\.pyc$\|\.so$\|\.swp$',
-      \ }
-
-let g:NERDTreeDirArrowExpandable = '|'
-let g:NERDTreeDirArrowCollapsible = '>'
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "~",
-    \ "Staged"    : "+",
-    \ "Untracked" : "*",
-    \ "Renamed"   : ">",
-    \ "Unmerged"  : "=",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }
+let g:netrw_liststyle=3
 
 " -- Functions -- "
 
@@ -194,7 +159,3 @@ else
   echo "foldmethod=indent"
 endif
 endfunction
-
-" -- Auto commands --"
-
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
