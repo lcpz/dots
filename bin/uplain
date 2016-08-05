@@ -1,0 +1,13 @@
+#! /bin/bash
+# Updates lain-git on AUR
+
+current=`pwd`
+num=`git --git-dir="/home/luke/.config/awesome/lain/.git" rev-list --count HEAD`
+rev=`git --git-dir="/home/luke/.config/awesome/lain/.git" rev-parse --short HEAD`
+echo $num.$rev
+cd /home/aur/lain-git
+cat PKGBUILD | sed "s/pkgver=*.*/pkgver=$num.$rev/g" > PKGBUILD
+mksrcinfo
+git commit -am "new commit, read git-log for infos"
+git push
+cd $current

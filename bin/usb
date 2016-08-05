@@ -1,0 +1,10 @@
+#!/bin/bash
+# mounts input usb device
+
+if [[ -n "$1" ]]; then
+    device="$1"
+else
+    device="sdb"
+fi
+
+sudo mount -t vfat /dev/"$device" /mnt/usb; cd /mnt/usb

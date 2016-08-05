@@ -1,4 +1,5 @@
 #! /bin/bash
+# updates an arch-linux system
 
 sudo pacman -Syu
 

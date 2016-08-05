@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# https://ok100.github.io/homepage.py
+
 ########## begin config ##########
 
-output = 'homepage.html'      # output file
-title = 'Speed Dial'          # page title
-font = ('Tamsyn', '11pt')     # font
-separator = '>'               # separator between group title and links
+output = 'homepage.html'  # output file
+title = 'Speed Dial'      # page title
+font = ('Tamsyn', '11pt') # font
+separator = '>'           # separator between group title and links
 colors = (
     '#242424',  # background
     '#dddcff',  # links
@@ -18,50 +20,41 @@ colors = (
 links = {
     #['', ''],
     'serious': [
-        ['rosettacode', 'http://rosettacode.org'],
-        ['instant server', 'http://instantserver.io'],
-    ],
+        ['rosettacode'                 , 'https://rosettacode.org']                       ,
+        ['linx'                        , 'https://linx.li']                               ,
+    ]                                  ,
     'fancy': [
-        ['lulubox', 'http://lulubox.tumblr.com/'],
-        ['la pelle muta', 'http://lapellemuta.blogspot.it'],
-        ['simpledesktops', 'http://simpledesktops.com'],
-        ['4walled', 'http://4walled.cc'],
-        ['a journey round my skull', 'http://ajourneyroundmyskull.blogspot.it'],
-        ['kick to kill', 'http://kicktokill.blogspot.it'],
-        ['public domain images', 'http://imagespublicdomain.wordpress.com/'],
-        ['cyberpunkreview', 'http://cyberpunkreview.com'],
-        ['wallhave', 'http://alpha.wallhaven.cc'],
-        ['the cyberpunk project', 'http://project.cyberpunk.ru'],
-        ['thought experiments lain', 'http://www.cjas.org/~leng/lain.htm'],
-        ['kriegs', 'http://www.kriegs.net'],
-        ['mechafetus', 'http://visublog.mechafetus.com/'],
-        ['kotaku', 'http://kotaku.com'],
-        ['bagni proeliator', 'http://www.bagniproeliator.it/'],
-        ['prigionieri dello schermo', 'http://iprigionieridelloschermo.tumblr.com/'],
-        ['one thing well', 'http://onethingwell.org']
-    ],
+        ['la pelle muta'               , 'https://lapellemuta.blogspot.it']               ,
+        ['wallhaven alpha'             , 'https://alpha.wallhaven.cc']                    ,
+        ['simpledesktops'              , 'https://simpledesktops.com']                    ,
+        ['4walled'                     , 'https://4walled.cc']                            ,
+        ['public domain images'        , 'https://imagespublicdomain.wordpress.com']      ,
+        ['the cyberpunk project'       , 'http://project.cyberpunk.ru']                   ,
+        ['thought experiments lain'    , 'https://www.cjas.org/~leng/lain.htm']           ,
+        ['kriegs'                      , 'http://www.kriegs.net']                         ,
+        ['bagni proeliator'            , 'http://www.bagniproeliator.it']                 ,
+        ['prigionieri dello schermo'   , 'https://iprigionieridelloschermo.tumblr.com']   ,
+    ]                                  ,
     'music': [
-       ['thiseternalrotation', 'http://thiseternalrotation.blogspot.it/'],
-       ['brainwashed', 'http://brainwashed.com/'],
-       ['lanquidity', 'http://lnqdty.tumblr.com/'],
-       ['khinsider', 'http://downloads.khinsider.com/'],
-       ['eva00rei', 'http://eva00rei.blogspot.it/'],
-       ['perfect sound forever', 'http://www.furious.com/perfect/staff2.html'],
-       ['warp records', 'http://warp.net/'],
-       ['madrotter-treasure-hunt' , 'http://madrotter-treasure-hunt.blogspot.it'],
-       ['college of musical knowledge',  'http://collegeofmusicalknowledge.blogspot.it'],
-       ['a softly sleeping rose', 'http://asoftlysleepingrose.blogspot.it'],
-       ['mutant sounds', 'http://mutant-sounds.blogspot.it'],
-       ['habit of sex', 'http://habitofsex.blogspot.it'],
-       ['stalking duppi', 'http://stalkingduppi.blogspot.it'],
-       ['soundhead',  'http://the-soundhead.blogspot.it'],
-       ['nostalgie de la boue', 'http://nostalgie-de-la-boue.blogspot.it'],
+       ['50watts.com'                  , 'http://50watts.com']                            ,
+       ['thiseternalrotation'          , 'https://thiseternalrotation.blogspot.it']       ,
+       ['khinsider'                    , 'http://downloads.khinsider.com']                ,
+       ['perfect sound forever'        , 'http://www.furious.com/perfect/staff2.html']    ,
+       ['madrotter-treasure-hunt'      , 'https://madrotter-treasure-hunt.blogspot.it']   ,
+       ['college of musical knowledge' , 'https://collegeofmusicalknowledge.blogspot.it'] ,
+       ['soundhead'                    , 'https://the-soundhead.blogspot.it']             ,
+       ['nostalgie de la boue'         , 'https://nostalgie-de-la-boue.blogspot.it']      ,
     ]
 }
 
 ########## end config ##########
 
 import os
+
+directory = os.path.expanduser("~") + "/.homepage/"
+
+if not os.path.exists(directory):
+    os.makedirs(directory)
 
 css = '''body {
   background-color: %s;
@@ -116,9 +109,9 @@ html = '''<html>
 </body>
 </html>''' % (title, links_html)
 
-with open(output, 'w') as file:
+with open(directory + output, 'w') as file:
     file.write(html)
-with open('style.css', 'w') as file:
+with open(directory + 'style.css', 'w') as file:
     file.write(css)
 
 os.system('tidy -f /dev/null -utf8 -i -m -q -asxhtml %s' % output)
