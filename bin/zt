@@ -1,29 +1,29 @@
-#!/bin/sh
-# Based on tabbed-zathura script from:
-#   http://taitran.ca/vim/latex/markdown/2015/03/11/vim-latex-and-markdown-preview-scripts.html
+#!/bin/bash
 
-xidfile="/tmp/tabbed-zathura.xid"
-uri=""
+# favorites list must have one path per line
+fav="$HOME/.config/zathura/current_favorites"
 
-if [ "$#" -gt 0 ]; then
-    filename="$1"
-fi
-
-runtabbed() {
-	tabbed -cdn tabbed-zathura -r 2 zathura -e '' --fork "$filename" \
-        >"$xidfile" 2>/dev/null &
-}
-
-if [ ! -r "$xidfile" ]; then
-	runtabbed
+if [ -z $1 ]; then
+    # open tabbed zathura with favorites
+    favlist=$(cat $fav | sed -e '/^#/ d' -e ':a' -e 'N' -e '$!ba' -e 's/\n/ /g')
+    #tabbed -cd zathura $favlist -e
+    txid=$(tabbed -cd) && echo $txid && zathura --fork $favlist -e $txid
 else
-	xid=$(cat "$xidfile")
-	xprop -id "$xid" >/dev/null 2>&1
-	if [ $? -gt 0 ]; then
-		runtabbed
-	else
-		zathura -e "$xid" --fork "$filename" >/dev/null 2>&1 &
-	fi
+    while getopts "a:dm" o; do
+        case "${o}" in
+            a) # add -a file to favorites
+                a=${OPTARG}
+                echo "$(pwd)/$a" >> $fav
+                ;;
+            d) # delete all favorites
+                rm -i $fav
+                ;;
+            m) # manage favorites
+                $EDITOR $fav
+                ;;
+            *)
+                exit 1
+                ;;
+        esac
+    done
 fi
-
-exit 0

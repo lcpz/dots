@@ -1,3 +1,4 @@
+set adjust-open width
 set default-bg "#242424"
 set default-fg "#ebebff"
 set inputbar-bg "#323232"
