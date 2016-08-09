@@ -1,12 +1,9 @@
 #! /bin/bash
 
-# compress PDF/A generated with pdflatex
+# turns input pdf into an optimized PDF/A-1b
 
 #gs -dPDFA -dBATCH -dNOPAUSE -dQUIET -sProcessColorModel=DeviceCMYK -sDEVICE=pdfwrite -sPDFACompatibilityPolicy=1 -sOutputFile=$2 $1
-#gs -sDEVICE=pdfwrite -dPDFA -dPDFSETTINGS=/default -dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages -dCompressFonts=true -r150 -sProcessColorModel=DeviceCMYK -sOutputFile=$2.pdf $1
 #gs -sDEVICE=pdfwrite -dPDFA -dPDFSETTINGS=/default -dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages -r150 -sProcessColorModel=DeviceCMYK -sOutputFile=$2 $1
-#gs -sDEVICE=pdfwrite -dPDFA -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages -r150 -sProcessColorModel=DeviceCMYK -sOutputFile=$2 $1
-gs -sDEVICE=pdfwrite -dBATCH -dNOPAUSE -dSAFER -sColorConversionStrategy=UseDeviceIndependentColor -dEmbedAllFonts=true -dPrinted=true -dPDFA -sProcessColorModel=DeviceRGB -dPDFACompatibilityPolicy=1 -sPDFSETTINGS=printer -dDetectDuplicateImages -r150 -sOutputFile=$2 $1
+#gs -sDEVICE=pdfwrite -dPDFA -dPDFSETTINGS=/default -dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages -dCompressFonts=true -r150 -sProcessColorModel=DeviceCMYK -sOutputFile=$2.pdf $1
 
-qpdf --linearize $2 $2.optimized
-mv $2.optimized $2
+gs -sDEVICE=pdfwrite -dBATCH -dNOPAUSE -dSAFER -sColorConversionStrategy=UseDeviceIndependentColor -dEmbedAllFonts=true -dPrinted=true -dPDFA -sProcessColorModel=DeviceRGB -dPDFACompatibilityPolicy=1 -dDetectDuplicateImages -r150 -dFastWebView=true -sOutputFile=$2 $1
