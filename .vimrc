@@ -89,8 +89,7 @@ nnoremap <leader>s :set spell!<CR>
 nnoremap <leader><leader> :nohlsearch<CR>
 
 " Insert newline in normal mode
-map <S-Enter> O<Esc>
-map <CR> o<Esc>
+nnoremap <S-o> O<Esc>
 
 " Search for trailing whitespaces
 nnoremap <leader>w /\s\+$<CR>
@@ -99,43 +98,32 @@ nnoremap <leader>w /\s\+$<CR>
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 " Toggle method used for folding
-nnoremap <leader>m :call ToggleFoldMethod()<CR>
+nnoremap mm :call ToggleFoldMethod()<CR>
 
 " Paste mode for terminals
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 
-" Insert current date and time
-nnoremap <leader>d "=strftime("%d %B %Y @ %X")<CR>p
-
-" Delete (cut) to clipboard
-vnoremap <Leader>x "*x
-nnoremap <Leader>x "*x
-
 " Yank (copy) to clipboard
-vnoremap <Leader>y "*y
-nnoremap <Leader>y "*y
+nnoremap <leader>cc "+y
 
 " Put (paste) from clipboard
-nnoremap <Leader>p "*p
-vnoremap <Leader>p "*p
-nnoremap <Leader><S-P> "*P
-vnoremap <Leader><S-P> "*P
+nnoremap <leader>p "*p
+nnoremap <leader><S-P> "*P
 
 " Explore
-nnoremap <C-N> :Sexplore!<CR>
-nnoremap <C-M> :Hexplore<CR>
+nnoremap <leader>n :Sexplore!<CR>
+nnoremap <leader>m :Hexplore<CR>
 nnoremap <leader>l :Lexplore<CR>
 
 " Shortcut for Tabularize
 nnoremap <leader>t :Tabularize /
-vnoremap <leader>t :Tabularize /
 
 " Panes
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <S-J> <C-W><C-J>
+nnoremap <S-K> <C-W><C-K>
+nnoremap <S-L> <C-W><C-L>
+nnoremap <S-H> <C-W><C-H>
 nnoremap <silent> <F6> <C-w><
 nnoremap <silent> <F7> <C-w>>
 nnoremap <silent> <F8> <C-w>-
@@ -148,6 +136,21 @@ nnoremap <silent> <F9> <C-w>+
 " Max out the height of the current split                       : Ctrl+W _
 " Max out the width of the current split                        : Ctrl+W |
 " Normalize all split sizes                                     : Ctrl+W =
+
+" Page tabs
+nnoremap <C-n> :tabe<CR>:Explore!<CR>
+nnoremap <C-k> gt
+nnoremap <C-j> gT
+nnoremap <C-1> 1gt
+nnoremap <C-2> 2gt
+nnoremap <C-3> 3gt
+nnoremap <C-4> 4gt
+nnoremap <C-5> 5gt
+nnoremap <C-6> 6gt
+nnoremap <C-7> 7gt
+nnoremap <C-8> 8gt
+nnoremap <C-9> 9gt
+nnoremap <C-0> :tablast<CR>
 
 " -- Other Settings -- "
 

@@ -7,8 +7,10 @@ set statusbar-fg "#ebebff"
 set highlight-color "#FFFF00"
 set completion-bg "#242323"
 set font "Tamsyn 10.5"
+set first-page-column 2
 set adjust-open width
 set advance-pages-per-row true
+set page-padding 5
 
 map <F1> set "pages-per-row 1"
 map <F2> set "pages-per-row 2"
