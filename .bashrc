@@ -27,7 +27,6 @@ alias l='ls -lh --color=always --group-directories-first --sort=size | coloredls
 alias ls='ls -h --color=auto'
 alias v='vim'
 alias sv='sudo vim'
-#alias ve='vim -u ~/.vimencrypt -x'
 alias m='mutt'
 alias r='ranger'
 alias z='zathura'
@@ -37,8 +36,6 @@ alias pacss='sudo pacman --color always -Ss'
 alias pacqs='sudo pacman --color always -Qs'
 alias pacqi='sudo pacman --color always -Qi'
 alias pacr='sudo pacman --color always -Rscudn'
-#alias upmirrors='sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup; sudo reflector -l 5 --sort rate --save /etc/pacman.d/mirrorlist'
-#alias upterm='xrdb $HOME/.Xresources'
 alias awrc='$EDITOR $HOME/.config/awesome/rc.lua'
 alias awtheme='$EDITOR $HOME/.config/awesome/themes/copland/theme.lua'
 alias awdir='cd $HOME/.config/awesome'
@@ -62,6 +59,6 @@ export EDITOR="vim"
 
 export AWT_TOOLKIT="MToolkit"
 export _JAVA_AWT_WM_NONREPARENTING=1
-#export _JAVA_OPTIONS="-Dswing.aatext=true -Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel" 
+#export _JAVA_OPTIONS="-Dswing.aatext=true -Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 
 eval $(dircolors -b $HOME/.config/dir_colours)
