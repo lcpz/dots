@@ -105,11 +105,11 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 
 " Yank (copy) to clipboard
-nnoremap <leader>cc "+y
+nnoremap <C-Y> "+y
 
 " Put (paste) from clipboard
 nnoremap <leader>p "*p
-nnoremap <leader><S-P> "*P
+nnoremap <C-P> "*P
 
 " Explore
 nnoremap <leader>n :Sexplore!<CR>
