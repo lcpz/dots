@@ -46,6 +46,7 @@ alias emptytrash='sudo rm -r ~/.local/share/Trash; mkdir ~/.local/share/Trash'
 alias reboot='sudo reboot'
 alias cower='cower --color=always --target=$HOME/aur'
 #alias clearcache='echo "sync; echo 3 > /proc/sys/vm/drop_caches"'
+alias rip="sudo dhclient -r && sudo dhclient" 
 alias mpvw="mpv --aspect=16:9"
 alias xc='xsel -p -o | xsel -i -b'
 alias pp='pdflatex doc.tex; cpdf doc.pdf documento.pdf'

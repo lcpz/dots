@@ -1,0 +1,21 @@
+# HDMI config 
+
+pcm.!default{
+	type plug
+	slave.pcm "hdmivol"
+}
+
+pcm.hdmi-playback{
+	type hw
+	card 1
+	device 9
+}
+
+pcm.hdmivol{
+	type softvol
+	slave.pcm "hdmi-playback"
+	control {
+    	name "Master"
+    	card 1
+  }
+}
