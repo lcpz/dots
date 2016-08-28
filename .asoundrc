@@ -1,14 +1,13 @@
-# HDMI config 
+# ALSA NVidia HDMI config 
+
+ctl.!default{
+  type hw
+  card "NVidia"
+}
 
 pcm.!default{
 	type plug
 	slave.pcm "hdmivol"
-}
-
-pcm.hdmi-playback{
-	type hw
-	card 1
-	device 9
 }
 
 pcm.hdmivol{
@@ -16,6 +15,12 @@ pcm.hdmivol{
 	slave.pcm "hdmi-playback"
 	control {
     	name "Master"
-    	card 1
+    	card "NVidia"
   }
+}
+
+pcm.hdmi-playback{
+	type hw
+	card "NVidia"
+	device "HDMI 3"
 }
