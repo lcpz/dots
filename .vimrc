@@ -104,12 +104,11 @@ nnoremap mm :call ToggleFoldMethod()<CR>
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 
-" Yank (copy) to clipboard
-nnoremap <C-Y> "+y
+" Yank (copy) selection to clipboard
+nnoremap <C-c> "+y
 
 " Put (paste) from clipboard
-nnoremap <leader>p "*p
-nnoremap <C-P> "*P
+nnoremap <C-P> "*p
 
 " Explore
 nnoremap <leader>n :Sexplore!<CR>
