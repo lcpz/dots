@@ -8,7 +8,7 @@ set highlight-color "#FFFF00"
 set completion-bg "#242323"
 set font "Tamsyn 10.5"
 set first-page-column 2
-set adjust-open width
+set adjust-open best-fit
 set advance-pages-per-row true
 set page-padding 5
 
