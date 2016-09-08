@@ -1,0 +1,35 @@
+# -*-muttrc-*-
+# luke's scheme
+
+# Colors          fg             bg
+color hdrdefault  brightblue     default
+color signature   magenta        default
+color attachment  brightblack    default
+color message     brightred      default
+color error       red            default
+color indicator   brightyellow   black
+color status      brightblack    default
+color tree        brightred      default
+color normal      white          default
+color markers     red            default
+color search      white          default
+color tilde       brightblue     default
+
+color quoted      red            default
+color quoted1     cyan           default
+color quoted2     red            default
+color quoted3     cyan           default
+color quoted4     red            default
+color quoted5     cyan           default
+color quoted6     red            default
+color quoted7     cyan           default
+
+color index       brightmagenta  default  "~F"
+color index       magenta        default  "~T"
+color index       brightgreen    default  "~N|~O"
+color index       brightred      default  "~D"
+
+color body        green          default  "(https|http|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
+color body        green          default  "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+
+color body        magenta        default  "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"

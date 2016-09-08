@@ -1,0 +1,21 @@
+set sidebar_width   = 20
+set sidebar_visible = no
+set sidebar_delim   = ' '
+set sidebar_sort    = no
+
+mailboxes =INBOX =Inviata =Trash
+
+color sidebar_new red default
+
+# PGUP/PGDN next/previous folder
+# CTRL-o open folder
+bind index <PageUp>   sidebar-prev
+bind index <PageDown> sidebar-next
+bind index \Co        sidebar-open
+bind pager <PageUp>   sidebar-prev
+bind pager <PageDown> sidebar-next
+bind pager \Co        sidebar-open
+
+# Togge with "b"
+macro index b '<enter-command>toggle sidebar_visible<enter><refresh>'
+macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'

@@ -1,3 +1,5 @@
+# HDMI S/PDIF 3
+
 pcm.!default{
 	type plug
 	slave.pcm "hdmivol"

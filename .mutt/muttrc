@@ -1,0 +1,106 @@
+#---------------#
+# PGP           #
+#---------------#
+
+#source ~/.mutt/pgprc
+#set my_header="X-PGP-Key: https://my.pgp.key.url"
+
+#---------------#
+# Mailboxes     #
+#---------------#
+
+# switch to default account on startup
+source ~/.mutt/accounts/1
+
+macro index <f1> '<sync-mailbox><enter-command>source ~/.mutt/accounts/1<enter><change-folder>!<enter>'
+macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/accounts/2<enter><change-folder>!<enter>'
+macro index <f3> '<sync-mailbox><enter-command>source ~/.mutt/accounts/3<enter><change-folder>!<enter>'
+macro index <f4> '<sync-mailbox><enter-command>source ~/.mutt/accounts/4<enter><change-folder>!<enter>'
+
+macro index gi   '<change-folder>=INBOX<enter>' 'Go to inbox'
+macro index la   '<shell-escape>abook<return>' 'Launch Abook'
+macro index ca   '<change-folder>?'
+
+macro index,pager A '| abook --add-email' 'Add sender to Abook'
+
+#-------------------------#
+# Misc. optional settings #
+#-------------------------#
+
+set ssl_force_tls    = yes
+set ssl_verify_host  = no  # I just have one machine
+set ssl_verify_dates = no
+set timeout          = 60
+set mail_check       = 120
+set imap_keepalive   = 300
+set charset          = UTF8
+set header_cache     = ~/.mutt/cache/headers
+set message_cachedir = ~/.mutt/cache/bodies
+set certificate_file = ~/.mutt/certificates
+set mailcap_path     = $HOME/.mutt/mailcap
+set reply_to         = ask-yes
+set move             = no
+set sleep_time       = 0
+
+bind editor <space> noop
+bind index G imap-fetch-mail
+
+unset imap_passive
+
+# view
+set date_format  = "%d %b %y ◦ %H:%M"
+set index_format = "%Z ◦ %{%d %b %y}, %{%H:%M} │ %-32.32L ◦ (%4c) │ %s"
+
+set pager_context     = 2             # Paging down a message leaves 5 lines of overlap, so you don't get lost
+set pager_index_lines = 8             # Show 8 messages on either side of the message I'm reading
+set sort              = threads       # Sort by threads
+set sort_aux          = date-received # Sort threads by date received
+set nostrict_threads                  # Lets have some fuzzy threading
+set pager_stop                        # Don't skip msgs on next page
+
+# URL & HTML
+alternative_order text/enriched text/plain text/html
+auto_view text/html
+
+# header stuff
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+hdr_order Date From To Cc
+ignore *
+unignore from: date subject to cc
+unignore x-mailing-list: posted-to:
+unignore x-mailer:
+
+# for better looks
+set markers           = no
+set pager_index_lines = 10
+set sort              = 'threads'
+set sort_aux          = 'last-date-received'
+
+# editor
+set editor=$EDITOR
+
+set include = yes                  # Include Message In Replies
+set fcc_attach                     # Forward Attachments
+unset reply_self                   # Don't Include Myself When Replying To A Group
+set attribution="On %d, %n wrote:" # Included Message Header
+set forward_format="Fwd: %s"       # Forwarded Message Title
+set indent_str="> "                # Indented Text Prefaced By This String
+
+# colorscheme
+source ~/.mutt/colors/lukes
+
+#---------------#
+# Abook         #
+#---------------#
+
+# Q from index menu
+# ctrl+t in address field
+set query_command = "abook --mutt-query '%s'"
+
+#---------------#
+# Sidebar       #
+#---------------#
+
+#source ~/.mutt/sidebar

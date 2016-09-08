@@ -1,0 +1,15 @@
+# My mail account
+
+set imap_user        = 'name@mail.com'
+set imap_pass        = `spm show mymailpass`
+set smtp_url         = 'smtps://'
+set smtp_pass        = imap_pass
+set from             = 'name@mail.com'
+set realname         = 'Name'
+set folder           = 'imaps://'
+set spoolfile        = '+INBOX'
+set record           = '+Sent'
+set postponed        = '+Drafts'
+#set header_cache     =
+#set message_cachedir =
+#set certificate_file =
