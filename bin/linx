@@ -5,7 +5,6 @@ for ARG in "$@"; do
         echo "$ARG: file does not exist"
         continue
     fi
-
     URL=$(curl -s -F "Filedata=@$ARG" https://linx.li/upload/public)
     echo $URL
 done

@@ -4,11 +4,11 @@
   for181818=$'\e[30m';   forb15b4a=$'\e[31m';    fora2b149=$'\e[32m'
   forb0914a=$'\e[33m'   for4964b0=$'\e[34m';   forb0486e=$'\e[35m'
   for49b08d=$'\e[36m';    forb0b0b0=$'\e[37m'
-  
+
   back181818=$'\e[40m';   backb15b4a=$'\e[41m';    backa2b149=$'\e[42m'
   backb0914a=$'\e[43m'   back4964b0=$'\e[44m';   backb0486e=$'\e[45m'
   back49b08d=$'\e[46m';    backb0b0b0=$'\e[47m'; rst=$'\e[0m'
-  
+
   for4f4f4f=$'\e[90m';   forb1877f=$'\e[91m';    aab180=$'\e[92m'
   forb0a17f=$'\e[93m'   for7f8cb0=$'\e[94m';   forb07f91=$'\e[95m'
   for7fb09f=$'\e[96m';    fore8e8e8=$'\e[97m'

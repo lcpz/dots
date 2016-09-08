@@ -10,7 +10,7 @@ if [ "$#" -gt 0 ]; then
 fi
 
 runtabbed() {
-	tabbed -cdn tabbed-zathura -r 2 zathura -e '' --fork "$filename" \
+	tabbed -cdn zathura -r 2 zathura -e '' --fork "$filename" \
         >"$xidfile" 2>/dev/null &
 }
 

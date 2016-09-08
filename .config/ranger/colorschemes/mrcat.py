@@ -105,7 +105,6 @@ class dcat(ColorScheme):
                 fg = white
                 attr &= ~bold
 
-
         if context.text:
             if context.highlight:
                 attr |= reverse
@@ -122,7 +121,6 @@ class dcat(ColorScheme):
                     fg = self.progress_bar_color
                 else:
                     bg = self.progress_bar_color
-
 
         if context.vcsfile and not context.selected:
             attr &= ~bold
