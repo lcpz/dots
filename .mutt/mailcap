@@ -1,5 +1,5 @@
 application/pdf ; zathura %s
 image/*         ; sxiv %s & sleep 2
-text/html       ; elinks %s         ; nametemplate=%s.html
-text/plain      ; elinks %s         ; nametemplate=%s.html
-text/enriched   ; elinks %s         ; nametemplate=%s.html
+text/html       ; elinks %s ; nametemplate=%s.html
+text/plain      ; elinks %s ; nametemplate=%s.html
+text/enriched   ; elinks %s ; nametemplate=%s.html
