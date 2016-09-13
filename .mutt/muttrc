@@ -59,8 +59,8 @@ set nostrict_threads                  # Lets have some fuzzy threading
 set pager_stop                        # Don't skip msgs on next page
 
 # URL & HTML
-alternative_order text/enriched text/plain text/html
 auto_view text/html
+alternative_order text/enriched text/plain text/html
 
 # header stuff
 ignore "Authentication-Results:"
