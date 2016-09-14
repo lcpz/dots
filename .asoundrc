@@ -4,38 +4,38 @@ pcm.dmixed {
   type asym
   playback.pcm {
     type dmix
-		ipc_key 5678293
-		slave {
-			channels 2 # stereo
-			pcm {
-				rate 48000 #44100
-				nonblock true
-				type hw
-				card 1
-				device 9
-				subdevice 0
-			}
-			period_size 1024
-			buffer_size 8192
-		}
+    ipc_key 5678293
+    slave {
+      channels 2 # stereo
+      pcm {
+        rate 48000 #44100
+        nonblock true
+        type hw
+        card 1
+        device 9
+        subdevice 0
+      }
+	  period_size 1024
+	  buffer_size 8192
 	}
+  }
 }
 
-pcm.hdmivol{
+pcm.hdmivol {
   type softvol
   slave.pcm "dmixed"
-  control{
+  control {
     name "Master"
     card 1
   }
 }
 
-pcm.!default{
+pcm.!default {
   type plug
   slave.pcm "hdmivol"
 }
 
-ctl.!default{
+ctl.!default {
   type hw
   card 1
 }

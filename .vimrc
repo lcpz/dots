@@ -16,7 +16,7 @@ call vundle#end()
 " -- Settings -- "
 
 " File detection
-filetype plugin indent on
+filetype indent plugin on
 syntax on
 
 " General
