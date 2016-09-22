@@ -4,12 +4,12 @@ pcm.dmixed {
   type asym
   playback.pcm {
     type dmix
-    ipc_key 5678293
+    #ipc_key 5678293
     slave {
       channels 2 # stereo
       pcm {
-        rate 48000 #44100
-        nonblock true
+        #rate 48000 #44100
+        #nonblock true
         type hw
         card 1
         device 9

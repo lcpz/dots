@@ -1,6 +1,8 @@
 #! /bin/bash
-
 # compress, optimize and transform into PDF/A-1b
 
+# dependency : ghostscript (gs), version >= 9.19
+# usage      : $ cpdf input.pdf output.pdf
+
 gs -sDEVICE=pdfwrite -dBATCH -dNOPAUSE -dSAFER -sProcessColorModel=DeviceRGB -sColorConversionStrategy=UseDeviceIndependentColor \
-   -dEmbedAllFonts=true -dCompressFonts=true -dPDFA -dPDFACompatibilityPolicy=1 -dDetectDuplicateImages -dFastWebView=true -r150 -sOutputFile=$2 $1
+   -dEmbedAllFonts=true -dCompressFonts=true -dPDFA -dPDFACompatibilityPolicy=1 -dDetectDuplicateImages=true -dFastWebView=true -sOutputFile=$2 $1
