@@ -4,7 +4,7 @@ pcm.dmixed {
   type asym
   playback.pcm {
     type dmix
-    #ipc_key 5678293
+    ipc_key 5678293
     slave {
       channels 2 # stereo
       pcm {
@@ -13,10 +13,10 @@ pcm.dmixed {
         type hw
         card 1
         device 9
-        subdevice 0
+        #subdevice 0
       }
-	  period_size 1024
-	  buffer_size 8192
+	  #period_size 1024
+	  #buffer_size 8192
 	}
   }
 }
