@@ -1,45 +1,49 @@
-### connection settings
+# Connection
 mpd_host = "127.0.0.1"
 mpd_port = "6600"
-mpd_music_dir = "/home/luke/Music"
+mpd_music_dir = "/mnt/storage/Downloads/Music"
 mpd_connection_timeout = "5"
 mpd_crossfade_time = "1"
 
-### columns settings
-song_columns_list_format = "(40)[red]{t|f} (25)[yellow]{a} (25)[green]{b} (25)[white]{l}"
+# Visualizer
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "fifo"
+visualizer_type = "wave" (spectrum/wave)
+
+# Columns
+song_columns_list_format = " (40)[246]{t|f} (25)[blue]{a} (30)[green]{b} (5f)[245]{l}"
 song_list_format = "{$5 %a$9 $1│$9 $8%t$9 }|{ $8%f$9}$R{$5%b $7}"
-song_status_format = "{{{$3%a$9}} $8-$9 {$8%t$9}|{$8%f$9}{ $8-$9 $6%b$9{ $8-$9 $7%y$9}}}"
+song_status_format = "{{{$5%a$9}} $8-$9 {$2%t$9}|{$0%f$9}{ $8-$9 $3%b$9{ $8-$9 $5%y$9}}}"
 song_library_format = "{%n $8-$9 }{%t}|{%f}"
-alternative_header_first_line_format = "$1$aqqu$/a$9 {$8%t$9}|{$8%f$9} $1$atqq$/a$9"
-alternative_header_second_line_format = "{{$6%a$9}{ $8-$9 $4%b$9 $8-$9 $7%y$9}}|{%D}"
-now_playing_prefix = "$b"
-now_playing_suffix = "$/b"
+alternative_header_first_line_format = " aaaa $1$aqqu$/a$9 {$8%t$9}|{$8%f$9} $1$atqq$/a$9"
+alternative_header_second_line_format = " ppp {{$6%a$9}{ $8-$9 $4%b$9 $8-$9 $7%y$9}}|{%D}"
+now_playing_prefix = "$b$2"
+now_playing_suffix = "$8$/b"
 browser_playlist_prefix = "playlist"
 selected_item_prefix = "$5"
 selected_item_suffix = "$9"
 song_window_title_format = "{%t}|{%f} - {%a}"
 
-### various settings
+# Various
 execute_on_song_change = ""
 playlist_show_remaining_time = "no"
 playlist_shorten_total_times = "yes"
 playlist_separate_albums = "no"
-playlist_display_mode = "columns" (classic/columns)
-browser_display_mode = "columns" (classic/columns)
-search_engine_display_mode = "columns" (classic/columns)
+playlist_display_mode = "columns"
+browser_display_mode = "columns"
+search_engine_display_mode = "columns"
 discard_colors_if_item_is_selected = "no"
 incremental_seeking = "yes"
 seek_time = "1"
 autocenter_mode = "yes"
 centered_cursor = "yes"
-#progressbar_look = ""
-#progressbar_look = "███"
-default_place_to_search_in = "database" (database/playlist)
+progressbar_look = "─╼─"
+progressbar_color = 239
+progressbar_elapsed_color = white
+progressbar_boldness = "yes"
 user_interface = "classic" (classic/alternative)
-default_find_mode = "wrapped" (wrapped/normal)
-#header_visibility = "no"
-#statusbar_visibility = "no"
-titles_visibility = "yes"
+header_visibility = "no"
+titles_visibility = "no"
 header_text_scrolling = "yes"
 cyclic_scrolling = "no"
 lines_scrolled = "2"
@@ -47,38 +51,24 @@ follow_now_playing_lyrics = "yes"
 show_hidden_files_in_local_browser = "no"
 jump_to_now_playing_song_at_start = "yes"
 clock_display_seconds = "no"
-display_volume_level = "yes"
+display_volume_level = "no"
 display_bitrate = "yes"
 display_remaining_time = "no"
-regular_expressions = "extended" (basic/extended)
+regular_expressions = "extended"
 ignore_leading_the = "no"
 block_search_constraints_change_if_items_found = "yes"
 mouse_support = "yes"
 mouse_list_scroll_whole_page = "yes"
-
-### visualizer settings
-visualizer_fifo_path = "/tmp/mpd.fifo"
-visualizer_output_name = "my_fifo"
-#visualizer_type = "wave" (spectrum/wave)
-visualizer_type = "spectrum" (spectrum/wave)
-
-### lyrics support
 external_editor = "vim"
-use_console_editor = "yes" (set to yes, if your editor is console app)
+use_console_editor = "yes"
 colors_enabled = "yes"
 empty_tag_color = "white"
-header_window_color = "black"
-volume_color = "yellow"
+header_window_color = "blue"
 state_line_color = "black"
 state_flags_color = "black"
-main_window_color = "white"
-color1 = "default"
-color2 = "blue"
+main_window_color = 245
 main_window_highlight_color = "blue"
-progressbar_color = "black"
 statusbar_color = "blue"
-alternative_ui_separator_color = "black"
 active_column_color = "blue"
-window_border_color = "blue"
 active_window_border = "blue"
 visualizer_color = "blue"

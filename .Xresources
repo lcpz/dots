@@ -10,6 +10,8 @@ Xft.rgba                     : rgb
 
 Xcursor.theme                : Vanilla-DMZ-AA
 
+!URxvt.font : -misc-tamzen-medium-r-normal--14-101-100-100-c-70-iso8859-1
+!URxvt.boldFont : -misc-tamzen-medium-r-normal--14-101-100-100-c-70-iso8859-1
 URxvt.font                   : xft:Tamsyn:pixelsize=14:autohint=true
 URxvt.boldFont               : xft:Tamsyn:pixelsize=14:autohint=true
 URxvt.scrollBar              : false
