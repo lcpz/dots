@@ -3,7 +3,7 @@
 defaults.pcm.rate_converter "speexrate_medium"
 
 pcm.dmixed {
-	type asym
+  type asym
   playback.pcm {
     type dmix
     ipc_key_add_uid true
@@ -23,8 +23,8 @@ pcm.dmixed {
       }
       period_size 1024
       buffer_size 8192
-		}
-	}
+    }
+  }
 }
 
 pcm.hdmivol {
