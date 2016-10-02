@@ -7,25 +7,25 @@ mpd_crossfade_time = "1"
 
 # Visualizer
 visualizer_fifo_path = "/tmp/mpd.fifo"
-visualizer_output_name = "fifo"
-visualizer_type = "wave" (spectrum/wave)
+visualizer_output_name = "FIFO"
+visualizer_sync_interval = "30"
+visualizer_in_stereo = "yes"
+visualizer_type = "wave_filled"
+visualizer_color = 246,245,244,243,242,241,240,239,238,237,236,235
+visualizer_look = "|○"
 
 # Columns
-song_columns_list_format = " (40)[246]{t|f} (25)[blue]{a} (30)[green]{b} (5f)[245]{l}"
+song_columns_list_format = "(3f)[239]{} (35)[246]{t|f} (30)[blue]{a} (30)[green]{b} (5f)[240]{l}"
 song_list_format = "{$5 %a$9 $1│$9 $8%t$9 }|{ $8%f$9}$R{$5%b $7}"
 song_status_format = "{{{$5%a$9}} $8-$9 {$2%t$9}|{$0%f$9}{ $8-$9 $3%b$9{ $8-$9 $5%y$9}}}"
 song_library_format = "{%n $8-$9 }{%t}|{%f}"
-alternative_header_first_line_format = " aaaa $1$aqqu$/a$9 {$8%t$9}|{$8%f$9} $1$atqq$/a$9"
-alternative_header_second_line_format = " ppp {{$6%a$9}{ $8-$9 $4%b$9 $8-$9 $7%y$9}}|{%D}"
-now_playing_prefix = "$b$2"
-now_playing_suffix = "$8$/b"
+now_playing_prefix = "$8$b ➤ "
 browser_playlist_prefix = "playlist"
 selected_item_prefix = "$5"
 selected_item_suffix = "$9"
 song_window_title_format = "{%t}|{%f} - {%a}"
 
 # Various
-execute_on_song_change = ""
 playlist_show_remaining_time = "no"
 playlist_shorten_total_times = "yes"
 playlist_separate_albums = "no"
@@ -38,10 +38,10 @@ seek_time = "1"
 autocenter_mode = "yes"
 centered_cursor = "yes"
 progressbar_look = "─╼─"
-progressbar_color = 239
+progressbar_color = 240
 progressbar_elapsed_color = white
 progressbar_boldness = "yes"
-user_interface = "classic" (classic/alternative)
+user_interface = "classic"
 header_visibility = "no"
 titles_visibility = "no"
 header_text_scrolling = "yes"
@@ -66,9 +66,8 @@ empty_tag_color = "white"
 header_window_color = "blue"
 state_line_color = "black"
 state_flags_color = "black"
-main_window_color = 245
-main_window_highlight_color = "blue"
+main_window_color = 243
+main_window_highlight_color = "white"
 statusbar_color = "blue"
 active_column_color = "blue"
 active_window_border = "blue"
-visualizer_color = "blue"

@@ -39,7 +39,7 @@ set spelllang=it
 " Folding
 set foldignore=                " don't ignore anything when folding
 set foldlevelstart=99          " no folds closed on open
-set foldmethod=marker          " collapse code using markers
+set foldmethod=indent          " collapse code using indentations
 
 " Tabs
 set autoindent                 " copy indent from previous line
