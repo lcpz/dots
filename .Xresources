@@ -14,6 +14,7 @@ URxvt.font                   : xft:Tamsyn:pixelsize=14:autohint=true
 URxvt.boldFont               : xft:Tamsyn:pixelsize=14:autohint=true
 URxvt.scrollBar              : false
 URxvt.buffered               : true
+URxvt.depth                  : 16
 URxvt.iso14755               : false
 URxvt.perl-ext-common        : default,tabbedex
 URxvt.tabbed.tabbar-fg       : 8
