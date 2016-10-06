@@ -5,4 +5,4 @@
 # usage      : $ cpdf input.pdf output.pdf
 
 gs -sDEVICE=pdfwrite -dBATCH -dNOPAUSE -dSAFER -sProcessColorModel=DeviceRGB -sColorConversionStrategy=UseDeviceIndependentColor \
-   -dEmbedAllFonts=true -dCompressFonts=true -dPDFA -dPDFACompatibilityPolicy=1 -dDetectDuplicateImages=true -dFastWebView=true -sOutputFile=$2 $1
+    -dEmbedAllFonts=true -dCompressFonts=true -dPDFA -dPDFACompatibilityPolicy=1 -dDetectDuplicateImages=true -dFastWebView=true -sOutputFile=$2 $1

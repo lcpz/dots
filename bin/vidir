@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# original: https://raw.githubusercontent.com/trapd00r/vidir
+# source: https://raw.githubusercontent.com/trapd00r/vidir
 
 use strict;
 use warnings FATAL => 'all';
