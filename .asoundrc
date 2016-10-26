@@ -8,7 +8,7 @@ pcm.dmixed {
     type dmix
     ipc_key_add_uid true
     ipc_key 5678293
-    ipc_perm 0660
+    #ipc_perm 0660
     ipc_gid audio
     slave {
       channels 2
@@ -25,6 +25,7 @@ pcm.dmixed {
       buffer_size 8192
     }
   }
+  capture.pcm "dsnoop"
 }
 
 pcm.hdmivol {

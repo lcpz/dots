@@ -21,3 +21,5 @@ then
 	sudo reflector -l 5 --sort rate --save /etc/pacman.d/mirrorlist
 fi
 
+cower -u
+
