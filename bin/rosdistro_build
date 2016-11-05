@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# ROS source installation: distribution build
+
+build_dir=$HOME/.catkin_ws_build
+install_space=/opt/ros/indigo
+
+cd $build_dir
+sudo ./src/catkin/bin/catkin_make_isolated --install --install-space $install_space \
+     -DCMAKE_BUILD_TYPE=Release \
+     -DCATKIN_BUILD_BINARY_PACKAGE=ON \
+     -DPYTHON_EXECUTABLE=/usr/bin/python2 \
+     -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 \
+     -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so \
+     -DPYTHON_BASENAME=-python2.7 \
+     -DASSIMP_UNIFIED_HEADER_NAMES=ON \
+     -DSETUPTOOLS_DEB_LAYOUT=OFF
