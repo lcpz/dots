@@ -8,7 +8,7 @@ Xft.antialias                : 1
 Xft.dpi                      : 96
 Xft.rgba                     : rgb
 
-!Xcursor.theme                : Vanilla-DMZ-AA
+Xcursor.theme                : Vanilla-DMZ-AA
 
 !URxvt.font                   : xft:Tamsyn:pixelsize=14:autohint=true
 !URxvt.boldFont               : xft:Tamsyn:pixelsize=14:autohint=true

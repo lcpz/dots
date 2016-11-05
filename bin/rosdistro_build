@@ -2,10 +2,15 @@
 
 # ROS source installation: distribution build
 
+# After a successful build, source the setup files again
+
 build_dir=$HOME/.catkin_ws_build
 install_space=/opt/ros/indigo
 
 cd $build_dir
+
+[[ $1 = "clean" ]] && rm -fr {build,devel}*
+
 sudo ./src/catkin/bin/catkin_make_isolated --install --install-space $install_space \
      -DCMAKE_BUILD_TYPE=Release \
      -DCATKIN_BUILD_BINARY_PACKAGE=ON \
