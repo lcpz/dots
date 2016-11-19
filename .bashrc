@@ -43,7 +43,7 @@ alias showtrash='ranger $HOME/.local/share/Trash'
 alias emptytrash='sudo rm -r $HOME/.local/share/Trash; mkdir $HOME/.local/share/Trash'
 alias reboot='sudo reboot'
 alias cower='cower --color=always --target=$HOME/aur'
-alias rip="sudo dhclient -r && sudo dhclient" 
+alias rip="sudo dhclient -r && sudo dhclient"
 alias mpvw="mpv --aspect=16:9"
 alias xc='xsel | xsel -i -b'
 alias xp='xsel -b | xsel'

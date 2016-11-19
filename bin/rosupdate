@@ -3,28 +3,30 @@
 # ROS source installation: update check
 
 build_dir=$HOME/.catkin_ws_build
-variant="indigo-desktop"
+dis="indigo"
+version="desktop"
+variant="$dis-$version"
 
 echo "Checking for ${variant} updates..."
 cd $build_dir
 mv ${variant}-wet.rosinstall ${variant}-wet.rosinstall.old
-rosinstall_generator desktop --rosdistro indigo --deps --wet-only --tar > ${variant}-wet.rosinstall
+rosinstall_generator $version --rosdistro $dis --deps --wet-only --tar > ${variant}-wet.rosinstall
 difference=`diff -u ${variant}-wet.rosinstall ${variant}-wet.rosinstall.old`
 
 if [ ${#difference} -eq 0 ]; then
     echo "No new updates found"
-    rm -f ${variant}-wet.rosinstall.old
 else
-    echo $difference
+    echo "$difference"
     read -p "Do you wish to update your distro? " yn
     case $yn in
-        [Yys]* )
+        [Yys]*)
             echo "Updating..."
-            wstool merge -t src ${variant}-wet.rosinstall
+            wstool merge -t src ${variant}-wet.rosinstall -r
             wstool update -t src
             echo -e " done.\nYou can now rebuild"
-            break;;
-        [Nn]* ) exit;;
-        * ) exit;;
+            ;;
+        *)  ;;
     esac
 fi
+
+rm -f ${variant}-wet.rosinstall.old

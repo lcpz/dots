@@ -20,3 +20,5 @@ sudo ./src/catkin/bin/catkin_make_isolated --install --install-space $install_sp
      -DPYTHON_BASENAME=-python2.7 \
      -DASSIMP_UNIFIED_HEADER_NAMES=ON \
      -DSETUPTOOLS_DEB_LAYOUT=OFF
+
+sudo rm -r build* devel*
