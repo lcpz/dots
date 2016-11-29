@@ -1,32 +1,34 @@
-#!/bin/bash
+#!/bin/sh
 
 # ROS source installation: update check
 
+# do your settings here
 build_dir=$HOME/.catkin_ws_build
-dis="indigo"
+distro="indigo"
 version="desktop"
-variant="$dis-$version"
 
+variant="$distro-$version"
 echo "Checking for ${variant} updates..."
 cd $build_dir
 mv ${variant}-wet.rosinstall ${variant}-wet.rosinstall.old
-rosinstall_generator $version --rosdistro $dis --deps --wet-only --tar > ${variant}-wet.rosinstall
-difference=`diff -u ${variant}-wet.rosinstall ${variant}-wet.rosinstall.old`
+rosinstall_generator $version --rosdistro $distro --deps --wet-only --tar > ${variant}-wet.rosinstall
+difference=`diff -u ${variant}-wet.rosinstall.old ${variant}-wet.rosinstall --color=always`
 
 if [ ${#difference} -eq 0 ]; then
     echo "No new updates found"
 else
-    echo "$difference"
+    echo -e "\n$difference\n"
     read -p "Do you wish to update your distro? " yn
     case $yn in
         [Yys]*)
             echo "Updating..."
-            wstool merge -t src ${variant}-wet.rosinstall -r
-            wstool update -t src
-            echo -e " done.\nYou can now rebuild"
+            sudo wstool merge --merge-replace -t src ${variant}-wet.rosinstall -r
+            sudo wstool update --delete-changed-uris -t src
+            rm -f ${variant}-wet.rosinstall.old
+            echo -e "\nDone, you can now rebuild $variant"
             ;;
-        *)  ;;
+        *)
+            mv ${variant}-wet.rosinstall.old ${variant}-wet.rosinstall
+            ;;
     esac
 fi
-
-rm -f ${variant}-wet.rosinstall.old

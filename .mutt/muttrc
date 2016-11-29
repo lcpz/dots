@@ -27,23 +27,24 @@ macro index,pager A '| abook --add-email' 'Add sender to Abook'
 # Misc. optional settings #
 #-------------------------#
 
+set ssl_starttls     = yes
 set ssl_force_tls    = yes
 set ssl_verify_host  = no  # I just have one machine
 set ssl_verify_dates = no
-set timeout          = 60
-set mail_check       = 120
+set timeout          = 10
+set mail_check       = 60
 set imap_keepalive   = 300
 set charset          = UTF8
 set header_cache     = ~/.mutt/cache/headers
 set message_cachedir = ~/.mutt/cache/bodies
 set certificate_file = ~/.mutt/certificates
-set mailcap_path     = $HOME/.mutt/mailcap
+set mailcap_path     = ~/.mutt/mailcap
 set reply_to         = ask-yes
 set move             = no
 set sleep_time       = 0
 
 bind editor <space> noop
-bind index G imap-fetch-mail
+bind index <f5> imap-fetch-mail
 
 unset imap_passive
 

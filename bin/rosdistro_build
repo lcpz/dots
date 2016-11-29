@@ -4,6 +4,7 @@
 
 # After a successful build, source the setup files again
 
+# do your settings here
 build_dir=$HOME/.catkin_ws_build
 install_space=/opt/ros/indigo
 
