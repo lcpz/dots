@@ -1,6 +1,13 @@
 #! /bin/bash
 # updates an arch-linux system
 
+if [ -n "$1" ]
+then
+	printf ":: Updating mirrors...\n"
+	sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
+	sudo reflector -l 5 --sort rate --save /etc/pacman.d/mirrorlist
+fi
+
 sudo pacman -Syu
 
 dip=$(pacman -Qdtq)
@@ -13,12 +20,5 @@ else
 fi
 
 sudo pacman -Sc
-
-if [ -n "$1" ]
-then
-	printf "\n:: Updating mirrors...\n"
-	sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
-	sudo reflector -l 5 --sort rate --save /etc/pacman.d/mirrorlist
-fi
 
 cower -u
