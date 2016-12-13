@@ -18,31 +18,25 @@ colors = (
 
 # add your links here
 links = {
-    #['', ''],
     'serious': [
         ['rosettacode'                 , 'https://rosettacode.org']                       ,
         ['linx'                        , 'https://linx.li']                               ,
     ]                                  ,
     'fancy': [
-        ['la pelle muta'               , 'https://lapellemuta.blogspot.it']               ,
-        ['wallhaven alpha'             , 'https://alpha.wallhaven.cc']                    ,
-        ['simpledesktops'              , 'https://simpledesktops.com']                    ,
-        ['4walled'                     , 'https://4walled.cc']                            ,
         ['public domain images'        , 'https://imagespublicdomain.wordpress.com']      ,
+        ['wallhaven alpha'             , 'https://alpha.wallhaven.cc']                    ,
+        ['kriegs'                      , 'http://www.kriegs.net']                         ,
         ['the cyberpunk project'       , 'http://project.cyberpunk.ru']                   ,
         ['thought experiments lain'    , 'https://www.cjas.org/~leng/lain.htm']           ,
-        ['kriegs'                      , 'http://www.kriegs.net']                         ,
-        ['bagni proeliator'            , 'http://www.bagniproeliator.it']                 ,
-        ['prigionieri dello schermo'   , 'https://iprigionieridelloschermo.tumblr.com']   ,
+        ['50watts.com'                 , 'http://50watts.com']                            ,
     ]                                  ,
     'music': [
-       ['50watts.com'                  , 'http://50watts.com']                            ,
+       ['la pelle muta'                , 'https://lapellemuta.blogspot.it']               ,
+       ['pitchfork'                    , 'http://pitchfork.com'                           ,
+       ['tiny mix tapes'               , 'http://www.tinymixtapes.com'                    ,
        ['thiseternalrotation'          , 'https://thiseternalrotation.blogspot.it']       ,
-       ['khinsider'                    , 'http://downloads.khinsider.com']                ,
-       ['perfect sound forever'        , 'http://www.furious.com/perfect/staff2.html']    ,
+       ['perfect sound forever'        , 'http://www.furious.com/perfect']                ,
        ['madrotter-treasure-hunt'      , 'https://madrotter-treasure-hunt.blogspot.it']   ,
-       ['college of musical knowledge' , 'https://collegeofmusicalknowledge.blogspot.it'] ,
-       ['soundhead'                    , 'https://the-soundhead.blogspot.it']             ,
        ['nostalgie de la boue'         , 'https://nostalgie-de-la-boue.blogspot.it']      ,
     ]
 }
@@ -66,11 +60,7 @@ css = '''body {
 a:link,a:visited,a:active {
   text-decoration: none;
   color: %s;
-<<<<<<< HEAD
-  fo:nt-weight: normal;
-=======
   font-weight: normal;
->>>>>>> c857ac20227d082b3671756c045a72832022a666
 }
 a:hover {
   text-decoration: underline;

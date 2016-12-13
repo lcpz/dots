@@ -25,7 +25,7 @@ else
             sudo wstool merge --merge-replace -t src ${variant}-wet.rosinstall -r
             sudo wstool update --delete-changed-uris -t src
             rm -f ${variant}-wet.rosinstall.old
-            echo -e "\nDone, you can now rebuild $variant"
+            echo -e "\nYou can now rebuild $variant"
             ;;
         *)
             mv ${variant}-wet.rosinstall.old ${variant}-wet.rosinstall
