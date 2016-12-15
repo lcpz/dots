@@ -23,8 +23,8 @@ export PROMPT_COMMAND=__prompt_command
 alias rm='rm -i'
 alias l='ls -lh --color=always --group-directories-first --sort=size | coloredls'
 alias ls='ls -h --color=auto'
-alias v='vim'
-alias sv='sudo vim'
+alias v='nvim'
+alias sv='sudo nvim'
 alias m='mutt'
 alias r='ranger'
 alias sr='sudo ranger'
@@ -54,7 +54,7 @@ complete -cf sudo
 
 set -o posix
 
-export EDITOR="vim"
+export EDITOR="nvim"
 export AWT_TOOLKIT="MToolkit"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
