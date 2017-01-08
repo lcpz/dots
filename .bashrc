@@ -60,15 +60,19 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 eval $(dircolors -b $HOME/.config/dir_colours)
 
+# CUDA
+export CUDA_HOME=/opt/cuda
+export LD_LIBRARY_PATH="/opt/cuda/lib64:/opt/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH"
+
 # ROS
 indigo() {
-  export ROS_HOSTNAME=localhost
-  export ROS_MASTER_URI="http://localhost:11311"
-  export LD_LIBRARY_PATH="/opt/ros/indigo/lib:/usr/lib:/usr/local/lib64:$LD_LIBRARY:PATH"
-  source /opt/ros/indigo/setup.bash
-  [[ -f $HOME/catkin_ws/devel/setup.bash ]] && source $HOME/catkin_ws/devel/setup.bash
-  export PYTHONPATH="/opt/ros/indigo/lib/python2.7/site-packages:$PYTHONPATH"
-  export PKG_CONFIG_PATH="/opt/ros/indigo/lib/pkgconfig:$PKG_CONFIG_PATH"
-  alias catkin_make="catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so"
-  export VREP_ROOT="$HOME/Download/vrep-latest"
+    export ROS_HOSTNAME=localhost
+    export ROS_MASTER_URI="http://localhost:11311"
+    export LD_LIBRARY_PATH="/opt/ros/indigo/lib:/usr/lib:/usr/local/lib64:$LD_LIBRARY:PATH"
+    source /opt/ros/indigo/setup.bash
+    [[ -f $HOME/catkin_ws/devel/setup.bash ]] && source $HOME/catkin_ws/devel/setup.bash
+    export PYTHONPATH="/opt/ros/indigo/lib/python2.7/site-packages:$PYTHONPATH"
+    export PKG_CONFIG_PATH="/opt/ros/indigo/lib/pkgconfig:$PKG_CONFIG_PATH"
+    alias catkin_make="catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so"
+    export VREP_ROOT="$HOME/Download/vrep-latest"
 }

@@ -21,4 +21,5 @@ fi
 
 sudo pacman -Sc
 
+printf "\n:: Checking for AUR updates...\n"
 cower -u
