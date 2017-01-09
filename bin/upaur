@@ -1,0 +1,18 @@
+#!/bin/sh
+# updates a git package in AUR
+# dependency: GNU sed
+
+if [ $# -ne 2 ]; then
+    echo "usage: `basename "$0"` repository_dir aur_dir"
+else
+    cd $1
+    commit="$(git rev-list --count master).$(git rev-parse --short HEAD)"
+    msg="$(git log -1 --pretty=%B | paste -sd '')"
+
+    cd $2
+    cp PKGBUILD PKGBUILD.old
+    sed -i "/pkgver=/c\pkgver=$commit" PKGBUILD
+    mksrcinfo
+    git commit -am "$msg"
+    git push
+fi
