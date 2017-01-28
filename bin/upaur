@@ -6,12 +6,14 @@ if [ $# -ne 2 ]; then
     echo "usage: `basename "$0"` repository_dir aur_dir"
 else
     cd $1
-    commit="$(git rev-list --count master).$(git rev-parse --short HEAD)"
+    commit="$(git rev-list --count HEAD)"
+    sha="$(git rev-parse --short HEAD)"
     msg="$(git log -1 --pretty=%B | paste -sd '')"
 
     cd $2
     cp PKGBUILD PKGBUILD.old
-    sed -i "/pkgver=/c\pkgver=$commit" PKGBUILD
+    sed -i "/pkgcom=/c\pkgcom=$commit" PKGBUILD
+    sed -i "/pkgsha=/c\pkgsha=$sha" PKGBUILD
     mksrcinfo
     git commit -am "$msg"
     git push

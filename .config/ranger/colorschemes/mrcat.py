@@ -1,10 +1,10 @@
-# Mr.Cat 
-# based on minimal, rangy and dcat
+# Mr.Cat
+# based on Minimal, Rangy and dCAT
 
 from ranger.gui.colorscheme import ColorScheme
 from ranger.gui.color import *
 
-class dcat(ColorScheme):
+class mrcat(ColorScheme):
     progress_bar_color = 238
 
     def use(self, context):

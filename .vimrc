@@ -20,6 +20,7 @@ filetype indent plugin on
 syntax on
 
 " General
+set autoread                   " auto refresh any file not being edited by Vim
 set background=dark            " dark background
 set directory^=$HOME/backups/  " put all swap files together in one place
 set backspace=2                " enable <BS> for everything

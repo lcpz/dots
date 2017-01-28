@@ -6,7 +6,7 @@ set statusbar-bg "#333333"
 set statusbar-fg "#ebebff"
 set highlight-color "#FFFF00"
 set completion-bg "#242323"
-set font "Tamsyn 11"
+set font "Tamzen 11"
 set first-page-column 2
 set adjust-open best-fit
 set advance-pages-per-row true
