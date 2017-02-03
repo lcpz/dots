@@ -5,14 +5,13 @@ Xft.hintstyle                : hintslight
 Xft.hinting                  : 1
 Xft.autohint                 : 1
 Xft.antialias                : 1
-Xft.dpi                      : 96
+Xft.dpi                      : 100
 Xft.rgba                     : rgb
 
 Xcursor.theme                : Vanilla-DMZ-AA
 
-URxvt.font                   : -*-tamzen-medium-*-*-*-14-*-*-*-*-*-*-*
-URxvt.boldFont               : -*-tamzen-medium-*-*-*-14-*-*-*-*-*-*-*
-URxvt.italicFont             : -*-tamzen-medium-*-*-*-14-*-*-*-*-*-*-*
+*.font                       : -*-tamzen-medium-*-*-*-14-*-*-*-*-*-*-*
+URxvt.font                   : xft:Tamzen:size=11
 URxvt.scrollBar              : false
 URxvt.buffered               : true
 URxvt.iso14755               : false

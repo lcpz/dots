@@ -30,7 +30,7 @@ system=$(cat /etc/issue|cut -d\\ -f1)
 
 if [ -n "$DISPLAY" ]; then
     wmname=$(awesome -v | head -1)
-    termfn=$(more ~/.Xresources | grep font | cut -d: -f3)
+    termfn=$(more ~/.Xresources | grep font | cut -d- -f3)
 else
     wmname="none"
     termfn="none"

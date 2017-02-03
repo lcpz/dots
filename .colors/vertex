@@ -1,0 +1,39 @@
+! Vertex
+
+*background: #282828
+!*foreground: #eeeeec
+*foreground: #eeffdd
+
+! black
+*color0: #333333
+*color8: #777777
+!*color0: #30142b
+!*color8: #988a95
+
+! red
+*color1: #cc99aa
+*color9: #dbb7c3
+
+! green
+*color2: #aacc99
+*color10: #c3dbb7
+
+! yellow
+*color3: #ccbb99
+*color11: #dbcfb7
+
+! blue
+*color4: #99aacc
+*color12: #b7c3db
+
+! magenta
+*color5: #ffddcc
+*color13: #ffe7db
+
+! cyan
+*color6: #778899
+*color14: #9fabb7
+
+! white
+*color7: #eeffdd
+*color15: #f3ffe7
