@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# sets all PDF images to version 1.4
+# in input dir recursively
+
+[[ $# -ne 1 ]] && exit 1
+
+for f in $(find $1 -type f -name '*.pdf')
+do
+    pdf2ps $f swap.ps
+    ps2pdf swap.ps $f
+    echo $f
+done
+
+rm -f swap.ps
+echo "Done"

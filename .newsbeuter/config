@@ -1,6 +1,6 @@
 always-display-description  true
 auto-reload             yes
-browser                 iron
+browser                 w3m
 cleanup-on-quit         yes
 download-retries        10
 download-timeout        20
