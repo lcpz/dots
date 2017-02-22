@@ -1,0 +1,5 @@
+#!/bin/sh
+
+git fetch upstream
+git checkout master -q
+git merge upstream/master
