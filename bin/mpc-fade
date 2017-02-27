@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# dependency: mpc
+mpc=`which mpc`
+
+# volume commands, customize here
+decrease="amixer -q set Master 1%-"
+increase="amixer -q set Master 1%+"
+
+if [ $# -ne 2 ] ; then
+   echo "usage: mpc-fade <volume fade percentage> <fade length in secs>" ;
+   # example: $ mpc-fade 20 4
+   exit 1 ;
+fi
+
+VOLUME=$1
+
+fade() {
+    while [ $VOLUME -ge 0 ] ; do
+        $1
+        VOLUME=$(($VOLUME-1))
+        sleep .1 # 0.1 seconds
+    done
+}
+
+playing=$(mpc status | grep playing)
+
+if [ ${#playing} -gt 0 ]; then
+    fade "$decrease"
+    mpc toggle -q
+else
+    mpc toggle -q
+    fade "$increase"
+fi
+
+exit 0
+
+# eof

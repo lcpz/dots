@@ -52,6 +52,7 @@ alias startx='startx -- -keeptty -nolisten tcp > $HOME/.xorg.log 2>&1'
 alias commands='sed -n -e "0,/PROMPT/d" -e "s/alias //g" -e "s/=\x27/#/g" -e "/commands/d" -e "s/\x27//p" $HOME/.bashrc | column -t -s "#"'
 
 complete -cf sudo
+shopt -s cdspell
 set -o posix
 eval $(dircolors -b $HOME/.config/dir_colours)
 
