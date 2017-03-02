@@ -1,4 +1,4 @@
-#include ".colors/copland"
+#include ".colors/powerarrow"
 
 Xft.lcdfilter                : lcddefault
 Xft.hintstyle                : hintslight

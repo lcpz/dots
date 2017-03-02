@@ -4,7 +4,7 @@
 *foreground: #CCCCCC
 
 ! black
-*color0: #444444 
+*color0: #444444
 *color8: #888888
 
 ! red
@@ -17,7 +17,7 @@
 
 ! yellow
 *color3: #AB7260
-*color11: #E59980 
+*color11: #E59980
 
 ! blue
 *color4: #6099AC

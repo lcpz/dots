@@ -1,10 +1,10 @@
-! Rainbow 
+! Rainbow
 
 *background: #242424
 *foreground: #ebebff
 
 ! black
-*color0: #333333 
+*color0: #333333
 *color8: #777777
 
 ! red
@@ -17,7 +17,7 @@
 
 ! yellow
 *color3: #e6c45c
-*color11: #d9d982 
+*color11: #d9d982
 
 ! blue
 *color4: #6a9fb5

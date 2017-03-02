@@ -1,0 +1,36 @@
+! Powerarrow
+
+*.background: #282828
+*.foreground: #D2D2D2
+
+!black
+*color0: #343434
+*color8: #6E6E6E
+
+!red
+*color1: #E04613
+*color9: #C83F11
+
+!green
+*color2: #7FB219
+*color10: #98C146
+
+!yellow
+*color3: #D8D782
+*color11: #CFCD63
+
+!blue
+*color4: #6C9EAB
+*color12: #00CCFF
+
+!magenta
+*color5: #E5C8D6
+*color13: #CB92AD
+
+!cyan
+*color6: #7F4DE6
+*color14: #6F37E3
+
+!white
+*color7: #CCCCCC
+*color15: #FFFFFF
