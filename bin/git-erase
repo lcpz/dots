@@ -1,0 +1,14 @@
+#!/bin/sh
+# delete git history, but keep the code in its current state
+# http://stackoverflow.com/a/26000395
+
+if [ $# -ne 1]; then
+    echo "usage: `basename "$0"` commit_message"
+else
+    git checkout --orphan latest_branch
+    git add -A
+    git commit -am "$1"
+    git branch -D master
+    git branch -m master
+    git push -f origin master
+fi

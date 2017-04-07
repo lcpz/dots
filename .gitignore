@@ -14,7 +14,6 @@ screenshots/
 .config/ranger/bookmarks
 .config/ranger/history
 .config/ranger/tagged
-.newsbeuter/urls
 .newsbeuter/cache*
 .newsbeuter/history*
 .gimp*/

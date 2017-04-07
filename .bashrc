@@ -45,9 +45,10 @@ alias reboot='sudo reboot'
 alias cower='cower --color=always --target=$HOME/aur'
 alias rip="sudo dhclient -r && sudo dhclient"
 alias mpvw="mpv --aspect=16:9"
+alias tmux="tmux -2uv"
 alias xc='xsel | xsel -i -b'
 alias xp='xsel -b | xsel'
-alias pp='pdflatex main.tex; cpdf main.pdf documento.pdf'
+alias pp='pdflatex doc.tex; cpdf doc.pdf documento.pdf'
 alias startx='startx -- -keeptty -nolisten tcp > $HOME/.xorg.log 2>&1'
 alias commands='sed -n -e "0,/PROMPT/d" -e "s/alias //g" -e "s/=\x27/#/g" -e "/commands/d" -e "s/\x27//p" $HOME/.bashrc | column -t -s "#"'
 

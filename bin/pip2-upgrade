@@ -1,0 +1,3 @@
+#!/bin/sh
+
+pip2 list --outdated --format=legacy | cut -d' ' -f1 | xargs sudo pip install -U

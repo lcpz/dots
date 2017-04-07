@@ -1,9 +1,6 @@
 #!/bin/bash
 
 install_path="/mnt/storage/MATLAB-linux"
-version="R2016b"
+version="R2017a"
 
-export _JAVA_OPTIONS="-Dswing.aatext=true -Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel" &&
-#urxvtc -e $install_path/$version/bin/matlab -softwareopengl &&
-$install_path/$version/bin/matlab &&
-rm $HOME/java.log*
+$install_path/$version/bin/matlab && rm $HOME/java.log*
