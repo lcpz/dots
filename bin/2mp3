@@ -1,4 +1,19 @@
-#!/bin/bash
-# convert input audio file to mp3 320k
+#!/bin/sh
+# optional arguments: original_file_type directory_path
 
-ffmpeg -i "$1" -codec:a libmp3lame -b:a 320k "${1%.*}.mp3"
+# defaults
+inputtype="flac"
+directory="./"
+
+if [ ! -z "$1" ]; then
+    inputtype="$1"
+fi
+
+if [ ! -z "$2" ]; then
+    directory="$2"
+fi
+
+for i in $directory*.$inputtype; do
+    echo "${i}"
+    ffmpeg -i "$(basename "${i}")" -codec:a libmp3lame -b:a 320k -vsync 2 "$(basename "${i/.flac}").mp3"
+done

@@ -1,3 +1,9 @@
 #!/bin/sh
 
-pip list --outdated --format=legacy | cut -d' ' -f1 | xargs sudo pip install -U
+toinstall=$(pip list --outdated --format=legacy | cut -d' ' -f1)
+
+if [ $toinstall ]; then
+    sudo pip install -U $toinstall
+else
+    echo "No new updates"
+fi
