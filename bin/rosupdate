@@ -4,7 +4,7 @@
 
 # do your settings here
 build_dir=$HOME/.catkin_ws_build
-distro="indigo"
+distro="kinetic"
 version="desktop"
 
 variant="$distro-$version"

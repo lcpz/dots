@@ -1,4 +1,5 @@
 #!/bin/sh
+# dependency: curl
 
 for ARG in "$@"; do
     if [ ! -f "$ARG" ]; then

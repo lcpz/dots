@@ -32,10 +32,7 @@ links = {
     ]                                  ,
     'music': [
        ['la pelle muta'                , 'https://lapellemuta.blogspot.it']               ,
-       ['pitchfork'                    , 'http://pitchfork.com'                           ,
-       ['tiny mix tapes'               , 'http://www.tinymixtapes.com'                    ,
        ['thiseternalrotation'          , 'https://thiseternalrotation.blogspot.it']       ,
-       ['perfect sound forever'        , 'http://www.furious.com/perfect']                ,
        ['madrotter-treasure-hunt'      , 'https://madrotter-treasure-hunt.blogspot.it']   ,
        ['nostalgie de la boue'         , 'https://nostalgie-de-la-boue.blogspot.it']      ,
     ]

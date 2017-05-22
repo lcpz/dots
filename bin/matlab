@@ -1,6 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
 install_path="/mnt/storage/MATLAB-linux"
+initial_dir="/mnt/storage/Downloads/Dropbox/MUSA-Cloud/matlab"
 version="R2017a"
 
-$install_path/$version/bin/matlab && rm $HOME/java.log*
+$install_path/$version/bin/matlab -desktop -sd $initial_dir && rm -f $HOME/{java.log*,matlab_crash_dump.*}
