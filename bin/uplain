@@ -1,0 +1,2 @@
+#!/bin/sh
+upaur $HOME/.config/awesome/lain $HOME/aur/lain-git

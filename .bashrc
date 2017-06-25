@@ -43,13 +43,13 @@ alias showtrash='ranger $HOME/.local/share/Trash'
 alias emptytrash='sudo rm -r $HOME/.local/share/Trash; mkdir $HOME/.local/share/Trash'
 alias reboot='sudo reboot'
 alias cower='cower --color=always --target=$HOME/aur'
-alias rip="sudo dhclient -r && sudo dhclient"
+alias rip="sudo dhclient -v -r wlan0"
 alias mpvw="mpv --aspect=16:9"
 alias tmux="tmux -2uv"
-alias xc='xsel | xsel -i -b'
-alias xp='xsel -b | xsel'
+alias xi='xsel | xsel -i -b'
+alias xb='xsel -b | xsel'
 alias pp='pdflatex doc.tex; cpdf doc.pdf documento.pdf'
-alias startx='startx -- -keeptty -nolisten tcp > $HOME/.xorg.log 2>&1'
+alias startx2='startx -- -keeptty -nolisten tcp > $HOME/.xorg.log 2>&1'
 alias commands='sed -n -e "0,/PROMPT/d" -e "s/alias //g" -e "s/=\x27/#/g" -e "/commands/d" -e "s/\x27//p" $HOME/.bashrc | column -t -s "#"'
 
 complete -cf sudo
@@ -60,3 +60,6 @@ eval $(dircolors -b $HOME/.config/dir_colours)
 export EDITOR="nvim"
 export AWT_TOOLKIT="MToolkit"
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
+export JACAMO_HOME=$HOME/Download/jacamo/build

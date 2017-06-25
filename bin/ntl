@@ -1,0 +1,18 @@
+#!/bin/sh
+# Native TeX Live caller
+
+year="`date '+%Y'`"
+arch="`uname -m`"
+path="/usr/local/texlive/$year/bin/$arch-linux"
+
+if [ $# -eq 1 ]; then
+    "$path/$1"
+elif [ $# -gt 1 ]; then
+    "$path/$1" "${@:2}"
+else
+    echo "usage: `basename "$0"` program [space separated arguments]"
+fi
+
+# Reminder:
+# tlmgr update --list       # see available updates
+# tlmgr update --self --all # update infrastructure and all packages

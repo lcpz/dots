@@ -1,16 +1,15 @@
-always-display-description  true
-auto-reload             yes
-browser                 w3m
-cleanup-on-quit         yes
-download-retries        10
-download-timeout        20
-refresh-on-startup      yes
-reload-time             10
-download-path           ~/Download
-max-downloads           10
-player                  mpv
-cleanup-on-quit         yes
-history-limit           100
+auto-reload         yes
+browser             w3m
+cleanup-on-quit     yes
+download-retries    10
+download-timeout    20
+refresh-on-startup  yes
+reload-time         10
+download-path       ~/Download
+max-downloads       10
+player              mpv
+cleanup-on-quit     yes
+history-limit       100
 
 color  info                color243  default
 color  listnormal          color8    default
