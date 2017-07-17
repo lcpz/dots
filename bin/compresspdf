@@ -2,7 +2,7 @@
 # compress, optimize and transform into PDF/A-1b
 
 # dependency : ghostscript (gs), version >= 9.19
-# usage      : $ cpdf input.pdf output.pdf
+# usage      : $ basename input.pdf output.pdf
 
 gs -sDEVICE=pdfwrite -dBATCH -dNOPAUSE -dSAFER -dUseCIEColor -sProcessColorModel=DeviceCMYK -sColorConversionStrategy=UseDeviceIndependentColor \
    -dEmbedAllFonts=true -dPDFA -dPDFACompatibilityPolicy=1 -dDetectDuplicateImages=true -dFastWebView=true -sOutputFile=$2 $1

@@ -17,8 +17,11 @@ macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/accounts/2<enter><
 macro index <f3> '<sync-mailbox><enter-command>source ~/.mutt/accounts/3<enter><change-folder>!<enter>'
 macro index <f4> '<sync-mailbox><enter-command>source ~/.mutt/accounts/4<enter><change-folder>!<enter>'
 
+bind  index g    noop
 macro index gi   '<change-folder>=INBOX<enter>' 'Go to inbox'
+bind  index l    noop
 macro index la   '<shell-escape>abook<return>' 'Launch Abook'
+bind  index c    noop
 macro index ca   '<change-folder>?'
 
 macro index,pager A '| abook --add-email' 'Add sender to Abook'

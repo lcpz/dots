@@ -48,7 +48,7 @@ alias mpvw="mpv --aspect=16:9"
 alias tmux="tmux -2uv"
 alias xi='xsel | xsel -i -b'
 alias xb='xsel -b | xsel'
-alias pp='pdflatex doc.tex; cpdf doc.pdf documento.pdf'
+alias pp='pdflatex doc.tex; compresspdf doc.pdf documento.pdf'
 alias startx2='startx -- -keeptty -nolisten tcp > $HOME/.xorg.log 2>&1'
 alias commands='sed -n -e "0,/PROMPT/d" -e "s/alias //g" -e "s/=\x27/#/g" -e "/commands/d" -e "s/\x27//p" $HOME/.bashrc | column -t -s "#"'
 

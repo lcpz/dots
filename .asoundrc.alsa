@@ -1,0 +1,49 @@
+## ALSA
+
+# HDMI S/PDIF 3
+
+defaults.pcm.rate_converter "speexrate_medium"
+
+pcm.dmixed {
+  type asym
+  playback.pcm {
+    type dmix
+    ipc_key_add_uid true
+    ipc_key 5678293
+    ipc_gid audio
+    slave {
+      channels 2
+      pcm {
+        format S16_LE
+        rate 48000
+        nonblock true
+        type hw
+        card 1
+        device 9
+        subdevice 0
+      }
+      period_size 1024
+      buffer_size 8192
+    }
+  }
+  capture.pcm "dsnoop"
+}
+
+pcm.hdmivol {
+  type softvol
+  slave.pcm "dmixed"
+  control {
+    name "Master"
+    card 1
+  }
+}
+
+pcm.|default {
+  type plug
+  slave.pcm "hdmivol"
+}
+
+ctl.!default {
+  type hw
+  card 1
+}

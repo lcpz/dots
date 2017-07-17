@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd $HOME/aur;
+auracle download -r $1 && auracle buildorder $1

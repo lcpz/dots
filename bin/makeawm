@@ -10,9 +10,9 @@ sudo cmake .. \
     -DCMAKE_BUILD_TYPE=RELEASE \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DSYSCONFDIR=/etc \
-    -DLUA_INCLUDE_DIR=/usr/include/luajit-2.1 \
-    -DLUA_LIBRARY=/usr/lib/libluajit-5.1.so
-    #-DLUA_LIBRARY=/usr/lib/liblua.so
+    #-DLUA_INCLUDE_DIR=/usr/include/luajit-2.1 \
+    #-DLUA_LIBRARY=/usr/lib/libluajit-5.1.so
+    -DLUA_LIBRARY=/usr/lib/liblua.so
 cd ..
 sudo make install
 sudo install -Dm644 awesome.desktop /usr/share/xsessions/awesome.desktop
