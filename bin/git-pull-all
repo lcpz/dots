@@ -1,0 +1,5 @@
+#!/bin/sh
+# git pull all repositories in pwd or given path
+
+[[ -n "$1" ]] && cd "$1"
+ls -ARd */.git .git 2>/dev/null | xargs -P0 -I"{}" git pull

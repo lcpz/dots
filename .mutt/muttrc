@@ -1,11 +1,4 @@
 #---------------#
-# PGP           #
-#---------------#
-
-#source ~/.mutt/pgprc
-#set my_header="X-PGP-Key: https://my.pgp.key.url"
-
-#---------------#
 # Mailboxes     #
 #---------------#
 
@@ -22,7 +15,7 @@ macro index gi   '<change-folder>=INBOX<enter>' 'Go to inbox'
 bind  index l    noop
 macro index la   '<shell-escape>abook<return>' 'Launch Abook'
 bind  index c    noop
-macro index ca   '<change-folder>?'
+macro index ca   '<change-folder>?<enter><tab>' 'Show mail folders'
 
 macro index,pager A '| abook --add-email' 'Add sender to Abook'
 
@@ -47,7 +40,7 @@ set move             = no
 set sleep_time       = 0
 
 bind editor <space> noop
-bind index <f5> imap-fetch-mail
+bind index  <f5>    imap-fetch-mail
 
 unset imap_passive
 
@@ -108,3 +101,10 @@ set query_command = "abook --mutt-query '%s'"
 #---------------#
 
 #source ~/.mutt/sidebar
+
+#---------------#
+# PGP           #
+#---------------#
+
+#source ~/.mutt/pgprc
+#set my_header='X-PGP-Key: https://pgp.mit.edu/pks/lookup?op=get&search=0x4CBE4FBB03A4F912'

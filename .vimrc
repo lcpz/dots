@@ -60,11 +60,12 @@ set ignorecase                 " case insensitive searching
 set smartcase                  " override ignorecase if upper case typed
 set showcmd                    " show command on last line of screen
 set showmatch                  " show bracket matches
-set textwidth=0                " don't break lines after some maximum width
+set textwidth=80               " break lines after 80 char width
+"set colorcolumn=80
 set wildmenu                   " enhanced cmd line completion
 set ruler                      " shows ruler
 set clipboard+=unnamed         " use the clipboards of vim and win
-set go+=a                      " Visual selection automatically copied to the clipboard
+set go+=a                      " automatically copy to clipboard
 
 " Colours
 set t_Co=256
