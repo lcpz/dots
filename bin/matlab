@@ -1,7 +1,7 @@
 #!/bin/sh
 
-install_path="/mnt/storage/MATLAB-linux"
-initial_dir="/mnt/storage/Downloads/Dropbox/MUSA-Cloud/matlab"
-version="R2017a"
+install_path="/mnt/win/MATLAB/linux"
+initial_dir="/mnt/storage/Downloads/"
+version="R2018a"
 
 "$install_path/$version/bin/matlab" -softwareopengl -desktop -sd $initial_dir && rm -f $HOME/{java.log*,matlab_crash_dump.*}

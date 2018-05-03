@@ -4,6 +4,5 @@
 # dependency : ghostscript (gs), version >= 9.21
 # usage      : $ basename input.pdf output.pdf
 
-gs -sDEVICE=pdfwrite -dBATCH -dNOPAUSE -dSAFER -sProcessColorModel=DeviceCMYK -sColorConversionStrategy=UseDeviceIndependentColor \
-   -dFIXEDMEDIA -dPDFFitPage \
-   -dEmbedAllFonts=true -dPDFA -dPDFACompatibilityPolicy=1 -dDetectDuplicateImages=true -dFastWebView=true -sOutputFile=$2 $1
+gs -sDEVICE=pdfwrite -dBATCH -dNOPAUSE -dSAFER -sColorConversionStrategy=UseDeviceIndependentColor \
+   -dCompressFonts=true -dEmbedAllFonts=true -dPDFA -dPDFACompatibilityPolicy=1 -dDetectDuplicateImages=true -dFastWebView=true -sOutputFile=$2 $1

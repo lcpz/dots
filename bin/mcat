@@ -1,0 +1,12 @@
+#!/bin/sh
+# multiple cat
+
+if [ $# -gt 0 ]; then
+    if [ $# -eq 1 ]; then
+        find . -name "$1" -exec cat {} +
+    else
+        find "$2" -name "$1" -exec cat {} +
+    fi
+else
+    echo "Usage: `basename $0` \"wildcard\" [\"path\"]"
+fi

@@ -152,6 +152,11 @@ nnoremap <C-8> 8gt
 nnoremap <C-9> 9gt
 nnoremap <C-0> :tablast<CR>
 
+" :tabs      list all tabs including their displayed windows
+" :tabm 0    move current tab to first
+" :tabm      move current tab to last
+" :tabm {i}  move current tab to position i+1
+
 " -- Other Settings -- "
 
 let g:netrw_liststyle=3

@@ -105,7 +105,7 @@ else
     let s:purple     = "13"   " LightMagenta
   else
     let s:foreground = "250"
-    let s:selection  = "237" 
+    let s:selection  = "237"
     let s:line       = "235"
     let s:comment    = "246"
     let s:red        = "167"

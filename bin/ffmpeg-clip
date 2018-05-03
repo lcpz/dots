@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# usage: ffmpeg-clip input start_time time_to_elapse output
+
+# example: ffmpeg-clip input.mp4 00:00:30.0 00:00:10.0 output.mp4
+# means that, with respect to the input, the output will start at 30 seconds and
+# end 10 seconds later
+
+ffmpeg --s $2 -i $1 -c copy -t $3 $4

@@ -8,7 +8,6 @@ source ~/.mutt/accounts/1
 macro index <f1> '<sync-mailbox><enter-command>source ~/.mutt/accounts/1<enter><change-folder>!<enter>'
 macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/accounts/2<enter><change-folder>!<enter>'
 macro index <f3> '<sync-mailbox><enter-command>source ~/.mutt/accounts/3<enter><change-folder>!<enter>'
-macro index <f4> '<sync-mailbox><enter-command>source ~/.mutt/accounts/4<enter><change-folder>!<enter>'
 
 bind  index g    noop
 macro index gi   '<change-folder>=INBOX<enter>' 'Go to inbox'

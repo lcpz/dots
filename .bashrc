@@ -25,7 +25,7 @@ alias l='ls -lh --color=always --group-directories-first --sort=size | coloredls
 alias ls='ls -h --color=auto'
 alias v='nvim'
 alias sv='sudo nvim'
-alias m='mutt'
+alias m='neomutt'
 alias r='ranger'
 alias sr='sudo ranger'
 alias z='zathura'
@@ -61,5 +61,5 @@ export EDITOR="nvim"
 export AWT_TOOLKIT="MToolkit"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-export PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux
+export PATH=$PATH:/usr/local/texlive/2018/bin/x86_64-linux
 export JACAMO_HOME=$HOME/Download/jacamo/build
