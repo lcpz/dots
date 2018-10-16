@@ -14,7 +14,7 @@ else
     cp PKGBUILD PKGBUILD.old
     sed -i "/pkgcom=/c\pkgcom=$commit" PKGBUILD
     sed -i "/pkgsha=/c\pkgsha=$sha" PKGBUILD
-    mksrcinfo
+    makepkg --printsrcinfo > .SRCINFO
     git commit -am "$msg"
     git push
 fi
