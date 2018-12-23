@@ -6,4 +6,4 @@
 # means that, with respect to the input, the output will start at 30 seconds and
 # end 10 seconds later
 
-ffmpeg --s $2 -i $1 -c copy -t $3 $4
+ffmpeg -ss $2 -i $1 -c copy -t $3 $4
