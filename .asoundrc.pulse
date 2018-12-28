@@ -48,8 +48,7 @@ ctl.myalsac {
   card 1
 }
 
-
-# PulseAudio
+## PulseAudio
 
  pcm.!default {
      type pulse

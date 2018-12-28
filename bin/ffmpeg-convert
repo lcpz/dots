@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ffmpeg -i $1 -vcodec h264 -acodec mp3 $2

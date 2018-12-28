@@ -41,14 +41,13 @@ alias storage='sudo ntfs-3g /dev/sdb1 /mnt/storage; cd /mnt/storage'
 alias win='sudo ntfs-3g /dev/sda2 /mnt/win; cd /mnt/win/Users/Luke/Desktop'
 alias showtrash='ranger $HOME/.local/share/Trash'
 alias emptytrash='sudo rm -r $HOME/.local/share/Trash; mkdir $HOME/.local/share/Trash'
-alias reboot='sudo reboot'
-alias cower='cower --color=always --target=$HOME/aur'
-alias rip="sudo dhclient -v -r wlan0"
-alias mpvw="mpv --aspect=16:9"
-alias tmux="tmux -2uv"
+alias erip='sudo dhclient -v -r enp3s0'
+alias wrip='sudo dhclient -v -r wlp1s0'
+alias mpvw='mpv --aspect=16:9'
+alias tmux='tmux -2uv'
 alias xi='xsel | xsel -i -b'
 alias xb='xsel -b | xsel'
-alias pp='pdflatex -shell-escape doc.tex; compresspdf doc.pdf documento.pdf'
+alias pp='pdflatex -shell-escape doc.tex && compresspdf doc.pdf document.pdf'
 alias startx2='startx -- -keeptty -nolisten tcp > $HOME/.xorg.log 2>&1'
 alias commands='sed -n -e "0,/PROMPT/d" -e "s/alias //g" -e "s/=\x27/#/g" -e "/commands/d" -e "s/\x27//p" $HOME/.bashrc | column -t -s "#"'
 
@@ -57,9 +56,9 @@ shopt -s cdspell
 set -o posix
 eval $(dircolors -b $HOME/.config/dir_colours)
 
-export EDITOR="nvim"
-export AWT_TOOLKIT="MToolkit"
+export EDITOR='nvim'
+export AWT_TOOLKIT='MToolkit'
 export _JAVA_AWT_WM_NONREPARENTING=1
-
-export PATH=$PATH:/usr/local/texlive/2018/bin/x86_64-linux
 export JACAMO_HOME=$HOME/Download/jacamo/build
+export TEXLIVE=/usr/local/texlive/2018
+export PATH=$PATH:$TEXLIVE/bin/x86_64-linux
