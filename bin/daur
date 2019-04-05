@@ -1,4 +1,7 @@
 #!/bin/sh
 
-cd $HOME/aur;
-auracle download -r $1 && auracle buildorder $1
+cd $HOME/aur
+
+for arg
+    do auracle download -r $arg && auracle buildorder $arg
+done

@@ -1,3 +1,18 @@
 #!/bin/sh
 
-auracle search $1
+string=""
+delimeter=" "
+
+for a in "$@" # Loop over arguments
+do
+    if [[ "${a:0:1}" != "-" ]] # Ignore flags (first character is -)
+    then
+        if [[ "$string" != "" ]]
+        then
+            string+=$delimeter
+        fi
+        string+="$a"
+    fi
+done
+
+auracle search "$string"

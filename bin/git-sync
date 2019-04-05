@@ -1,5 +1,5 @@
 #!/bin/sh
 
-git fetch upstream
+git fetch origin
 git checkout master -q
-git merge upstream/master
+git merge origin/master

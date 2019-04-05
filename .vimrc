@@ -5,12 +5,10 @@ set nocompatible    " use vim defaults instead of vi
 
 " -- Plugins -- "
 
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'godlygeek/tabular'
-call vundle#end()
+call plug#begin('~/.vim/plugged')
+Plug 'godlygeek/tabular'
+Plug 'lervag/vimtex'
+call plug#end()
 
 " -- Settings -- "
 
@@ -34,7 +32,7 @@ set number                     " show line numbers
 set cursorline                 " highlight cursor line
 set title                      " use filename in window title
 set ttyfast                    " you've got a fast terminal
-set spelllang=it
+set spelllang=en
 
 " Folding
 set foldignore=                " don't ignore anything when folding
