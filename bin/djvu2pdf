@@ -1,0 +1,6 @@
+#!/bin/sh
+
+filename="${1%.*}"
+ddjvu -format=tiff "$1" "$filename".tiff
+tiff2pdf -j -o "$filename".pdf "$filename".tiff
+rm "$filename".tiff

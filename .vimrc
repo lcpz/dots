@@ -117,6 +117,9 @@ nnoremap <leader>l :Lexplore<CR>
 " Shortcut for Tabularize
 nnoremap <leader>t :Tabularize /
 
+" Fix indentation
+nnoremap <F10> gg=G<C-o><C-o>
+
 " Panes
 nnoremap <S-J> <C-W><C-J>
 nnoremap <S-K> <C-W><C-K>
@@ -157,7 +160,8 @@ nnoremap <C-0> :tablast<CR>
 
 " -- Other Settings -- "
 
-let g:netrw_liststyle=3
+let g:netrw_liststyle = 3
+let g:vimtex_view_method = 'zathura'
 
 " -- Functions -- "
 

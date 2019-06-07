@@ -6,3 +6,4 @@
 
 gs -sDEVICE=pdfwrite -dBATCH -dNOPAUSE -dSAFER -sColorConversionStrategy=UseDeviceIndependentColor \
    -dCompressFonts=true -dEmbedAllFonts=true -dPDFA -dPDFACompatibilityPolicy=1 -dDetectDuplicateImages=true -dFastWebView=true -sOutputFile=$2 $1
+   #-dPrinted=false for keeping urls

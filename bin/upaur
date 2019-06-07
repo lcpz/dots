@@ -2,7 +2,8 @@
 # updates a git package in AUR
 # dependency: GNU sed
 
-if [ $# -ne 2 ]; then
+if [ $# -ne 2 ]
+then
     echo "usage: `basename "$0"` repository_dir aur_dir"
 else
     cd $1
@@ -12,9 +13,9 @@ else
 
     cd $2
     cp PKGBUILD PKGBUILD.old
-    sed -i "/pkgcom=/c\pkgcom=$commit" PKGBUILD
-    sed -i "/pkgsha=/c\pkgsha=$sha" PKGBUILD
+    sed -i "s/pkgcom=.*/pkgcom=$commit/; s/pkgsha=.*/pkgsha=$sha/" PKGBUILD
     makepkg --printsrcinfo > .SRCINFO
-    git commit -am "$msg"
+
+    git commit -S -am "$msg"
     git push
 fi
