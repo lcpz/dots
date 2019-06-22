@@ -1,25 +1,20 @@
-#! /bin/bash
+#!/bin/sh
 # updates an arch-linux system
+# dependency: aur/trizen
 
-if [ -n "$1" ]
-then
-	printf ":: Updating mirrors...\n"
-	sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
-	sudo reflector -l 5 --sort rate --save /etc/pacman.d/mirrorlist
-fi
+printf ":: Updating mirrors...\n"
+sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
+sudo reflector -l 5 --sort rate --save /etc/pacman.d/mirrorlist
 
-sudo pacman -Syu
+sudo trizen -Syu
 
-dip=$(pacman -Qdtq)
+dip=$(trizen -Qdtq)
 if [ -z $dip ]
 then
-	printf "\n:: No unnecessary dependencies found\n\n"
+	printf "\n:: No dependencies to remove\n\n"
 else
 	printf "\n:: Removing unnecessary dependencies\n\n"
-	sudo pacman -Rs $dip
+	sudo trizen -Rs $dip
 fi
 
-sudo pacman -Sc
-
-printf "\n:: Checking for AUR updates...\n"
-auracle sync
+sudo trizen -Sc
