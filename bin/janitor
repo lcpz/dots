@@ -6,7 +6,7 @@ printf ":: Updating mirrors...\n"
 sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
 sudo reflector -l 5 --sort rate --save /etc/pacman.d/mirrorlist
 
-sudo trizen -Syu
+sudo pacman -Syu
 
 dip=$(trizen -Qdtq)
 if [ -z $dip ]
@@ -14,7 +14,8 @@ then
 	printf "\n:: No dependencies to remove\n\n"
 else
 	printf "\n:: Removing unnecessary dependencies\n\n"
-	sudo trizen -Rs $dip
+	sudo pacman -Rs $dip
 fi
 
-sudo trizen -Sc
+sudo pacman -Sc
+trizen -Sc
