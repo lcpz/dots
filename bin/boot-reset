@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# mount /dev/sdb2 /mnt
+# mount /dev/sdb1 /mnt/boot/efi
+# mount /dev/sdb3 /mnt/home
+# arch-chroot /mnt
+
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+grub-mkconfig -o /boot/grub/grub.cfg

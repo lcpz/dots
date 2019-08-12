@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# fixes a bug in samba 4.10.*
+# https://bbs.archlinux.org/viewtopic.php?id=245658
+
+sudo systemctl stop org.cups.cupsd.service &&
+sudo sed -i 's/AuthInfoRequired negotiate/AuthInfoRequired username,password/g' /etc/cups/printers.conf &&
+sudo systemctl start org.cups.cupsd.service
