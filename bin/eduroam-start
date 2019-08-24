@@ -1,3 +1,0 @@
-#!/bin/sh
-# https://gist.github.com/lcpz/889830cefca810be27d7e12906b8ef58
-sudo wpa_supplicant -B -c /etc/wpa_supplicant/eduroam.conf -i wlp1s0 && sudo dhcpcd wlp1s0

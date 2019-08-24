@@ -1,0 +1,14 @@
+#!/bin/sh
+
+## Eduroam
+# wget https://gist.githubusercontent.com/lcpz/889830cefca810be27d7e12906b8ef58/raw/e898da124925b1e8f8aa5438cc34b5055b798fc1/eduroam.conf /etc/wpa_supplicant/eduroam.conf
+# sudo chown root:root /etc/wpa_supplicant/eduroam.conf
+# sudo chmod 600 /etc/wpa_supplicant/eduroam.conf
+
+if [ -z "$1" ]
+then
+    echo "usage: `basename "$0"` conf-filename"
+else
+    sudo killall -q wpa_supplicant
+    sudo wpa_supplicant -B -c /etc/wpa_supplicant/$1.conf -i wlp1s0 && sudo dhcpcd wlp1s0
+fi
