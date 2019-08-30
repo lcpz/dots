@@ -1,7 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 # mounts input usb device
 
-if [[ -n "$1" ]]; then
+if [[ -n "$1" ]]
+then
     device="$1"
 else
     device="sdb"

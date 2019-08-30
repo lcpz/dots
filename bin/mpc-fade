@@ -25,7 +25,8 @@ fade() {
 
 playing=$(mpc status | grep playing)
 
-if [ ${#playing} -gt 0 ]; then
+if [ ${#playing} -gt 0 ]
+then
     fade "$decrease"
     mpc toggle -q
 else
@@ -34,5 +35,3 @@ else
 fi
 
 exit 0
-
-# eof

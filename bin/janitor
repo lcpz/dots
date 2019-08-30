@@ -18,4 +18,12 @@ else
 fi
 
 sudo pacman -Sc
+
+printf "\n:: Updating AUR packages\n\n"
+
 trizen -Sc
+
+printf "\n:: Updating TeX Live\n\n"
+
+sudo tlmgr option repository ctan
+sudo tlmgr update --self --all

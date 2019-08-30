@@ -1,8 +1,9 @@
-#! /bin/bash
+#! /bin/sh
 # every PDF in input dir is cleaned
 # from transparencies and set to v1.4
 
-for file in $1/*.pdf; do
+for file in $1/*.pdf
+do
       pdf2ps ${file##/} output.ps
       ps2pdf output.ps ${file%.*}.pdf
 done

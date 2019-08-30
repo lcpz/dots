@@ -3,5 +3,6 @@
 cd $HOME/aur
 
 for arg
-    do auracle download -r $arg && auracle buildorder $arg
+do
+    auracle download -r $arg && auracle buildorder $arg
 done

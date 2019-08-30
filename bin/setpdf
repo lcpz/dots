@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # sets all PDF images to version 1.4
 # in input dir recursively

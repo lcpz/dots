@@ -1,7 +1,8 @@
 #!/bin/sh
 # replace old_text with new_text in current git repository
 
-if [ $# -ne 2 ]; then
+if [ $# -ne 2 ]
+then
     echo "usage: `basename "$0"` 'old_text' 'new_text'"
 else
     git grep -l "$1" | xargs sed -i "s/$1/$2/g"

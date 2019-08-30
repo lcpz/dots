@@ -14,7 +14,8 @@ mv ${variant}-wet.rosinstall ${variant}-wet.rosinstall.old
 rosinstall_generator $version --rosdistro $distro --deps --wet-only --tar > ${variant}-wet.rosinstall
 difference=`diff -u ${variant}-wet.rosinstall.old ${variant}-wet.rosinstall --color=always`
 
-if [ ${#difference} -eq 0 ]; then
+if [ ${#difference} -eq 0 ]
+then
     echo "No new updates found"
 else
     echo -e "\n$difference\n"

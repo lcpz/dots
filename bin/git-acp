@@ -1,0 +1,16 @@
+#!/bin/sh
+# git (a)dd, (c)ommit and (p)ush
+
+if [ $# -eq 0 ]
+then
+    commit_date="`date +'%d%m%y'`"
+else
+    commit_date="$1"
+fi
+
+# remove whitespaces
+git grep -I --name-only -z -e '' -- './*' ':!*.pdf' | xargs -0 sed -i -e 's/[ \t]\+\(\r\?\)$/\1/'
+
+git add --all
+git commit -S -am $commit_date
+git push

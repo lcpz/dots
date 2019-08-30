@@ -11,6 +11,7 @@ Xft.rgba                     : rgb
 Xcursor.theme                : Vanilla-DMZ-AA
 
 URxvt.font                   : xft:Tamzen:pixelsize=14
+URxvt.boldFont               : xft:Tamzen:pixelsize=14
 URxvt.scrollBar              : false
 URxvt.buffered               : true
 URxvt.iso14755               : false

@@ -1,9 +1,0 @@
-#!/bin/sh
-
-toinstall=$(pip2 list --outdated --format=legacy | cut -d' ' -f1)
-
-if [ $toinstall ]; then
-    sudo pip2 install -U $toinstall
-else
-    echo "No new updates"
-fi
