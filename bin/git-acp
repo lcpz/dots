@@ -9,7 +9,7 @@ else
 fi
 
 # remove whitespaces
-git grep -I --name-only -z -e '' -- './*' ':!*.pdf' | xargs -0 sed -i -e 's/[ \t]\+\(\r\?\)$/\1/'
+git grep -I --name-only -z -e '' -- './*' ':!*.pdf' | xargs -r -0 sed -i -e 's/[ \t]\+\(\r\?\)$/\1/'
 
 git add --all
 git commit -S -am $commit_date
