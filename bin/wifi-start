@@ -5,10 +5,17 @@
 # sudo chown root:root /etc/wpa_supplicant/eduroam.conf
 # sudo chmod 600 /etc/wpa_supplicant/eduroam.conf
 
-if [ -z "$1" ]
+if [ $# -ge 1 ]
 then
-    echo "usage: `basename "$0"` conf-filename"
+    echo "usage: `basename "$0"` conf-filename wifi-device"
 else
-    sudo killall -q wpa_supplicant
-    sudo wpa_supplicant -B -c /etc/wpa_supplicant/$1.conf -i wlp1s0 && sudo dhcpcd wlp1s0
+    if [ -z "$2" ]
+    then
+        wdevice="wlp1s0"
+    else
+        wdevice="$2"
+    fi
+    sudo killall -q wpa_supplicant dhcpcd
+    sudo wpa_supplicant -B -c /etc/wpa_supplicant/$1.conf -i $wdevice &
+    sudo dhcpcd $wdevice
 fi
