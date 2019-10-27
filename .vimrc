@@ -5,9 +5,20 @@ set nocompatible    " use vim defaults instead of vi
 
 " -- Plugins -- "
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
-Plug 'godlygeek/tabular'
+"Plug 'neomake/neomake'
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'lervag/vimtex'
+Plug 'junegunn/vim-easy-align'
+Plug 'airblade/vim-gitgutter'
+Plug 'ipod825/vim-netranger'
+Plug 'henrik/vim-open-url'
 call plug#end()
 
 " -- Settings -- "
@@ -17,53 +28,53 @@ filetype indent plugin on
 syntax on
 
 " General
-set autoread                   " auto refresh any file not being edited by Vim
-set background=dark            " dark background
-set directory^=$HOME/backups/  " put all swap files together in one place
-set backspace=2                " enable <BS> for everything
-set completeopt-=preview       " dont show preview window
-set fillchars+=vert:\          " empty space instead of broken line for vsplits
-set hidden                     " hide when switching buffers, don't unload
-set laststatus=2               " always show status line
-set mouse=a                    " enable mouse in all modes
-set wrap                       " word wrap
-set linebreak                  " attempt to wrap lines cleanly
-set number                     " show line numbers
-set cursorline                 " highlight cursor line
-set title                      " use filename in window title
-set ttyfast                    " you've got a fast terminal
+set autoread                  " auto refresh any file not being edited by Vim
+set background=dark           " dark background
+set directory^=$HOME/backups/ " put all swap files together in one place
+set backspace=2               " enable <BS> for everything
+set completeopt-=preview      " dont show preview window
+set fillchars+=vert:\         " empty space instead of broken line for vsplits
+set hidden                    " hide when switching buffers, don't unload
+set laststatus=2              " always show status line
+set mouse=a                   " enable mouse in all modes
+set wrap                      " word wrap
+set linebreak                 " attempt to wrap lines cleanly
+set number                    " show line numbers
+set cursorline                " highlight cursor line
+set title                     " use filename in window title
+set ttyfast                   " you've got a fast terminal
 set spelllang=en
 
 " Folding
-set foldignore=                " don't ignore anything when folding
-set foldlevelstart=99          " no folds closed on open
-set foldmethod=indent          " collapse code using indentations
+set foldignore=               " don't ignore anything when folding
+set foldlevelstart=99         " no folds closed on open
+set foldmethod=indent         " collapse code using indentations
 
 " Tabs
-set autoindent                 " copy indent from previous line
-set expandtab                  " replace tabs with spaces
-set shiftwidth=4               " spaces for autoindenting
-set smarttab                   " <BS> removes shiftwidth worth of spaces
-set softtabstop=2              " spaces for editing, e.g. <Tab> or <BS>
-set tabstop=2                  " spaces for <Tab>
+set autoindent                " copy indent from previous line
+set expandtab                 " replace tabs with spaces
+set shiftwidth=4              " spaces for autoindenting
+set smarttab                  " <BS> removes shiftwidth worth of spaces
+set softtabstop=2             " spaces for editing, e.g. <Tab> or <BS>
+set tabstop=2                 " spaces for <Tab>
 
 " Panes
 set splitbelow
 set splitright
 
 " Searches
-set hlsearch                   " highlight search results
-set incsearch                  " search whilst typing
-set ignorecase                 " case insensitive searching
-set smartcase                  " override ignorecase if upper case typed
-set showcmd                    " show command on last line of screen
-set showmatch                  " show bracket matches
-set textwidth=80               " break lines after 80 char width
+set hlsearch                  " highlight search results
+set incsearch                 " search whilst typing
+set ignorecase                " case insensitive searching
+set smartcase                 " override ignorecase if upper case typed
+set showcmd                   " show command on last line of screen
+set showmatch                 " show bracket matches
+set textwidth=80              " break lines after 80 char width
 "set colorcolumn=80
-set wildmenu                   " enhanced cmd line completion
-set ruler                      " shows ruler
-set clipboard+=unnamed         " use the clipboards of vim and win
-set go+=a                      " automatically copy to clipboard
+set wildmenu                  " enhanced cmd line completion
+set ruler                     " shows ruler
+set clipboard+=unnamed        " use the clipboards of vim and win
+set go+=a                     " automatically copy to clipboard
 
 " Colours
 set t_Co=256
@@ -107,18 +118,24 @@ set pastetoggle=<F2>
 nnoremap <C-c> "+y
 
 " Put (paste) from clipboard
-nnoremap <C-P> "*p
+nnoremap <C-p> "*p
 
-" Explore
-nnoremap <leader>n :Sexplore!<CR>
-nnoremap <leader>m :Hexplore<CR>
-nnoremap <leader>l :Lexplore<CR>
+" vim-netranger
+nnoremap <leader>n :e %:p:h<CR>
+nnoremap <leader>v :vsp<CR>:e %:p:h<CR>
+nnoremap <C-n> :tabe<CR>:e %:p:h<CR>
 
-" Shortcut for Tabularize
-nnoremap <leader>t :Tabularize /
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 " Fix indentation
 nnoremap <F10> gg=G<C-o><C-o>
+
+" A better gx
+"nnoremap gx :normal mxviugx<Esc>
 
 " Panes
 nnoremap <S-J> <C-W><C-J>
@@ -139,7 +156,7 @@ nnoremap <silent> <F9> <C-w>+
 " Normalize all split sizes                                     : Ctrl+W =
 
 " Page tabs
-nnoremap <C-n> :tabe<CR>:Explore!<CR>
+"nnoremap <C-n> :tabe<CR>:Explore!<CR>
 nnoremap <C-k> gt
 nnoremap <C-j> gT
 nnoremap <C-1> 1gt
@@ -160,17 +177,19 @@ nnoremap <C-0> :tablast<CR>
 
 " -- Other Settings -- "
 
-let g:netrw_liststyle = 3
 let g:vimtex_view_method = 'zathura'
+let g:deoplete#enable_at_startup = 1
+let g:NETRColors = {'cwd':'white', 'footer': 'yellow', 'link': 'white', 'dir': 'blue', 'exe': 'green'}
+let g:open_url_browser='xdg-open'
 
 " -- Functions -- "
 
 function! ToggleFoldMethod()
-if &foldmethod == 'indent'
-  set foldmethod=marker
-  echo "foldmethod=marker"
-else
-  set foldmethod=indent
-  echo "foldmethod=indent"
-endif
+    if &foldmethod == 'indent'
+        set foldmethod=marker
+        echo "foldmethod=marker"
+    else
+        set foldmethod=indent
+        echo "foldmethod=indent"
+    endif
 endfunction
