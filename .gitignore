@@ -62,6 +62,6 @@ screenshots/
 .*log*
 *.tmp
 *.uuid
-.gem/
+!.gem/ruby/latest
 .eclipse/
 .texlive*/

@@ -10,7 +10,7 @@ setxkbmap it &
 xset m 1/1 0 &
 
 # Faster keyboard auto-repeat rate
-xset r rate 250 40 &
+xset r rate 250 50 &
 
 # Multiple monitor setting
 #xrandr --output HDMI2 --primary &

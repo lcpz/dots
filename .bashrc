@@ -60,6 +60,6 @@ export EDITOR='nvim'
 export AWT_TOOLKIT='MToolkit'
 export _JAVA_AWT_WM_NONREPARENTING=1
 export TEXLIVE=/usr/local/texlive/2019
-export PATH=$PATH:$TEXLIVE/bin/x86_64-linux
+export PATH=$PATH:$TEXLIVE/bin/x86_64-linux:$HOME/.gem/ruby/latest/bin
 export MANPATH=$MANPATH:$TEXLIVE/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:$TEXLIVE/texmf-dist/doc/info
