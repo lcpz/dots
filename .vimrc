@@ -12,13 +12,19 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-"Plug 'neomake/neomake'
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'neomake/neomake'
 Plug 'lervag/vimtex'
 Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/fzf'
 Plug 'airblade/vim-gitgutter'
 Plug 'ipod825/vim-netranger'
 Plug 'henrik/vim-open-url'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'scrooloose/nerdcommenter'
+Plug 'jiangmiao/auto-pairs'
+Plug 'thaerkh/vim-workspace'
+Plug 'troydm/zoomwintab.vim'
 call plug#end()
 
 " -- Settings -- "
@@ -76,6 +82,10 @@ set ruler                     " shows ruler
 set clipboard+=unnamed        " use the clipboards of vim and win
 set go+=a                     " automatically copy to clipboard
 
+" Persistent undo
+set undodir=~/.vim/undodir
+set undofile
+
 " Colours
 set t_Co=256
 let g:hybrid_use_Xresources = 1
@@ -114,11 +124,11 @@ nnoremap mm :call ToggleFoldMethod()<CR>
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 
-" Yank (copy) selection to clipboard
-nnoremap <C-c> "+y
+" Yank (copy) selection to global clipboard
+vmap <C-c> "+yi
 
-" Put (paste) from clipboard
-nnoremap <C-p> "*p
+" Put (paste) from global clipboard
+imap <C-v> <esc>"+gpi
 
 " vim-netranger
 nnoremap <leader>n :e %:p:h<CR>
@@ -136,6 +146,12 @@ nnoremap <F10> gg=G<C-o><C-o>
 
 " A better gx
 "nnoremap gx :normal mxviugx<Esc>
+
+" Fuzzy finder
+nnoremap <leader>f :FZF<CR>
+
+" Workspaces
+nnoremap <leader>W :ToggleWorkSpace<CR>
 
 " Panes
 nnoremap <S-J> <C-W><C-J>
@@ -178,9 +194,15 @@ nnoremap <C-0> :tablast<CR>
 " -- Other Settings -- "
 
 let g:vimtex_view_method = 'zathura'
-let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_at_startup = 1
 let g:NETRColors = {'cwd':'white', 'footer': 'yellow', 'link': 'white', 'dir': 'blue', 'exe': 'green'}
 let g:open_url_browser='xdg-open'
+let g:workspace_session_directory = $HOME . '/.vim/sessions/'
+let g:workspace_session_disable_on_args = 1
+
+"autocmd! BufReadPost,BufWritePost * Neomake
+"let g:neomake_serialize = 1
+"let g:neomake_serialize_abort_on_error = 1
 
 " -- Functions -- "
 

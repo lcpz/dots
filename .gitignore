@@ -48,14 +48,10 @@ screenshots/
 .ssh/
 .spm/
 .urxvt/
-.vim/bundle/
-.vim/.*
 .*history
 .viminfo*
 .viminfz*
-.vim/
-.vim/plugged/*
-.vim/plugged/vimtex
+!.vim/{after,colors}
 .nv/
 !.weechat/weechat.conf
 .Xauthority

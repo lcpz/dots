@@ -8,7 +8,7 @@ else
     commit_date="$1"
 fi
 
-git pull
+git pull -q
 
 # remove whitespaces
 git grep -I --name-only -z -e '' -- './*' ':!*.pdf' | xargs -r -0 sed -i -e 's/[ \t]\+\(\r\?\)$/\1/'
