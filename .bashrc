@@ -54,6 +54,8 @@ alias commands='sed -n -e "0,/PROMPT/d" -e "s/alias //g" -e "s/=\x27/#/g" -e "/c
 complete -cf sudo
 shopt -s cdspell
 set -o posix
+set show-all-if-ambiguous on
+set completion-ignore-case on
 eval $(dircolors -b $HOME/.config/dir_colours)
 
 export EDITOR='nvim'
