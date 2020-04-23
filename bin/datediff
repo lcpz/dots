@@ -1,0 +1,15 @@
+#! /bin/sh
+
+# Compute the difference in days between two dates.
+
+if [ $# -ne 2 ]
+then
+    echo -e "usage: `basename "$0"` first-date second-date\n"\
+    "Date order is not relevant\n"\
+    "Valid date formats: ISO 8601; RFC 5322; RFC 3339"
+else
+    d1=$(date -d "$1" +%s)
+    d2=$(date -d "$2" +%s)
+    result=$(((d1 - d2) / 86400))
+    echo ${result#-} # absolute value
+fi
