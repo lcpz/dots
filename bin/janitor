@@ -27,3 +27,7 @@ printf "\n:: Updating TeX Live\n\n"
 
 sudo tlmgr option repository ctan
 sudo tlmgr update --self --all
+
+printf "\n:: Updating NVim\n\n"
+
+nvim -c ':PlugUpgrade|:PlugUpdate|:qa'
