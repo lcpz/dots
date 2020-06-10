@@ -1,0 +1,5 @@
+#!/bin/sh
+# counts lines of code (loc) in a git repository
+# https://gist.github.com/amitchhajer/4461043
+
+git ls-files | while read f; do git blame -w -M -C -C --line-porcelain "$f" | grep -I '^author '; done | sort -f | uniq -ic | sort -n
