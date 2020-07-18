@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rsync -avzh --stats --progress -r $1 $2
