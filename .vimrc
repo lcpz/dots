@@ -131,9 +131,9 @@ vmap <C-c> "+yi
 imap <C-v> <esc>"+gpi
 
 " vim-netranger
-nnoremap <leader>n :e %:p:h<CR>
+nnoremap <leader>n :tabe<CR>:e %:p:h<CR>
+nnoremap <leader>N :e %:p:h<CR>
 nnoremap <leader>v :vsp<CR>:e %:p:h<CR>
-nnoremap <C-n> :tabe<CR>:e %:p:h<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
