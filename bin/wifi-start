@@ -18,6 +18,6 @@ else
         wdevice="$2"
     fi
     sudo killall -q wpa_supplicant dhcpcd
-    sudo wpa_supplicant -B -c /etc/wpa_supplicant/$1.conf -i "$wdevice" &
-    sudo dhcpcd $wdevice
+    sudo wpa_supplicant -B -c "/etc/wpa_supplicant/$1.conf" -i "$wdevice" &
+    sudo dhcpcd "$wdevice"
 fi

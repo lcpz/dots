@@ -17,7 +17,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/fzf'
-Plug 'airblade/vim-gitgutter'
+"Plug 'airblade/vim-gitgutter'
 Plug 'ipod825/vim-netranger'
 Plug 'henrik/vim-open-url'
 Plug 'terryma/vim-multiple-cursors'
@@ -76,7 +76,7 @@ set smartcase                 " override ignorecase if upper case typed
 set showcmd                   " show command on last line of screen
 set showmatch                 " show bracket matches
 set textwidth=80              " break lines after 80 char width
-"set colorcolumn=80
+set colorcolumn=80
 set wildmenu                  " enhanced cmd line completion
 set ruler                     " shows ruler
 set clipboard+=unnamed        " use the clipboards of vim and win
@@ -131,9 +131,9 @@ vmap <C-c> "+yi
 imap <C-v> <esc>"+gpi
 
 " vim-netranger
-nnoremap <leader>n :e %:p:h<CR>
+nnoremap <leader>n :tabe<CR>:e %:p:h<CR>
+nnoremap <leader>N :e %:p:h<CR>
 nnoremap <leader>v :vsp<CR>:e %:p:h<CR>
-nnoremap <C-n> :tabe<CR>:e %:p:h<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)

@@ -14,5 +14,5 @@ git pull -q
 git grep -I --name-only -z -e '' -- './*' ':!*.pdf' | xargs -r -0 sed -i -e 's/[ \t]\+\(\r\?\)$/\1/'
 
 git add --all
-git commit -S -am $commit_date
+git commit -S -am "$commit_date"
 git push

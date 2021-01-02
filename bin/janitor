@@ -4,7 +4,7 @@
 
 printf ":: Updating mirrors...\n"
 sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
-sudo reflector -l 5 --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 
 sudo pacman -Syu
 
@@ -31,3 +31,5 @@ sudo tlmgr update --self --all
 printf "\n:: Updating NVim\n\n"
 
 nvim -c ':PlugUpgrade|:PlugUpdate|:qa'
+
+flatpak update com.valvesoftware.Steam

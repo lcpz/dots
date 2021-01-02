@@ -1,5 +1,5 @@
 auto-reload         yes
-browser             w3m
+browser             firefox
 cleanup-on-quit     yes
 download-retries    10
 download-timeout    20

@@ -61,7 +61,9 @@ eval $(dircolors -b $HOME/.config/dir_colours)
 export EDITOR='nvim'
 export AWT_TOOLKIT='MToolkit'
 export _JAVA_AWT_WM_NONREPARENTING=1
-export TEXLIVE=/usr/local/texlive/2019
-export PATH=$PATH:$TEXLIVE/bin/x86_64-linux:$HOME/.gem/ruby/latest/bin
+export JAVA_HOME=/usr/lib/jvm/java-14-openjdk
+export TEXLIVE=/usr/local/texlive/2020
+export PATH=$PATH:$TEXLIVE/bin/x86_64-linux:$HOME/.gem/ruby/latest/bin:$JAVA_HOME/bin
 export MANPATH=$MANPATH:$TEXLIVE/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:$TEXLIVE/texmf-dist/doc/info
+export XDG_DATA_DIRS=$XDG_DATA_DIRS:$HOME/.local/share/flatpak/exports/share/applications:/var/lib/flatpak/exports/share/applications
