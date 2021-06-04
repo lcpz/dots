@@ -32,4 +32,8 @@ printf "\n:: Updating NVim\n\n"
 
 nvim -c ':PlugUpgrade|:PlugUpdate|:qa'
 
+sudo pip_upgrade_outdated
+
+rustup update
+
 flatpak update com.valvesoftware.Steam
