@@ -12,20 +12,134 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"Plug 'neomake/neomake'
 Plug 'lervag/vimtex'
 Plug 'junegunn/vim-easy-align'
-Plug 'junegunn/fzf'
-"Plug 'airblade/vim-gitgutter'
-Plug 'ipod825/vim-netranger'
-Plug 'henrik/vim-open-url'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'scrooloose/nerdcommenter'
-Plug 'jiangmiao/auto-pairs'
 Plug 'thaerkh/vim-workspace'
+Plug 'mg979/vim-visual-multi'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'windwp/nvim-autopairs'
 Plug 'troydm/zoomwintab.vim'
+Plug 'preservim/tagbar'
+Plug 'akinsho/bufferline.nvim'
+Plug 'williamboman/mason.nvim'
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-file-browser.nvim'
+
+Plug 'MunifTanjim/nui.nvim'
+Plug 'nvim-neo-tree/neo-tree.nvim'
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
 call plug#end()
+
+lua << EOF
+require('nvim-autopairs').setup()
+
+require('neo-tree').setup {
+    default_component_configs = {
+        indent = {
+            with_markers = true,
+            indent_marker = '│',
+            last_indent_marker = '└',
+            highlight = 'NeoTreeIndentMarker',
+            with_expanders = false,
+        },
+        icon = {
+            folder_closed = '•',
+            folder_open = '◘',
+            folder_empty = '◦',
+            default = '-',
+            highlight = 'NeoTreeFileIcon'
+        },
+        git_status = {
+            symbols = {
+                -- Change type
+                added     = '',
+                modified  = '',
+                deleted   = 'x',
+                renamed   = 'r',
+                -- Status type
+                untracked = 'u',
+                ignored   = 'i',
+                unstaged  = 'n',
+                staged    = 's',
+                conflict  = 'c',
+            }
+        }
+    }
+}
+
+require('telescope').load_extension('file_browser')
+
+require('bufferline').setup {
+    options = {
+        mode = "tabs",
+        offsets = {
+            { filetype = "neo-tree", text = "", padding = 1 },
+        },
+        indicator = {
+            style = 'none',
+        },
+        modified_icon = "~",
+        close_icon = "",
+        separator_style = { "" , ""},
+        show_buffer_close_icons = false,
+        always_show_bufferline = false,
+    },
+    highlights = {
+        background = {
+            ctermfg = 8
+        },
+        buffer_selected = {
+            ctermfg = 15,
+            ctermbg = 0,
+            bold = false
+        }
+    }
+}
+
+require('mason').setup()
+
+local cmp = require('cmp')
+
+cmp.setup {
+    snippet = {
+        expand = function(args)
+            vim.fn["vsnip#anonymous"](args.body)
+        end,
+    },
+    mapping = cmp.mapping.preset.insert {
+      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+      ['<C-f>'] = cmp.mapping.scroll_docs(4),
+      ['<C-Space>'] = cmp.mapping.complete(),
+      ['<C-e>'] = cmp.mapping.abort(),
+      ['<CR>'] = cmp.mapping.confirm { select = true }
+    },
+    sources = cmp.config.sources({
+      { name = 'nvim_lsp' },
+      { name = 'vsnip' }
+    }, {
+      { name = 'buffer' }
+    })
+}
+
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local lspconfig = require('lspconfig')
+local language_servers = {'clangd', 'jdtls'}
+
+for _, lsp in pairs(language_servers) do
+    lspconfig[lsp].setup { capabilities = capabilities }
+end
+EOF
 
 " -- Settings -- "
 
@@ -49,6 +163,7 @@ set number                    " show line numbers
 set cursorline                " highlight cursor line
 set title                     " use filename in window title
 set ttyfast                   " you've got a fast terminal
+set signcolumn=number
 set spelllang=en
 
 " Folding
@@ -75,8 +190,8 @@ set ignorecase                " case insensitive searching
 set smartcase                 " override ignorecase if upper case typed
 set showcmd                   " show command on last line of screen
 set showmatch                 " show bracket matches
-set textwidth=80              " break lines after 80 char width
-set colorcolumn=80
+set textwidth=90              " break lines after 80 char width
+set colorcolumn=90
 set wildmenu                  " enhanced cmd line completion
 set ruler                     " shows ruler
 set clipboard+=unnamed        " use the clipboards of vim and win
@@ -130,11 +245,6 @@ vmap <C-c> "+yi
 " Put (paste) from global clipboard
 imap <C-v> <esc>"+gpi
 
-" vim-netranger
-nnoremap <leader>n :tabe<CR>:e %:p:h<CR>
-nnoremap <leader>N :e %:p:h<CR>
-nnoremap <leader>v :vsp<CR>:e %:p:h<CR>
-
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 
@@ -144,14 +254,26 @@ nmap ga <Plug>(EasyAlign)
 " Fix indentation
 nnoremap <F10> gg=G<C-o><C-o>
 
-" A better gx
-"nnoremap gx :normal mxviugx<Esc>
-
-" Fuzzy finder
-nnoremap <leader>f :FZF<CR>
-
 " Workspaces
 nnoremap <leader>W :ToggleWorkSpace<CR>
+
+" Neotree
+nnoremap <space>e :Neotree toggle show<CR>
+nnoremap <space>k :Neotree dir=..<CR>
+nnoremap <space>w :Neotree toggle current reveal_force_cwd<CR>
+
+" Telescope (requires fd)
+nnoremap <space>ff <cmd>Telescope find_files<CR>
+nnoremap <space>fg <cmd>Telescope live_grep<CR>
+nnoremap <space>fb <cmd>Telescope file_browser<CR>
+nnoremap <space>fh <cmd>Telescope help_tags<CR>
+
+" Tagbar (requires ctags)
+nnoremap <space>tr :TagbarToggle<CR>
+let g:tagbar_iconchars = ['▸', '▾']
+
+" LSP config
+nnoremap <space>ca :lua vim.lsp.buf.code_action()<CR>
 
 " Panes
 nnoremap <S-J> <C-W><C-J>
@@ -172,7 +294,6 @@ nnoremap <silent> <F9> <C-w>+
 " Normalize all split sizes                                     : Ctrl+W =
 
 " Page tabs
-"nnoremap <C-n> :tabe<CR>:Explore!<CR>
 nnoremap <C-k> gt
 nnoremap <C-j> gT
 nnoremap <C-1> 1gt
@@ -194,15 +315,9 @@ nnoremap <C-0> :tablast<CR>
 " -- Other Settings -- "
 
 let g:vimtex_view_method = 'zathura'
-"let g:deoplete#enable_at_startup = 1
-let g:NETRColors = {'cwd':'white', 'footer': 'yellow', 'link': 'white', 'dir': 'blue', 'exe': 'green'}
 let g:open_url_browser='xdg-open'
 let g:workspace_session_directory = $HOME . '/.vim/sessions/'
 let g:workspace_session_disable_on_args = 1
-
-"autocmd! BufReadPost,BufWritePost * Neomake
-"let g:neomake_serialize = 1
-"let g:neomake_serialize_abort_on_error = 1
 
 " -- Functions -- "
 
