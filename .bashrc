@@ -24,11 +24,14 @@ alias rm='rm -i'
 alias l='ls -lh --color=always --group-directories-first --sort=size | coloredls'
 alias ls='ls -h --color=auto'
 alias v='nvim'
+alias e='exit'
 alias sv='sudo nvim'
 alias m='neomutt'
 alias r='ranger'
+alias f='fff'
 alias sr='sudo ranger'
 alias z='zathura'
+alias sxiv='nsxiv'
 alias pacman='sudo pacman --color always'
 alias pacs='sudo pacman --color always -S'
 alias pacss='sudo pacman --color always -Ss'
@@ -48,10 +51,12 @@ alias mpvw='mpv --aspect=16:9'
 alias tmux='tmux -2uv'
 alias xi='xsel | xsel -i -b'
 alias xb='xsel -b | xsel'
+alias wh='wifi-start home'
 alias startx2='startx -- -keeptty -nolisten tcp > $HOME/.xorg.log 2>&1'
 alias commands='sed -n -e "0,/PROMPT/d" -e "s/alias //g" -e "s/=\x27/#/g" -e "/commands/d" -e "s/\x27//p" $HOME/.bashrc | column -t -s "#"'
 
 complete -cf sudo
+complete -cf doas
 shopt -s cdspell
 set -o posix
 set show-all-if-ambiguous on
@@ -61,9 +66,8 @@ eval $(dircolors -b $HOME/.config/dir_colours)
 export EDITOR='nvim'
 export AWT_TOOLKIT='MToolkit'
 export _JAVA_AWT_WM_NONREPARENTING=1
-export JAVA_HOME=/usr/lib/jvm/java-14-openjdk
-export TEXLIVE=/usr/local/texlive/2020
-export PATH=$PATH:$TEXLIVE/bin/x86_64-linux:$HOME/.gem/ruby/latest/bin:$JAVA_HOME/bin
+export JAVA_HOME=/usr/lib/jvm/java-18-openjdk
+export TEXLIVE=/usr/local/texlive/2022
+export PATH=$PATH:$TEXLIVE/bin/x86_64-linux:$HOME/.gem/ruby/3.0.0/bin:$JAVA_HOME/bin
 export MANPATH=$MANPATH:$TEXLIVE/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:$TEXLIVE/texmf-dist/doc/info
-export XDG_DATA_DIRS=$XDG_DATA_DIRS:$HOME/.local/share/flatpak/exports/share/applications:/var/lib/flatpak/exports/share/applications
