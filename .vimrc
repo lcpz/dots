@@ -39,6 +39,8 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
+
+Plug 'ThePrimeagen/harpoon'
 call plug#end()
 
 lua << EOF
@@ -159,7 +161,8 @@ set laststatus=2              " always show status line
 set mouse=a                   " enable mouse in all modes
 set wrap                      " word wrap
 set linebreak                 " attempt to wrap lines cleanly
-set number                    " show line numbers
+set number                    " show line number (cursor)
+set relativenumber            " show relative line numbers (w.r.t. cursor)
 set cursorline                " highlight cursor line
 set title                     " use filename in window title
 set ttyfast                   " you've got a fast terminal
