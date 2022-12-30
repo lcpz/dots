@@ -3,12 +3,14 @@
 # dependency: aur/trizen
 
 printf ":: Updating mirrors...\n"
+
 sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
 sudo reflector --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 
 sudo pacman -Syu
 
 dip=$(trizen -Qdtq)
+
 if [ -z $dip ]
 then
 	printf "\n:: No dependencies to remove\n\n"
@@ -31,9 +33,3 @@ sudo tlmgr update --self --all
 printf "\n:: Updating NVim\n\n"
 
 nvim -c ':PlugUpgrade|:PlugUpdate|:qa'
-
-sudo pip_upgrade_outdated
-
-rustup update
-
-flatpak update com.valvesoftware.Steam

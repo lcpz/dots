@@ -4,7 +4,7 @@
 
 # do your settings here
 build_dir=$HOME/.catkin_ws_build
-distro="kinetic"
+distro="noetic"
 version="desktop"
 
 variant="$distro-$version"

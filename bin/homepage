@@ -19,22 +19,19 @@ colors = (
 # add your links here
 links = {
     'serious': [
-        ['rosettacode'                 , 'https://rosettacode.org']                       ,
-        ['linx'                        , 'https://linx.li']                               ,
+        ['rosettacode'                 , 'https://rosettacode.org']                      ,
     ]                                  ,
     'fancy': [
-        ['public domain images'        , 'https://imagespublicdomain.wordpress.com']      ,
-        ['wallhaven alpha'             , 'https://alpha.wallhaven.cc']                    ,
-        ['kriegs'                      , 'http://www.kriegs.net']                         ,
-        ['the cyberpunk project'       , 'http://project.cyberpunk.ru']                   ,
-        ['thought experiments lain'    , 'https://www.cjas.org/~leng/lain.htm']           ,
-        ['50watts.com'                 , 'http://50watts.com']                            ,
+        ['public domain images'        , 'https://imagespublicdomain.wordpress.com']     ,
+        ['wallhaven alpha'             , 'https://wallhaven.cc']                         ,
+        ['kriegs'                      , 'http://www.kriegs.net']                        ,
+        ['thought experiments lain'    , 'https://www.cjas.org/~leng/lain.htm']          ,
+        ['50watts.com'                 , 'http://50watts.com']                           ,
     ]                                  ,
     'music': [
-       ['la pelle muta'                , 'https://lapellemuta.blogspot.it']               ,
-       ['thiseternalrotation'          , 'https://thiseternalrotation.blogspot.it']       ,
-       ['madrotter-treasure-hunt'      , 'https://madrotter-treasure-hunt.blogspot.it']   ,
-       ['nostalgie de la boue'         , 'https://nostalgie-de-la-boue.blogspot.it']      ,
+       ['la pelle muta'                , 'https://lapellemuta.blogspot.it']              ,
+       ['madrotter-treasure-hunt'      , 'https://madrotter-treasure-hunt.blogspot.it']  ,
+       ['nostalgie de la boue'         , 'https://nostalgie-de-la-boue.blogspot.it']     ,
     ]
 }
 

@@ -1,13 +1,12 @@
 #!/bin/bash
-#
+
 # Compare two PDF files.
 # Dependencies:
 #  - pdfinfo (xpdf)
 #  - pdfjam  (texlive-extra-utils)
 #  - diffpdf
-#
 
-MAX_HEIGHT=15840  #The maximum height of a page (in points), limited by pdfjam.
+MAX_HEIGHT=15840  # The maximum height of a page (in points), limited by pdfjam.
 
 TMPFILE1=$(mktemp /tmp/XXXXXX.pdf)
 TMPFILE2=$(mktemp /tmp/XXXXXX.pdf)

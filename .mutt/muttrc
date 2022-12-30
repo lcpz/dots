@@ -87,7 +87,7 @@ set forward_format="Fwd: %s"       # Forwarded Message Title
 set indent_str="> "                # Indented Text Prefaced By This String
 
 # colorscheme
-source ~/.mutt/colors/lukes
+source ~/.mutt/colors/lucas
 
 #---------------#
 # Abook         #

@@ -1,5 +1,5 @@
 auto-reload         yes
-browser             firefox
+browser             librewolf
 cleanup-on-quit     yes
 download-retries    10
 download-timeout    20

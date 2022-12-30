@@ -1,5 +1,5 @@
 #!/bin/sh
 
 sudo tlmgr option repository ctan
-#tlmgr update --list            # see available updates
+#tlmgr update --list # see available updates
 sudo tlmgr update --self --all # update infrastructure and all packages

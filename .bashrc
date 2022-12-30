@@ -1,21 +1,9 @@
-[ -z "$PS1" ] && return
-[[ -d $HOME/bin ]] && export PATH=$PATH:$HOME/bin
+[[ $- == *i* ]] && source /usr/share/blesh/ble.sh --noattach
+
+[ -d $HOME/bin ] && export PATH=$PATH:$HOME/bin
 
 function __prompt_command() {
-    PS1=""
-    local EXIT="$?"
-    local RCol='\[\e[0m\]'
-    local Red='\[\e[0;31m\]'
-    local Gre='\[\e[0;32m\]'
-    local BYel='\[\e[1;33m\]'
-    local BBlu='\[\e[1;34m\]'
-    local Pur='\[\e[0;35m\]'
-
-    if [ $EXIT != 0 ]; then
-        PS1+=" ${Red}$EXIT"
-    fi
-
-    PS1+=" ${BBlu}\u${RCol}  \W  "
+    PS1=" \[\e[1;34m\]\u\[\e[0m\]  \W  "
 }
 
 export PROMPT_COMMAND=__prompt_command
@@ -26,7 +14,6 @@ alias ls='ls -h --color=auto'
 alias v='nvim'
 alias e='exit'
 alias sv='sudo nvim'
-alias m='neomutt'
 alias r='ranger'
 alias f='fff'
 alias sr='sudo ranger'
@@ -53,21 +40,14 @@ alias xi='xsel | xsel -i -b'
 alias xb='xsel -b | xsel'
 alias wh='wifi-start home'
 alias startx2='startx -- -keeptty -nolisten tcp > $HOME/.xorg.log 2>&1'
-alias commands='sed -n -e "0,/PROMPT/d" -e "s/alias //g" -e "s/=\x27/#/g" -e "/commands/d" -e "s/\x27//p" $HOME/.bashrc | column -t -s "#"'
 
-complete -cf sudo
-complete -cf doas
-shopt -s cdspell
-set -o posix
-set show-all-if-ambiguous on
-set completion-ignore-case on
-eval $(dircolors -b $HOME/.config/dir_colours)
+set -o vi
 
 export EDITOR='nvim'
-export AWT_TOOLKIT='MToolkit'
-export _JAVA_AWT_WM_NONREPARENTING=1
-export JAVA_HOME=/usr/lib/jvm/java-18-openjdk
+export JAVA_HOME=/usr/lib/jvm/java-19-openjdk
 export TEXLIVE=/usr/local/texlive/2022
 export PATH=$PATH:$TEXLIVE/bin/x86_64-linux:$HOME/.gem/ruby/3.0.0/bin:$JAVA_HOME/bin
 export MANPATH=$MANPATH:$TEXLIVE/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:$TEXLIVE/texmf-dist/doc/info
+
+[[ ${BLE_VERSION-} ]] && ble-attach
