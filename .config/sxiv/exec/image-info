@@ -1,9 +1,7 @@
 #!/bin/sh
 
-# Example for ~/.config/sxiv/exec/image-info
-# Called by sxiv(1) whenever an image gets loaded,
-# with the name of the image file as its first argument.
-# The output is displayed in sxiv's status bar.
+# Called by sxiv(1) whenever an image gets loaded, with the name of the image
+# file as its first argument. The output is displayed in sxiv's status bar.
 
 s=" | " # field separator
 
