@@ -32,4 +32,4 @@ sudo tlmgr update --self --all
 
 printf "\n:: Updating NVim\n\n"
 
-nvim -c ':PlugUpgrade|:PlugUpdate|:qa'
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
