@@ -41,13 +41,13 @@ alias xb='xsel -b | xsel'
 alias wh='wifi-start home'
 alias startx2='startx -- -keeptty -nolisten tcp > $HOME/.xorg.log 2>&1'
 
-set -o vi
-
 export EDITOR='nvim'
 export JAVA_HOME=/usr/lib/jvm/java-19-openjdk
 export TEXLIVE=/usr/local/texlive/2022
 export PATH=$PATH:$TEXLIVE/bin/x86_64-linux:$HOME/.gem/ruby/3.0.0/bin:$JAVA_HOME/bin
 export MANPATH=$MANPATH:$TEXLIVE/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:$TEXLIVE/texmf-dist/doc/info
+
+set -o vi
 
 [[ ${BLE_VERSION-} ]] && ble-attach

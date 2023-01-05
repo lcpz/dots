@@ -1,4 +1,4 @@
-#include ".colors/copland"
+#include ".colors/one-dark"
 
 Xft.lcdfilter                : lcddefault
 Xft.hintstyle                : hintslight
@@ -26,4 +26,4 @@ URxvt.perl-ext               : default,url-select
 URxvt.keysym.C-i             : perl:url-select:select_next
 URxvt.url-select.launcher    : /usr/bin/librewolf
 URxvt.url-select.underline   : true
-URxvt.colorUL                : #78A4FF
+URxvt.colorUL                : 4
