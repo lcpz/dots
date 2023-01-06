@@ -292,6 +292,7 @@ require('telescope').setup {
     file_browser = {
       mappings = {
         ['n'] = {
+          ['p'] = fb_actions.toggle_hidden,
           ['h'] = fb_actions.goto_parent_dir,
           ['l'] = fb_actions.change_cwd
         }
@@ -317,6 +318,7 @@ vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { de
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>fb', ':Telescope file_browser<CR>', { desc = '[F]ile [B]rowser' })
+vim.keymap.set('n', '<C-n>', ':tabnew<CR>:Telescope file_browser<CR>', { desc = 'Open File Browser in a New Tab' })
 
 -- Configure Treesitter
 -- `:help nvim-treesitter`

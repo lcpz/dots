@@ -1,12 +1,15 @@
-set default-bg "#242424"
-set default-fg "#ebebff"
-set inputbar-bg "#323232"
-set inputbar-fg "#ebebff"
-set statusbar-bg "#333333"
-set statusbar-fg "#ebebff"
-set highlight-color "#FFFF00"
-set completion-bg "#242323"
-set font "Terminus 9"
+set default-bg   "#282c34"
+set inputbar-bg  "#282c34"
+set statusbar-bg "#282c34"
+
+set default-fg   "#d5d8df"
+set inputbar-fg  "#61afef"
+set statusbar-fg "#d5d8df"
+
+set highlight-color "#d19a66"
+set completion-bg   "#98c379"
+
+set font "Terminus 10"
 set adjust-open best-fit
 set advance-pages-per-row true
 set page-padding 5

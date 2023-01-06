@@ -15,6 +15,7 @@ URxvt.boldFont               : xft:Tamzen:pixelsize=14
 URxvt.scrollBar              : false
 URxvt.buffered               : true
 URxvt.iso14755               : false
+URxvt.iso14755_52            : false
 URxvt.perl-ext-common        : default,tabbedex
 URxvt.tabbed.tabbar-fg       : 8
 URxvt.tabbed.tabbar-bg       : 0
