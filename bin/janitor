@@ -4,10 +4,10 @@
 
 printf ":: Updating mirrors...\n"
 
-sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
-sudo reflector --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+doas cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
+doas reflector --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 
-sudo pacman -Syu
+doas pacman -Syu
 
 dip=$(trizen -Qdtq)
 
@@ -16,10 +16,10 @@ then
 	printf "\n:: No dependencies to remove\n\n"
 else
 	printf "\n:: Removing unnecessary dependencies\n\n"
-	sudo pacman -Rs $dip
+	doas pacman -Rs $dip
 fi
 
-sudo pacman -Sc
+doas pacman -Sc
 
 printf "\n:: Updating AUR packages\n\n"
 
@@ -27,8 +27,8 @@ trizen -Sc
 
 printf "\n:: Updating TeX Live\n\n"
 
-sudo tlmgr option repository ctan
-sudo tlmgr update --self --all
+doas tlmgr option repository ctan
+doas tlmgr update --self --all
 
 printf "\n:: Updating NVim\n\n"
 
