@@ -1,5 +1,3 @@
-# https://github.com/akinomyoga/ble.sh
-
 bleopt term_index_colors=16
 
 function blerc/define-sabbrev-branch {
@@ -146,3 +144,6 @@ function ble/prompt/backslash:X {
 
 bleopt prompt_rps1='\X'
 bleopt prompt_rps1_transient=1
+
+ble-import -d contrib/fzf-completion
+ble-import -d contrib/fzf-key-bindings
