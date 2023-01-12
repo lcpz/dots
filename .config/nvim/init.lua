@@ -148,8 +148,8 @@ vim.o.smartcase = true  -- Override ignorecase if upper case typed
 -- Highlight column 80
 vim.o.colorcolumn = '80'
 
--- Use the clipboards of nvim and win
-vim.o.clipboard = 'unnamed'
+-- Use the clipboards of nvim plusand win
+vim.o.clipboard = 'unnamedplus'
 
 -- Basic Keymaps
 -- `:help mapleader`
