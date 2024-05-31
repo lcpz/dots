@@ -1,0 +1,18 @@
+#!/bin/bash
+
+fif() {
+    RG_PREFIX="rga --files-with-matches --hidden --no-ignore-vcs"
+    local file
+    search_term="$1"
+    file="$(
+        FZF_DEFAULT_COMMAND="$RG_PREFIX '$search_term' || rga --files --hidden --no-ignore-vcs '$search_term'" \
+            fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
+                --phony -q "$search_term" \
+                --bind "change:reload:$RG_PREFIX {q} || rga --files --hidden --no-ignore-vcs {q}" \
+                --preview-window="70%:wrap"
+    )" &&
+    echo "opening $file" &&
+    $EDITOR "$file"
+}
+
+fif "$@"
